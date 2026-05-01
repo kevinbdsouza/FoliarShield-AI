@@ -4,11 +4,11 @@ FoliarShield-AI is an open AI-for-science research prototype for data-driven des
 retentive, rainfast, and controlled-release foliar delivery systems for climate-resilient
 agriculture.
 
-The first-year scope is deliberately narrow: difficult-to-wet leaf surfaces, one
+The initial scope is: difficult-to-wet leaf surfaces, one
 nonliving benchmark payload, one non-pathogenic foliar-compatible Bacillus-like payload,
 liquid-liquid encapsulation and cloaked/controlled-release formulations, a
 literature-grounded knowledge graph, a domain-specific AI co-scientist, and batched
-physics-aware Bayesian active learning. Outputs are research decision support only; they
+physics-aware Bayesian active learning. Outputs are research decision support only, for now; they
 are not field-use, regulatory, biosafety, or agronomic recommendations.
 
 ## Project Scope
@@ -33,12 +33,11 @@ Initial experimental boundary:
 - Higher-fidelity labels: release kinetics, microbial viability, persistence on leaf
   surfaces, and contained plant or polyhouse response tests for shortlisted candidates.
 
-Seed delivery is retained only as a later scalability pathway through partners. It is not
-the first-year optimization target.
+Seed delivery is retained only as a later scalability pathway through partners.
 
 ## What The Code Does
 
-The repository currently provides local, deterministic scaffolding for the FoliarShield-AI
+The repository currently provides initial scaffolding for the FoliarShield-AI
 data and modeling loop:
 
 1. Register project-authored and public sources with license and redistribution review.
@@ -61,7 +60,7 @@ data and modeling loop:
    learning.
 
 The current data under `data/raw/` and `data/processed/` is starter fixture data for
-workflow validation. It is not benchmark-ready experimental evidence.
+workflow validation.
 
 ## Architecture
 
@@ -99,60 +98,6 @@ Run the smoke workflow:
 foliarshield-ai smoke-run \
   --output benchmarks/reports/local-smoke-result.json
 ```
-
-## CLI Workflows
-
-The CLI still uses `seed` in file and command names to mean starter fixture data, not seed
-delivery. The domain scope is foliar delivery.
-
-```bash
-foliarshield-ai ingest-seed-strains \
-  --output data/processed/seed_strains.json \
-  --manifest-output data/interim/source_manifest.seed-strains.json
-
-foliarshield-ai ingest-crop-stress \
-  --output data/processed/seed_crop_stress_evidence.json \
-  --manifest-output data/interim/source_manifest.seed-crop-stress.json
-
-foliarshield-ai ingest-formulation \
-  --output data/processed/seed_formulation_evidence.json \
-  --manifest-output data/interim/source_manifest.seed-formulation.json
-
-foliarshield-ai chunk-literature \
-  --documents-output data/processed/seed_literature_documents.json \
-  --chunks-output data/processed/seed_literature_chunks.json \
-  --manifest-output data/interim/source_manifest.seed-literature.json
-```
-
-Build evidence and modeling scaffolds:
-
-```bash
-foliarshield-ai data-quality-report --output data/processed/data_quality_report.json
-foliarshield-ai curation-report --output data/processed/seed_curation_report.json
-foliarshield-ai build-retrieval-index --output data/processed/seed_retrieval_index.json
-foliarshield-ai extract-evidence --output data/processed/seed_structured_extractions.json
-foliarshield-ai build-knowledge-graph --output data/processed/seed_knowledge_graph.json
-foliarshield-ai build-feature-table --output data/processed/seed_feature_table.json
-foliarshield-ai build-candidate-scorecards --output data/processed/seed_candidate_scorecards.json
-foliarshield-ai build-candidate-search-space --output data/processed/seed_candidate_search_space.json
-foliarshield-ai build-candidate-encoding --output data/processed/seed_candidate_encoding.json
-foliarshield-ai run-optimizer-proposals --output benchmarks/reports/seed_optimizer_proposals.json
-foliarshield-ai build-candidate-shortlist --output benchmarks/reports/seed_candidate_shortlist.json
-```
-
-## Proposal Alignment
-
-The implementation tracks the revised proposal in `../docs/FoliarShield-AI.docx`:
-
-- focus on foliar retention, rainfastness, and controlled release;
-- build datasets through repeated batched assays rather than assuming a large starting
-  dataset;
-- use BO and expected Pareto improvement for experiment selection;
-- use the LLM agent for evidence retrieval, hypothesis explanation, constraint checking,
-  and auditable rationales;
-- keep policy learning outside the wet-lab loop for tool routing, critique quality,
-  hypothesis ranking, and experiment planning;
-- keep living-payload experiments contained and review-gated.
 
 ## Responsible Use
 

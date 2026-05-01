@@ -335,7 +335,9 @@ def build_evaluator_objectives(
         {
             "objective": "persistence_proxy",
             "direction": "maximize",
-            "description": "Starter proxy for leaf-surface persistence and post-deposition residence.",
+            "description": (
+                "Starter proxy for leaf-surface persistence and post-deposition residence."
+            ),
             "evidence_basis": ["phenotype_tags", "formulation_persistence_flags"],
         },
         {

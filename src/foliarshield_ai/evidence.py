@@ -66,7 +66,6 @@ _PHENOTYPE_TERMS = {
     "retained intensity": "retained intensity proxy",
     "sprayability": "sprayability proxy",
     "viability": "viability signal",
-    "viability": "viability signal",
     "wash-off": "wash-off proxy",
 }
 _ARCHITECTURE_TERMS = {

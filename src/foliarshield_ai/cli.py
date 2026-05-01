@@ -90,7 +90,10 @@ def build_smoke_records() -> list[ProvenancedRecord]:
         license="CC-BY-4.0",
         provenance="src/foliarshield_ai/cli.py",
         confidence=0.6,
-        strain_ids=("strain:smoke-bacillus-like-payload-foliar", "strain:smoke-bacillus-like-payload"),
+        strain_ids=(
+            "strain:smoke-bacillus-like-payload-foliar",
+            "strain:smoke-bacillus-like-payload",
+        ),
         consortium_id="consortium:smoke-payload-compatibility-001",
         consortium_ratios={
             "strain:smoke-bacillus-like-payload-foliar": 0.6,
@@ -218,8 +221,14 @@ def build_smoke_records() -> list[ProvenancedRecord]:
             license="CC-BY-4.0",
             provenance="src/foliarshield_ai/cli.py",
             confidence=0.55,
-            member_strain_ids=("strain:smoke-bacillus-like-payload-foliar", "strain:smoke-bacillus-like-payload"),
-            ratios={"strain:smoke-bacillus-like-payload-foliar": 0.6, "strain:smoke-bacillus-like-payload": 0.4},
+            member_strain_ids=(
+                "strain:smoke-bacillus-like-payload-foliar",
+                "strain:smoke-bacillus-like-payload",
+            ),
+            ratios={
+                "strain:smoke-bacillus-like-payload-foliar": 0.6,
+                "strain:smoke-bacillus-like-payload": 0.4,
+            },
             compatibility_notes=("Synthetic payload compatibility placeholder.",),
         ),
         FormulationMaterial(
@@ -996,7 +1005,10 @@ def build_parser() -> argparse.ArgumentParser:
 
     ingest_strains = subparsers.add_parser(
         "ingest-seed-strains",
-        help="Parse starter Bacillus-like foliar payload metadata into validated compatibility records.",
+        help=(
+            "Parse starter Bacillus-like foliar payload metadata into validated "
+            "compatibility records."
+        ),
     )
     ingest_strains.add_argument("--project-root", default=".", help="Repository root to use.")
     ingest_strains.add_argument(

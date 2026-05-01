@@ -12,7 +12,7 @@ from foliarshield_ai import (
     Assay,
     BenchmarkResult,
     CandidateDesign,
-    Consortium,
+    PayloadCombination,
     Crop,
     EncapsulationArchitecture,
     EvaluationResult,
@@ -90,12 +90,12 @@ def build_smoke_records() -> list[ProvenancedRecord]:
         license="CC-BY-4.0",
         provenance="src/foliarshield_ai/cli.py",
         confidence=0.6,
-        strain_ids=(
+        payload_ids=(
             "strain:smoke-bacillus-like-payload-foliar",
             "strain:smoke-bacillus-like-payload",
         ),
-        consortium_id="consortium:smoke-payload-compatibility-001",
-        consortium_ratios={
+        payload_combination_id="payload-combination:smoke-payload-compatibility-001",
+        payload_ratios={
             "strain:smoke-bacillus-like-payload-foliar": 0.6,
             "strain:smoke-bacillus-like-payload": 0.4,
         },
@@ -215,13 +215,13 @@ def build_smoke_records() -> list[ProvenancedRecord]:
             assay_id="assay:smoke-foliar-retention",
             evidence_ids=(evidence.id,),
         ),
-        Consortium(
-            id="consortium:smoke-payload-compatibility-001",
+        PayloadCombination(
+            id="payload-combination:smoke-payload-compatibility-001",
             source="cli-smoke",
             license="CC-BY-4.0",
             provenance="src/foliarshield_ai/cli.py",
             confidence=0.55,
-            member_strain_ids=(
+            payload_ids=(
                 "strain:smoke-bacillus-like-payload-foliar",
                 "strain:smoke-bacillus-like-payload",
             ),
@@ -837,7 +837,7 @@ def run_build_search_space(args: argparse.Namespace) -> int:
     output_payload = build_candidate_search_space(
         records,
         tasks,
-        max_consortium_size=int(args.max_consortium_size),
+        max_payload_combination_size=int(args.max_payload_combination_size),
     )
     _write_json_if_requested(output_payload, args.output, project_root)
     return 0
@@ -851,7 +851,7 @@ def run_build_candidate_encoding(args: argparse.Namespace) -> int:
     output_payload = build_candidate_encoding_report(
         records,
         tasks,
-        max_consortium_size=int(args.max_consortium_size),
+        max_payload_combination_size=int(args.max_payload_combination_size),
     )
     _write_json_if_requested(output_payload, args.output, project_root)
     return 0
@@ -1295,7 +1295,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     heuristic_baselines = subparsers.add_parser(
         "run-heuristic-baselines",
-        help="Run deterministic seed heuristic strain, consortium, and formulation baselines.",
+        help="Run deterministic seed heuristic strain, payload combination, and formulation baselines.",
     )
     heuristic_baselines.add_argument("--project-root", default=".", help="Repository root to use.")
     heuristic_baselines.add_argument(
@@ -1412,9 +1412,9 @@ def build_parser() -> argparse.ArgumentParser:
         help="Processed artifact JSON files with records lists.",
     )
     search_space.add_argument(
-        "--max-consortium-size",
+        "--max-payload-combination-size",
         default=2,
-        help="Largest consortium size to include in the seed search space.",
+        help="Largest payload combination size to include in the seed search space.",
     )
     search_space.add_argument("--output", help="Optional JSON output path.")
     search_space.set_defaults(func=run_build_search_space)
@@ -1441,9 +1441,9 @@ def build_parser() -> argparse.ArgumentParser:
         help="Processed artifact JSON files with records lists.",
     )
     candidate_encoding.add_argument(
-        "--max-consortium-size",
+        "--max-payload-combination-size",
         default=2,
-        help="Largest consortium size to include in the encoded seed candidates.",
+        help="Largest payload combination size to include in the encoded seed candidates.",
     )
     candidate_encoding.add_argument("--output", help="Optional JSON output path.")
     candidate_encoding.set_defaults(func=run_build_candidate_encoding)

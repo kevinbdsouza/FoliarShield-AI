@@ -43,11 +43,11 @@ fixtures, then make the interfaces ready for real batched assay data.
 - [x] Keep candidate, formulation, release-trigger, evidence, and scorecard schemas.
 - [x] Map starter candidates to foliar retention, release, sprayability, compatibility,
   and responsible-use objectives.
-- [ ] Rename internal schema fields that still carry microbial-consortium terminology
+- [x] Rename internal schema fields that still carry microbial-consortium terminology
   where a compatibility alias is no longer needed.
-- [ ] Add explicit objective weights for retention, wash-off, release profile,
+- [x] Add explicit objective weights for retention, wash-off, release profile,
   sprayability, payload viability, material safety, and experiment cost.
-- [ ] Define promotion thresholds for moving from fast physical labels to microbial
+- [x] Define promotion thresholds for moving from fast physical labels to microbial
   viability and plant/polyhouse labels.
 
 ## Milestone D: Active Learning Loop

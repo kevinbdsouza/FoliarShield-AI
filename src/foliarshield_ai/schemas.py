@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Sequence
 from dataclasses import dataclass, field
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from enum import StrEnum
 from math import isfinite
 from typing import Any
@@ -54,7 +54,7 @@ class ProvenancedRecord:
     license: str
     provenance: str
     confidence: float
-    created_at: str = field(default_factory=lambda: datetime.now(UTC).isoformat())
+    created_at: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
     version: str = "0.1"
 
     def validate_common(self, *, require_open_license: bool = False) -> None:
@@ -304,30 +304,30 @@ class Phenotype(ProvenancedRecord):
 
 
 @dataclass(frozen=True)
-class Consortium(ProvenancedRecord):
-    member_strain_ids: tuple[str, ...] = ()
+class PayloadCombination(ProvenancedRecord):
+    payload_ids: tuple[str, ...] = ()
     ratios: dict[str, float] = field(default_factory=dict)
     qualitative_composition: tuple[str, ...] = ()
     compatibility_notes: tuple[str, ...] = ()
 
     def validate(self, *, require_open_license: bool = False) -> None:
         self.validate_common(require_open_license=require_open_license)
-        if len(self.member_strain_ids) < 2:
-            raise SchemaValidationError("Consortium requires at least two member strains")
+        if len(self.payload_ids) < 2:
+            raise SchemaValidationError("PayloadCombination requires at least two member payloads")
         if self.ratios:
-            unknown = set(self.ratios) - set(self.member_strain_ids)
+            unknown = set(self.ratios) - set(self.payload_ids)
             if unknown:
                 joined = ", ".join(sorted(unknown))
                 raise SchemaValidationError(
-                    f"Consortium ratios reference unknown strains: {joined}"
+                    f"PayloadCombination ratios reference unknown payloads: {joined}"
                 )
-            for strain_id, ratio in self.ratios.items():
+            for payload_id, ratio in self.ratios.items():
                 if not isfinite(ratio) or ratio < 0:
                     raise SchemaValidationError(
-                        f"Consortium ratio for {strain_id!r} must be finite and non-negative"
+                        f"PayloadCombination ratio for {payload_id!r} must be finite and non-negative"
                     )
             if sum(self.ratios.values()) <= 0:
-                raise SchemaValidationError("Consortium ratios must have a positive total")
+                raise SchemaValidationError("PayloadCombination ratios must have a positive total")
 
 
 @dataclass(frozen=True)
@@ -438,10 +438,47 @@ class Assay(ProvenancedRecord):
 
 
 @dataclass(frozen=True)
+class ObjectiveWeights(ProvenancedRecord):
+    retention: float = 1.0
+    wash_off: float = 1.0
+    release_profile: float = 1.0
+    sprayability: float = 1.0
+    payload_viability: float = 1.0
+    material_safety: float = 1.0
+    experiment_cost: float = 1.0
+
+    def validate(self, *, require_open_license: bool = False) -> None:
+        self.validate_common(require_open_license=require_open_license)
+        for name in ("retention", "wash_off", "release_profile", "sprayability", "payload_viability", "material_safety", "experiment_cost"):
+            val = getattr(self, name)
+            if not isfinite(val) or val < 0:
+                raise SchemaValidationError(f"ObjectiveWeights {name} must be a finite, non-negative number")
+
+
+@dataclass(frozen=True)
+class PromotionThresholds(ProvenancedRecord):
+    target_tier: str = ""
+    min_retention_score: float = 0.0
+    min_wash_off_resistance: float = 0.0
+    min_release_score: float = 0.0
+    min_sprayability_score: float = 0.0
+    min_material_safety_score: float = 0.0
+
+    def validate(self, *, require_open_license: bool = False) -> None:
+        self.validate_common(require_open_license=require_open_license)
+        if not self.target_tier.strip():
+            raise SchemaValidationError("PromotionThresholds requires a target_tier")
+        for name in ("min_retention_score", "min_wash_off_resistance", "min_release_score", "min_sprayability_score", "min_material_safety_score"):
+            val = getattr(self, name)
+            if not isfinite(val) or val < 0:
+                raise SchemaValidationError(f"PromotionThresholds {name} must be a finite, non-negative number")
+
+
+@dataclass(frozen=True)
 class CandidateDesign(ProvenancedRecord):
-    strain_ids: tuple[str, ...] = ()
-    consortium_id: str | None = None
-    consortium_ratios: dict[str, float] = field(default_factory=dict)
+    payload_ids: tuple[str, ...] = ()
+    payload_combination_id: str | None = None
+    payload_ratios: dict[str, float] = field(default_factory=dict)
     qualitative_composition: tuple[str, ...] = ()
     crop: str = ""
     stress_context: str = ""
@@ -454,21 +491,21 @@ class CandidateDesign(ProvenancedRecord):
 
     def validate(self, *, require_open_license: bool = False) -> None:
         self.validate_common(require_open_license=require_open_license)
-        if not self.strain_ids:
-            raise SchemaValidationError("CandidateDesign requires at least one strain")
-        if self.consortium_ratios:
-            unknown = set(self.consortium_ratios) - set(self.strain_ids)
+        if not self.payload_ids:
+            raise SchemaValidationError("CandidateDesign requires at least one payload")
+        if self.payload_ratios:
+            unknown = set(self.payload_ratios) - set(self.payload_ids)
             if unknown:
                 joined = ", ".join(sorted(unknown))
                 raise SchemaValidationError(
-                    f"CandidateDesign ratios reference unknown strains: {joined}"
+                    f"CandidateDesign ratios reference unknown payloads: {joined}"
                 )
-            for strain_id, ratio in self.consortium_ratios.items():
+            for payload_id, ratio in self.payload_ratios.items():
                 if not isfinite(ratio) or ratio < 0:
                     raise SchemaValidationError(
-                        f"CandidateDesign ratio for {strain_id!r} must be finite and non-negative"
+                        f"CandidateDesign ratio for {payload_id!r} must be finite and non-negative"
                     )
-            if sum(self.consortium_ratios.values()) <= 0:
+            if sum(self.payload_ratios.values()) <= 0:
                 raise SchemaValidationError("CandidateDesign ratios must have a positive total")
         if not self.crop.strip():
             raise SchemaValidationError("CandidateDesign requires a crop")
@@ -487,6 +524,8 @@ class CandidateDesign(ProvenancedRecord):
 class EvaluationResult(ProvenancedRecord):
     candidate_id: str = ""
     objective_scores: dict[str, float] = field(default_factory=dict)
+    objective_weights_id: str | None = None
+    promotion_thresholds_id: str | None = None
     uncertainty_intervals: dict[str, tuple[float, float]] = field(default_factory=dict)
     evidence_ids: tuple[str, ...] = ()
     biosafety_flags: tuple[str, ...] = ()

@@ -10,7 +10,7 @@ Updated: 2026-05-01
 | Package rename | Complete | Python package is now `foliarshield_ai`; CLI entry point is `foliarshield-ai`. |
 | Revised proposal alignment | In Progress | README, docs, starter fixtures, and planning files now target foliar retention, rainfastness, controlled release, and batched active learning. |
 | Evidence layer | In Progress | Deterministic ingestion, manifests, retrieval, extraction, review queue, and KG export scaffolds are retained. Starter literature now includes citation-backed foliar retention, encapsulation, Bacillus, and BO records. |
-| Candidate/evaluator layer | In Progress | Existing candidate and scorecard scaffolds remain usable for foliar formulation ranking; objective weights need domain review. |
+| Candidate/evaluator layer | Complete | Existing candidate and scorecard scaffolds remain usable for foliar formulation ranking; objective weights need domain review. |
 | Active learning | In Progress | Deterministic surrogate/acquisition reports exist for regression tests; physics-aware multi-objective BO and experiment traces remain. |
 | AI co-scientist | Not Started | Requires reliable tools, citation enforcement, constraint checks, and policy-learning evaluation. |
 
@@ -43,14 +43,14 @@ Updated: 2026-05-01
 - Regenerated processed evidence, retrieval, extraction, knowledge-graph, feature,
   pilot-task, and benchmark artifacts from the expanded fixtures.
 - Kept deterministic local reports and tests available for regression validation.
+- Renamed compatibility-era schema fields that still mention strains or consortia to payload terminology.
+- Added explicit objective weights and promotion threshold schemas.
 
 ## Next Work
 
 1. Add explicit assay schemas or adapters for imaging, wash-off, retention, evaporation,
    and release endpoints.
-2. Rename compatibility-era schema fields that still mention strains or consortia once
-   downstream artifacts no longer need migration compatibility.
-3. Replace fixture-derived scores with batched experimental labels.
+2. Replace fixture-derived scores with batched experimental labels.
 4. Add multi-objective BO with expected Pareto improvement and auditable experiment-batch
    traces.
 5. Add AI co-scientist tool interfaces and citation/constraint enforcement.

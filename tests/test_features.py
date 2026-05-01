@@ -30,7 +30,7 @@ class FeatureWorkflowTests(unittest.TestCase):
         self.assertEqual(table["feature_counts"]["strain_features"], 2)
         self.assertEqual(table["feature_counts"]["formulation_features"], 1)
         self.assertEqual(table["feature_counts"]["crop_stress_context_features"], 1)
-        self.assertEqual(table["feature_counts"]["consortium_pair_features"], 1)
+        self.assertEqual(table["feature_counts"]["payload_combination_pair_features"], 1)
         self.assertEqual(table["feature_counts"]["genome_records_linked"], 1)
         self.assertEqual(table["feature_counts"]["protein_or_gene_features_linked"], 1)
         self.assertEqual(table["feature_counts"]["soil_context_records"], 1)
@@ -68,7 +68,7 @@ class FeatureWorkflowTests(unittest.TestCase):
         self.assertEqual(report["task_count"], 2)
         first = report["records"][0]
         self.assertEqual(first["ranked_strains"][0]["strain_id"], "strain:a")
-        self.assertEqual(first["ranked_consortia"][0]["assembly_rule"], (
+        self.assertEqual(first["ranked_payload_combinations"][0]["assembly_rule"], (
             "top_ranked_biosafety_clear_pair_with_genus_diversity_bonus"
         ))
         second = report["records"][1]
@@ -131,10 +131,10 @@ class FeatureWorkflowTests(unittest.TestCase):
         self.assertEqual(search_space["status"], "ok")
         first = search_space["records"][0]
         self.assertEqual(first["task_id"], "pilot-1")
-        self.assertEqual(first["consortium_sizes"], [1, 2])
+        self.assertEqual(first["payload_combination_sizes"], [1, 2])
         self.assertEqual(first["feasible_candidate_count"], 3)
         self.assertEqual(len(first["strain_candidates"]), 2)
-        self.assertEqual(first["constraint_summary"]["max_consortium_size"], 2)
+        self.assertEqual(first["constraint_summary"]["max_payload_combination_size"], 2)
         second = search_space["records"][1]
         self.assertEqual(second["formulation_candidates"][0]["material_id"], "material:alginate")
 
@@ -272,10 +272,10 @@ def _pilot_tasks() -> list[dict[str, Any]]:
     return [
         {
             "id": "pilot-1",
-            "name": "Millet drought consortium",
+            "name": "Millet drought payload_combination",
             "crop": "millet",
             "stressors": ["drought", "heat"],
-            "outputs": ["ranked_strains", "ranked_consortia"],
+            "outputs": ["ranked_strains", "ranked_payload_combinations"],
             "evaluation_tier": "in_silico",
         },
         {

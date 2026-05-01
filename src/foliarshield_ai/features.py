@@ -80,7 +80,7 @@ def build_feature_table(
         _crop_stress_feature(record, crop_records, soil_records)
         for record in stress_records
     ]
-    consortium_features = _consortium_pair_features(strain_features)
+    payload_combination_features = _payload_combination_pair_features(strain_features)
 
     return {
         "status": "ok",
@@ -90,7 +90,7 @@ def build_feature_table(
         "record_count": len(record_list),
         "feature_counts": {
             "strain_features": len(strain_features),
-            "consortium_pair_features": len(consortium_features),
+            "payload_combination_pair_features": len(payload_combination_features),
             "formulation_features": len(formulation_features),
             "crop_stress_context_features": len(crop_stress_features),
             "genome_records_linked": sum(
@@ -104,7 +104,7 @@ def build_feature_table(
             "soil_context_records": len(soil_records),
         },
         "strain_features": strain_features,
-        "consortium_pair_features": consortium_features,
+        "payload_combination_pair_features": payload_combination_features,
         "formulation_features": formulation_features,
         "crop_stress_context_features": crop_stress_features,
         "notes": [
@@ -144,7 +144,7 @@ def build_heuristic_baseline_report(
     *,
     artifact_id: str = "baseline:seed-heuristics-v0.1",
 ) -> dict[str, Any]:
-    """Build first-pass heuristic strain, consortium, and formulation baselines."""
+    """Build first-pass heuristic strain, payload_combination, and formulation baselines."""
 
     record_list = list(records)
     feature_table = build_feature_table(record_list)
@@ -222,7 +222,7 @@ def build_candidate_search_space(
     records: Iterable[Mapping[str, Any]],
     tasks: Sequence[Mapping[str, Any]],
     *,
-    max_consortium_size: int = 2,
+    max_payload_combination_size: int = 2,
     artifact_id: str = "optimizer:seed-search-space-v0.1",
 ) -> dict[str, Any]:
     """Define a deterministic, constraint-filtered seed candidate search space."""
@@ -238,7 +238,7 @@ def build_candidate_search_space(
             strain_features,
             formulation_features,
             stress_features,
-            max_consortium_size=max_consortium_size,
+            max_payload_combination_size=max_payload_combination_size,
         )
         for task in tasks
     ]
@@ -248,7 +248,7 @@ def build_candidate_search_space(
         "artifact_id": artifact_id,
         "generated_at": datetime.now(UTC).isoformat(),
         "search_space_version": "deterministic-seed-search-space-v0.1",
-        "max_consortium_size": max_consortium_size,
+        "max_payload_combination_size": max_payload_combination_size,
         "task_count": len(search_records),
         "records": search_records,
         "notes": [
@@ -262,7 +262,7 @@ def build_candidate_encoding_report(
     records: Iterable[Mapping[str, Any]],
     tasks: Sequence[Mapping[str, Any]],
     *,
-    max_consortium_size: int = 2,
+    max_payload_combination_size: int = 2,
     artifact_id: str = "optimizer:seed-candidate-encoding-v0.1",
 ) -> dict[str, Any]:
     """Encode search-space candidates into stable numeric and categorical features."""
@@ -284,7 +284,7 @@ def build_candidate_encoding_report(
     search_space = build_candidate_search_space(
         record_list,
         tasks,
-        max_consortium_size=max_consortium_size,
+        max_payload_combination_size=max_payload_combination_size,
     )
     encoded_records = [
         _encoding_for_task(
@@ -292,7 +292,7 @@ def build_candidate_encoding_report(
             strain_by_id,
             formulation_by_id,
             stress_by_id,
-            max_consortium_size=max_consortium_size,
+            max_payload_combination_size=max_payload_combination_size,
         )
         for task_record in cast(list[dict[str, Any]], search_space["records"])
     ]
@@ -372,7 +372,7 @@ def build_evaluator_objectives(
     for task in tasks:
         outputs = set(_sequence_values(task.get("outputs", [])))
         weights = dict(DEFAULT_OBJECTIVE_WEIGHTS)
-        if "ranked_consortia" in outputs:
+        if "ranked_payload_combinations" in outputs:
             weights["stress_tolerance_proxy"] += 0.04
             weights["nutrient_use_efficiency_proxy"] += 0.03
             weights["release_profile_fit"] -= 0.04
@@ -794,17 +794,17 @@ def build_reasoning_only_baseline_report(
                 cast(list[dict[str, Any]], heuristic_record.get("ranked_strains", []))[:top_k]
             )
         ]
-        consortium_hypotheses = [
+        payload_combination_hypotheses = [
             _reasoning_hypothesis_from_ranking(
                 ranking,
                 task,
                 evidence_ids,
                 citation_ids,
-                hypothesis_type="consortium",
+                hypothesis_type="payload_combination",
                 rank=index + 1,
             )
             for index, ranking in enumerate(
-                cast(list[dict[str, Any]], heuristic_record.get("ranked_consortia", []))[:top_k]
+                cast(list[dict[str, Any]], heuristic_record.get("ranked_payload_combinations", []))[:top_k]
             )
         ]
         formulation_hypotheses = [
@@ -820,7 +820,7 @@ def build_reasoning_only_baseline_report(
                 cast(list[dict[str, Any]], heuristic_record.get("ranked_formulations", []))[:top_k]
             )
         ]
-        hypotheses = [*strain_hypotheses, *consortium_hypotheses, *formulation_hypotheses]
+        hypotheses = [*strain_hypotheses, *payload_combination_hypotheses, *formulation_hypotheses]
         records_by_task.append(
             {
                 "task_id": task_id,
@@ -928,7 +928,7 @@ def build_baseline_benchmark_report(
         heuristic_record = heuristic_records_by_task.get(task_id, {})
         heuristic_scores = [
             *cast(list[dict[str, Any]], heuristic_record.get("ranked_strains", [])),
-            *cast(list[dict[str, Any]], heuristic_record.get("ranked_consortia", [])),
+            *cast(list[dict[str, Any]], heuristic_record.get("ranked_payload_combinations", [])),
             *cast(list[dict[str, Any]], heuristic_record.get("ranked_formulations", [])),
         ]
         records.append(
@@ -1037,7 +1037,7 @@ def build_candidate_shortlist_export(
             {
                 "rank": index + 1,
                 "candidate_id": str(candidate.get("candidate_id", "")),
-                "strain_ids": list(_sequence_values(candidate.get("strain_ids", []))),
+                "payload_ids": list(_sequence_values(candidate.get("payload_ids", []))),
                 "formulation_material_id": candidate.get("formulation_material_id"),
                 "overall_score": float(candidate.get("overall_score", 0.0)),
                 "objective_scores": dict(
@@ -1128,7 +1128,7 @@ def _pilot_dataset(task: Mapping[str, Any], records: Sequence[Mapping[str, Any]]
         for record in _records_of_type(records, "LiteratureChunk")
         if _record_mentions(record, (crop, *stressors, *formulation_context))
     ]
-    candidate_strain_ids = [
+    candidate_payload_ids = [
         str(record.get("id", ""))
         for record in _records_of_type(records, "Strain")
         if _candidate_strain_for_task(record, stressors)
@@ -1146,7 +1146,7 @@ def _pilot_dataset(task: Mapping[str, Any], records: Sequence[Mapping[str, Any]]
         "crop_stress_evidence": crop_stress_evidence_ids,
         "formulation_evidence": formulation_evidence_ids,
         "literature_chunks": literature_chunk_ids,
-        "candidate_strains": candidate_strain_ids,
+        "candidate_strains": candidate_payload_ids,
         "candidate_materials": candidate_material_ids,
     }
     weak_evidence_ids = [
@@ -1208,7 +1208,7 @@ def _baseline_for_task(
         "task_id": str(task.get("id", "")),
         "method": "deterministic_seed_heuristic",
         "ranked_strains": strain_rankings,
-        "ranked_consortia": _rank_consortia(strain_rankings),
+        "ranked_payload_combinations": _rank_payload_combinations(strain_rankings),
         "ranked_formulations": formulation_rankings,
         "evaluation_caveats": [
             "Scores combine local seed confidence, lexical feature flags, and simple penalties.",
@@ -1431,7 +1431,7 @@ def _crop_stress_feature(
     }
 
 
-def _consortium_pair_features(strain_features: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
+def _payload_combination_pair_features(strain_features: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
     features: list[dict[str, Any]] = []
     eligible = [
         feature
@@ -1455,15 +1455,15 @@ def _consortium_pair_features(strain_features: Sequence[Mapping[str, Any]]) -> l
         )
         features.append(
             {
-                "consortium_id": f"consortium:pair:{left['strain_id']}+{right['strain_id']}",
-                "member_strain_ids": [left["strain_id"], right["strain_id"]],
+                "payload_combination_id": f"payload_combination:pair:{left['strain_id']}+{right['strain_id']}",
+                "member_payload_ids": [left["strain_id"], right["strain_id"]],
                 "genus_diversity": int(str(left.get("genus", "")) != str(right.get("genus", ""))),
                 "shared_phenotype_tag_count": len(left_tags & right_tags),
                 "functional_complementarity_score": round(complementarity / len(feature_flags), 3),
                 "risk_flags": [],
             }
         )
-    return sorted(features, key=lambda item: str(item["consortium_id"]))
+    return sorted(features, key=lambda item: str(item["payload_combination_id"]))
 
 
 def _score_strain_feature(
@@ -1550,7 +1550,7 @@ def _score_formulation_feature(
     }
 
 
-def _rank_consortia(strain_rankings: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
+def _rank_payload_combinations(strain_rankings: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
     eligible = [
         ranking
         for ranking in strain_rankings
@@ -1563,7 +1563,7 @@ def _rank_consortia(strain_rankings: Sequence[Mapping[str, Any]]) -> list[dict[s
         diversity_bonus = 0.05 if left_genus and left_genus != right_genus else 0.0
         ranked.append(
             {
-                "member_strain_ids": [left["strain_id"], right["strain_id"]],
+                "member_payload_ids": [left["strain_id"], right["strain_id"]],
                 "score": round(
                     min(1.0, (float(left["score"]) + float(right["score"])) / 2 + diversity_bonus),
                     3,
@@ -1571,7 +1571,7 @@ def _rank_consortia(strain_rankings: Sequence[Mapping[str, Any]]) -> list[dict[s
                 "assembly_rule": "top_ranked_biosafety_clear_pair_with_genus_diversity_bonus",
             }
         )
-    ranked.sort(key=lambda item: (-float(item["score"]), str(item["member_strain_ids"])))
+    ranked.sort(key=lambda item: (-float(item["score"]), str(item["member_payload_ids"])))
     return ranked
 
 
@@ -1621,7 +1621,7 @@ def _reasoning_hypothesis_from_ranking(
     subject_id = (
         str(ranking.get("strain_id", ""))
         or str(ranking.get("material_id", ""))
-        or "+".join(_sequence_values(ranking.get("member_strain_ids", [])))
+        or "+".join(_sequence_values(ranking.get("member_payload_ids", [])))
     )
     score = float(ranking.get("score", 0.0))
     components = cast(Mapping[str, Any], ranking.get("components", {}))
@@ -1630,7 +1630,7 @@ def _reasoning_hypothesis_from_ranking(
         for key, value in components.items()
         if isinstance(value, (float, int)) and float(value) > 0
     ]
-    if not rationale_terms and hypothesis_type == "consortium":
+    if not rationale_terms and hypothesis_type == "payload_combination":
         rationale_terms = ["ranked_member_scores", "genus_diversity_bonus"]
     return {
         "rank": rank,
@@ -1660,7 +1660,7 @@ def _search_space_for_task(
     formulation_features: Sequence[Mapping[str, Any]],
     stress_features: Sequence[Mapping[str, Any]],
     *,
-    max_consortium_size: int,
+    max_payload_combination_size: int,
 ) -> dict[str, Any]:
     task_id = str(task.get("id", ""))
     crop = str(task.get("crop", ""))
@@ -1704,10 +1704,10 @@ def _search_space_for_task(
         if feature not in eligible_formulations
     ]
     stress_context_id = _matching_stress_context_id(stress_features, crop, stressors)
-    consortium_sizes = [
-        size for size in range(1, max(1, max_consortium_size) + 1) if size <= len(eligible_strains)
+    payload_combination_sizes = [
+        size for size in range(1, max(1, max_payload_combination_size) + 1) if size <= len(eligible_strains)
     ]
-    combinations_count = _combination_count(len(eligible_strains), consortium_sizes)
+    combinations_count = _combination_count(len(eligible_strains), payload_combination_sizes)
     formulation_multiplier = len(eligible_formulations) if needs_formulation else 1
     feasible_candidate_count = combinations_count * formulation_multiplier
     constraint_summary = {
@@ -1717,14 +1717,14 @@ def _search_space_for_task(
         ),
         "formulation_requirement": needs_formulation,
         "architecture_requirement": "formulation candidates must link to at least one architecture",
-        "max_consortium_size": max_consortium_size,
+        "max_payload_combination_size": max_payload_combination_size,
     }
     return {
         "task_id": task_id,
         "crop": crop,
         "stressors": list(stressors),
         "stress_context_ids": [stress_context_id] if stress_context_id else [],
-        "consortium_sizes": consortium_sizes,
+        "payload_combination_sizes": payload_combination_sizes,
         "strain_candidates": [
             {
                 "strain_id": str(feature.get("strain_id", "")),
@@ -1772,9 +1772,9 @@ def _encoding_for_task(
     formulation_by_id: Mapping[str, Mapping[str, Any]],
     stress_by_id: Mapping[str, Mapping[str, Any]],
     *,
-    max_consortium_size: int,
+    max_payload_combination_size: int,
 ) -> dict[str, Any]:
-    strain_ids = [
+    payload_ids = [
         str(candidate.get("strain_id", ""))
         for candidate in cast(list[dict[str, Any]], task_record.get("strain_candidates", []))
     ]
@@ -1787,14 +1787,14 @@ def _encoding_for_task(
     ]
     stress_context_ids = _sequence_values(task_record.get("stress_context_ids", []))
     stress_context = stress_by_id.get(stress_context_ids[0], {}) if stress_context_ids else {}
-    consortium_sizes = [
+    payload_combination_sizes = [
         int(size)
-        for size in cast(list[int], task_record.get("consortium_sizes", []))
+        for size in cast(list[int], task_record.get("payload_combination_sizes", []))
         if int(size) > 0
     ]
     candidate_rows: list[dict[str, Any]] = []
-    for size in consortium_sizes:
-        for strain_group in combinations(strain_ids, size):
+    for size in payload_combination_sizes:
+        for strain_group in combinations(payload_ids, size):
             material_choices = formulation_ids or [""]
             for material_id in material_choices:
                 formulation = formulation_by_id.get(material_id, {})
@@ -1805,16 +1805,16 @@ def _encoding_for_task(
                 candidate_rows.append(
                     {
                         "candidate_id": candidate_id,
-                        "strain_ids": list(strain_group),
+                        "payload_ids": list(strain_group),
                         "formulation_material_id": material_id or None,
                         "continuous_vector": _candidate_continuous_vector(
                             [strain_by_id[strain_id] for strain_id in strain_group],
                             formulation,
                             stress_context,
-                            max_consortium_size=max_consortium_size,
+                            max_payload_combination_size=max_payload_combination_size,
                         ),
                         "categorical_variables": {
-                            "strain_ids": list(strain_group),
+                            "payload_ids": list(strain_group),
                             "genera": sorted(
                                 {
                                     str(strain_by_id[strain_id].get("genus", ""))
@@ -1844,7 +1844,7 @@ def _encoding_for_task(
             "mean_stress_response",
             "mean_nutrient_use",
             "mean_soil_persistence",
-            "consortium_size_norm",
+            "payload_combination_size_norm",
             "genus_diversity",
             "formulation_confidence",
             "release_fit_proxy",
@@ -1853,7 +1853,7 @@ def _encoding_for_task(
             "foliar_panel_relevance",
         ],
         "categorical_feature_schema": [
-            "strain_ids",
+            "payload_ids",
             "genera",
             "material_class",
             "architecture_ids",
@@ -1873,7 +1873,7 @@ def _candidate_continuous_vector(
     formulation: Mapping[str, Any],
     stress_context: Mapping[str, Any],
     *,
-    max_consortium_size: int,
+    max_payload_combination_size: int,
 ) -> list[float]:
     genera = {str(strain.get("genus", "")) for strain in strains if str(strain.get("genus", ""))}
     viability_risk = min(
@@ -1886,7 +1886,7 @@ def _candidate_continuous_vector(
         _mean([float(strain.get("stress_response_flag", 0.0)) for strain in strains]),
         _mean([float(strain.get("nutrient_use_proxy_flag", 0.0)) for strain in strains]),
         _mean([float(strain.get("soil_persistence_proxy_flag", 0.0)) for strain in strains]),
-        round(len(strains) / max(1, max_consortium_size), 3),
+        round(len(strains) / max(1, max_payload_combination_size), 3),
         round(len(genera) / max(1, len(strains)), 3),
         float(formulation.get("confidence", 0.0)) if formulation else 0.0,
         max(
@@ -1903,14 +1903,14 @@ def _candidate_continuous_vector(
 
 
 def _encoded_constraints_satisfied(
-    strain_ids: Sequence[str],
+    payload_ids: Sequence[str],
     formulation: Mapping[str, Any],
     *,
     requires_formulation: bool,
 ) -> dict[str, bool]:
     return {
-        "has_strain": bool(strain_ids),
-        "consortium_size_supported": len(strain_ids) in {1, 2},
+        "has_strain": bool(payload_ids),
+        "payload_combination_size_supported": len(payload_ids) in {1, 2},
         "has_required_formulation": bool(formulation) if requires_formulation else True,
         "formulation_has_architecture": bool(
             _sequence_values(formulation.get("architecture_ids", []))
@@ -2002,21 +2002,21 @@ def _sample_candidates_for_task(
     for index in range(samples_per_task):
         member_count = 2 if max_members >= 2 and rng.random() >= 0.35 else 1
         members = rng.sample(list(strain_features), member_count)
-        strain_ids = sorted(str(member.get("strain_id", "")) for member in members)
-        ratios = {strain_id: round(1.0 / len(strain_ids), 3) for strain_id in strain_ids}
+        payload_ids = sorted(str(member.get("strain_id", "")) for member in members)
+        ratios = {strain_id: round(1.0 / len(payload_ids), 3) for strain_id in payload_ids}
         formulation = rng.choice(list(formulation_features)) if needs_formulation else {}
         material_id = str(formulation.get("material_id", "")) if formulation else None
         architecture_ids = _sequence_values(formulation.get("architecture_ids", []))
         candidate_id = (
             f"candidate:random:{task_id}:{index + 1:03d}:"
-            f"{_stable_token((*strain_ids, material_id or 'no-material'))}"
+            f"{_stable_token((*payload_ids, material_id or 'no-material'))}"
         )
         candidates.append(
             {
                 "candidate_id": candidate_id,
                 "source": "deterministic_random_valid_sampler",
-                "strain_ids": strain_ids,
-                "consortium_ratios": ratios,
+                "payload_ids": payload_ids,
+                "payload_ratios": ratios,
                 "crop": crop,
                 "stress_context": stress_context_id or "+".join(stressors),
                 "formulation_material_id": material_id,
@@ -2026,7 +2026,7 @@ def _sample_candidates_for_task(
                 "responsible_use_status": "research_only",
                 "biosafety_flags": [],
                 "validity_checks": {
-                    "has_strain": bool(strain_ids),
+                    "has_strain": bool(payload_ids),
                     "biosafety_clear": True,
                     "has_crop": bool(crop),
                     "has_stress_context": bool(stress_context_id or stressors),
@@ -2039,7 +2039,7 @@ def _sample_candidates_for_task(
         "candidate_designs": candidates,
         "validity_notes": [
             "Candidates are sampled from local seed feature records.",
-            "Equal consortium ratios are placeholders for schema-valid baseline candidates.",
+            "Equal payload_combination ratios are placeholders for schema-valid baseline candidates.",
         ],
     }
 
@@ -2054,7 +2054,7 @@ def _score_candidate(
 ) -> dict[str, Any]:
     strains = [
         strain_features[strain_id]
-        for strain_id in _sequence_values(candidate.get("strain_ids", []))
+        for strain_id in _sequence_values(candidate.get("payload_ids", []))
         if strain_id in strain_features
     ]
     formulation = formulation_features.get(str(candidate.get("formulation_material_id", "")), {})
@@ -2126,7 +2126,7 @@ def _score_candidate(
 
     return {
         "candidate_id": str(candidate.get("candidate_id", "")),
-        "strain_ids": list(_sequence_values(candidate.get("strain_ids", []))),
+        "payload_ids": list(_sequence_values(candidate.get("payload_ids", []))),
         "formulation_material_id": candidate.get("formulation_material_id"),
         "overall_score": overall_score,
         "objective_scores": objective_scores,
@@ -2156,7 +2156,7 @@ def _score_candidate(
 def _encoded_candidate_design(candidate: Mapping[str, Any]) -> dict[str, Any]:
     return {
         "candidate_id": str(candidate.get("candidate_id", "")),
-        "strain_ids": list(_sequence_values(candidate.get("strain_ids", []))),
+        "payload_ids": list(_sequence_values(candidate.get("payload_ids", []))),
         "formulation_material_id": candidate.get("formulation_material_id"),
     }
 
@@ -2238,7 +2238,7 @@ def _acquisition_score(
 def _observation_summary(candidate: Mapping[str, Any]) -> dict[str, Any]:
     return {
         "candidate_id": str(candidate.get("candidate_id", "")),
-        "strain_ids": list(_sequence_values(candidate.get("strain_ids", []))),
+        "payload_ids": list(_sequence_values(candidate.get("payload_ids", []))),
         "formulation_material_id": candidate.get("formulation_material_id"),
         "observed_score": float(candidate.get("overall_score", 0.0)),
         "responsible_use_status": str(candidate.get("responsible_use_status", "")),

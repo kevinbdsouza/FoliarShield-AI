@@ -1,20 +1,20 @@
 {
   "status": "ok",
   "artifact_id": "quality:seed-data",
-  "generated_at": "2026-05-01T16:20:05.588511+00:00",
-  "record_count": 39,
+  "generated_at": "2026-05-01T17:34:14.930392+00:00",
+  "record_count": 79,
   "record_type_counts": {
-    "Assay": 3,
+    "Assay": 9,
     "Crop": 3,
     "EncapsulationArchitecture": 3,
-    "EvidenceRecord": 6,
+    "EvidenceRecord": 12,
     "FormulationMaterial": 3,
-    "LiteratureChunk": 3,
-    "LiteratureDocument": 3,
-    "Phenotype": 3,
+    "LiteratureChunk": 11,
+    "LiteratureDocument": 11,
+    "Phenotype": 9,
     "ReleaseTrigger": 3,
     "Strain": 3,
-    "StressContext": 3,
+    "StressContext": 9,
     "Taxon": 3
   },
   "coverage_by_crop": {
@@ -23,10 +23,21 @@
     "waxy brassica leaf": 1
   },
   "coverage_by_stress_type": {
-    "contact-line-motion": 1,
-    "controlled-release": 1,
-    "leaf-retention": 3,
-    "rainfastness": 2
+    "contact-line-motion": 2,
+    "controlled-release": 3,
+    "droplet-impact": 1,
+    "early-release": 1,
+    "evaporation": 1,
+    "leaf-residence-time": 1,
+    "leaf-retention": 5,
+    "nonliving-payload": 1,
+    "payload-availability": 1,
+    "rainfastness": 3,
+    "rebound-suppression": 1,
+    "retained-intensity": 1,
+    "simulated-rain": 1,
+    "spray-coverage": 1,
+    "wash-off": 1
   },
   "coverage_by_microbial_group": {
     "Bacillus": 6
@@ -46,11 +57,11 @@
     "version": 0
   },
   "license_summary": {
-    "CC-BY-4.0": 39
+    "CC-BY-4.0": 79
   },
   "provenance_completeness": {
-    "records_with_provenance": 39,
-    "records_total": 39,
+    "records_with_provenance": 79,
+    "records_total": 79,
     "fraction": 1.0
   },
   "weak_or_ambiguous_evidence_ids": [
@@ -63,8 +74,15 @@
   "duplicate_candidate_summary": {
     "taxa": 0,
     "strains": 0,
-    "publications": 0,
-    "duplicate_record_ids": []
+    "publications": 3,
+    "duplicate_record_ids": [
+      "evidence:assay-droplet-impact-video-001",
+      "evidence:assay-early-release-001",
+      "evidence:assay-evaporation-001",
+      "evidence:assay-retained-fluorescence-001",
+      "evidence:assay-simulated-rain-001",
+      "evidence:assay-spray-coverage-image-001"
+    ]
   },
   "notes": [
     "Seed artifacts validate workflow coverage only.",

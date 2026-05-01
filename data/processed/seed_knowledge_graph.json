@@ -1,10 +1,10 @@
 {
   "status": "ok",
   "artifact_id": "graph:seed-evidence-v0.1",
-  "generated_at": "2026-05-01T16:20:05.625349+00:00",
+  "generated_at": "2026-05-01T17:34:34.084766+00:00",
   "graph_version": "json-node-edge-v0.1",
-  "node_count": 69,
-  "edge_count": 55,
+  "node_count": 123,
+  "edge_count": 124,
   "nodes": [
     {
       "id": "architecture:manual-formulation-001-cloaked-droplet",
@@ -31,6 +31,54 @@
       "provenance": "data/raw/seed_formulation_evidence.jsonl"
     },
     {
+      "id": "assay:assay-droplet-impact-video-001-high-speed-droplet-impact-video-assay",
+      "type": "Assay",
+      "label": "assay:assay-droplet-impact-video-001-high-speed-droplet-impact-video-assay",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.78,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "assay:assay-early-release-001-early-release-kinetics-assay",
+      "type": "Assay",
+      "label": "assay:assay-early-release-001-early-release-kinetics-assay",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.73,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "assay:assay-evaporation-001-droplet-evaporation-and-residence-time-assay",
+      "type": "Assay",
+      "label": "assay:assay-evaporation-001-droplet-evaporation-and-residence-time-assay",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.76,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "assay:assay-retained-fluorescence-001-retained-fluorescence-intensity-assay",
+      "type": "Assay",
+      "label": "assay:assay-retained-fluorescence-001-retained-fluorescence-intensity-assay",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.72,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "assay:assay-simulated-rain-001-simulated-rain-wash-off-assay",
+      "type": "Assay",
+      "label": "assay:assay-simulated-rain-001-simulated-rain-wash-off-assay",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.77,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "assay:assay-spray-coverage-image-001-spray-coverage-image-assay",
+      "type": "Assay",
+      "label": "assay:assay-spray-coverage-image-001-spray-coverage-image-assay",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.76,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
       "id": "assay:manual-leaf-001-foliar-retention-and-wash-off-proxy",
       "type": "Assay",
       "label": "assay:manual-leaf-001-foliar-retention-and-wash-off-proxy",
@@ -53,6 +101,70 @@
       "source": "source:manual-crop-stress-curation",
       "confidence": 0.45,
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "chunk:document-lit-bacillus-phyllosphere-dispersal-2016-0",
+      "type": "LiteratureChunk",
+      "label": "Wei, F., Hu, X. and Xu, X. Dispersal of Bacillus subtilis and its effect on strawberry phyllosphere microbiota under open field and protection conditions. Scientific Reports 6, 22611 (2016). https://doi.org/10.1038/srep22611",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.81,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "chunk:document-lit-bacillus-rice-blast-colonization-2016-0",
+      "type": "LiteratureChunk",
+      "label": "Sha, Y., Wang, Q. and Li, Y. Suppression of Magnaporthe oryzae and interaction between Bacillus subtilis and rice plants in the control of rice blast. SpringerPlus 5, 1238 (2016). https://doi.org/10.1186/s40064-016-2858-1",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.79,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "chunk:document-lit-cloaked-droplets-retention-2025-0",
+      "type": "LiteratureChunk",
+      "label": "Jayaprakash, V., Rufer, S., Panat, S. and Varanasi, K. K. Enhancing spray retention using cloaked droplets to reduce pesticide pollution. Soft Matter 21, 3688-3699 (2025). https://doi.org/10.1039/D4SM01496K",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.84,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "chunk:document-lit-constrained-bo-2023-0",
+      "type": "LiteratureChunk",
+      "label": "Khatamsaz, D., Vela, B., Singh, P. et al. Bayesian optimization with active learning of design constraints using an entropy-based approach. npj Computational Materials 9, 49 (2023). https://doi.org/10.1038/s41524-023-01006-7",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.8,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "chunk:document-lit-polymer-additives-deposition-2021-0",
+      "type": "LiteratureChunk",
+      "label": "Song, Y., Huang, G., Zheng, L. et al. Polymer additives regulate the deposition behavior of pesticide droplets on target plants. Polymer Testing 93, 106958 (2021). https://doi.org/10.1016/j.polymertesting.2020.106958",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.78,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "chunk:document-lit-qnehvi-2021-0",
+      "type": "LiteratureChunk",
+      "label": "Daulton, S., Balandat, M. and Bakshy, E. Parallel Bayesian Optimization of Multiple Noisy Objectives with Expected Hypervolume Improvement. NeurIPS (2021). arXiv:2105.08195. https://arxiv.org/abs/2105.08195",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.78,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "chunk:document-lit-temperature-responsive-nanopesticides-2023-0",
+      "type": "LiteratureChunk",
+      "label": "Tang, J., Tong, X., Chen, Y. et al. Deposition and water repelling of temperature-responsive nanopesticides on leaves. Nature Communications 14, 6401 (2023). https://doi.org/10.1038/s41467-023-41878-3",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.8,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "chunk:document-lit-tunable-droplet-encapsulation-2023-0",
+      "type": "LiteratureChunk",
+      "label": "Lathia, R., Nagpal, S., Dey Modak, C. et al. Tunable encapsulation of sessile droplets with solid and liquid shells. Nature Communications 14, 6445 (2023). https://doi.org/10.1038/s41467-023-41977-1",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.82,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
     },
     {
       "id": "chunk:document-manual-doc-001-0",
@@ -87,12 +199,60 @@
       "provenance": "evidence:manual-leaf-003"
     },
     {
+      "id": "claim:background-corrected-retained-fraction-is-a-required-promotion-metric",
+      "type": "Claim",
+      "label": "background-corrected retained fraction is a required promotion metric",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.72,
+      "provenance": "evidence:assay-retained-fluorescence-001"
+    },
+    {
       "id": "claim:cloaked-droplets-are-in-scope-for-difficult-to-wet-foliar-retention",
       "type": "Claim",
       "label": "cloaked droplets are in scope for difficult-to-wet foliar retention",
       "source": "source:manual-material-curation",
       "confidence": 0.52,
       "provenance": "evidence:manual-formulation-001"
+    },
+    {
+      "id": "claim:coverage-images-should-capture-deposited-area-and-coverage-uniformity-before-wash-off",
+      "type": "Claim",
+      "label": "coverage images should capture deposited area and coverage uniformity before wash-off",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.76,
+      "provenance": "evidence:assay-spray-coverage-image-001"
+    },
+    {
+      "id": "claim:coverage-labels-are-required-before-living-payload-promotion",
+      "type": "Claim",
+      "label": "coverage labels are required before living-payload promotion",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.76,
+      "provenance": "evidence:assay-spray-coverage-image-001"
+    },
+    {
+      "id": "claim:droplet-impact-videos-should-quantify-rebound-suppression-and-contact-line-motion",
+      "type": "Claim",
+      "label": "droplet impact videos should quantify rebound suppression and contact-line motion",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.78,
+      "provenance": "evidence:assay-droplet-impact-video-001"
+    },
+    {
+      "id": "claim:early-release-labels-should-distinguish-burst-release-from-retained-payload",
+      "type": "Claim",
+      "label": "early release labels should distinguish burst release from retained payload",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.73,
+      "provenance": "evidence:assay-early-release-001"
+    },
+    {
+      "id": "claim:evaporation-endpoints-are-needed-to-interpret-retention-and-early-release-labels",
+      "type": "Claim",
+      "label": "evaporation endpoints are needed to interpret retention and early release labels",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.76,
+      "provenance": "evidence:assay-evaporation-001"
     },
     {
       "id": "claim:fast-physical-labels-should-precede-living-payload-assays",
@@ -103,6 +263,14 @@
       "provenance": "evidence:manual-leaf-001"
     },
     {
+      "id": "claim:hydrophobic-brassica-leaves-are-a-priority-target-for-dynamic-deposition-screening",
+      "type": "Claim",
+      "label": "hydrophobic brassica leaves are a priority target for dynamic deposition screening",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.78,
+      "provenance": "evidence:assay-droplet-impact-video-001"
+    },
+    {
       "id": "claim:liquid-liquid-encapsulation-is-in-scope-for-controlled-foliar-release",
       "type": "Claim",
       "label": "liquid-liquid encapsulation is in scope for controlled foliar release",
@@ -111,12 +279,36 @@
       "provenance": "evidence:manual-formulation-002"
     },
     {
+      "id": "claim:liquid-shell-or-oil-cloak-persistence-should-be-measured-independently-from-leaf-coverage",
+      "type": "Claim",
+      "label": "liquid shell or oil cloak persistence should be measured independently from leaf coverage",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.76,
+      "provenance": "evidence:assay-evaporation-001"
+    },
+    {
+      "id": "claim:nonliving-fluorescent-payloads-should-provide-the-first-retained-intensity-labels",
+      "type": "Claim",
+      "label": "nonliving fluorescent payloads should provide the first retained-intensity labels",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.72,
+      "provenance": "evidence:assay-retained-fluorescence-001"
+    },
+    {
       "id": "claim:nonliving-payload-assays-should-precede-living-payload-viability-checks",
       "type": "Claim",
       "label": "nonliving payload assays should precede living-payload viability checks",
       "source": "source:manual-material-curation",
       "confidence": 0.52,
       "provenance": "evidence:manual-formulation-002"
+    },
+    {
+      "id": "claim:nonliving-payload-release-assays-should-precede-living-payload-compatibility-tests",
+      "type": "Claim",
+      "label": "nonliving payload release assays should precede living-payload compatibility tests",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.73,
+      "provenance": "evidence:assay-early-release-001"
     },
     {
       "id": "claim:polymer-and-emulsion-descriptors-are-in-scope-for-physics-aware-foliar-optimization",
@@ -135,6 +327,14 @@
       "provenance": "evidence:manual-formulation-001"
     },
     {
+      "id": "claim:rainfastness-assays-should-compare-retained-signal-before-and-after-calibrated-rainfall",
+      "type": "Claim",
+      "label": "rainfastness assays should compare retained signal before and after calibrated rainfall",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.77,
+      "provenance": "evidence:assay-simulated-rain-001"
+    },
+    {
       "id": "claim:retention-and-wash-off-endpoints-should-be-measured-before-biological-labels",
       "type": "Claim",
       "label": "retention and wash-off endpoints should be measured before biological labels",
@@ -149,6 +349,14 @@
       "source": "source:manual-crop-stress-curation",
       "confidence": 0.55,
       "provenance": "evidence:manual-leaf-001"
+    },
+    {
+      "id": "claim:runoff-labels-are-needed-to-separate-adhesion-from-release-behavior",
+      "type": "Claim",
+      "label": "runoff labels are needed to separate adhesion from release behavior",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.77,
+      "provenance": "evidence:assay-simulated-rain-001"
     },
     {
       "id": "claim:sprayability-retention-and-wash-off-are-required-fast-labels",
@@ -191,6 +399,70 @@
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
     },
     {
+      "id": "document:lit-bacillus-phyllosphere-dispersal-2016",
+      "type": "LiteratureDocument",
+      "label": "Dispersal of Bacillus subtilis and its effect on strawberry phyllosphere microbiota under open field and protection conditions",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.81,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "document:lit-bacillus-rice-blast-colonization-2016",
+      "type": "LiteratureDocument",
+      "label": "Suppression of Magnaporthe oryzae and interaction between Bacillus subtilis and rice plants in the control of rice blast",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.79,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "document:lit-cloaked-droplets-retention-2025",
+      "type": "LiteratureDocument",
+      "label": "Enhancing spray retention using cloaked droplets to reduce pesticide pollution",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.84,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "document:lit-constrained-bo-2023",
+      "type": "LiteratureDocument",
+      "label": "Bayesian optimization with active learning of design constraints using an entropy-based approach",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.8,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "document:lit-polymer-additives-deposition-2021",
+      "type": "LiteratureDocument",
+      "label": "Polymer additives regulate the deposition behavior of pesticide droplets on target plants",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.78,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "document:lit-qnehvi-2021",
+      "type": "LiteratureDocument",
+      "label": "Parallel Bayesian Optimization of Multiple Noisy Objectives with Expected Hypervolume Improvement",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.78,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "document:lit-temperature-responsive-nanopesticides-2023",
+      "type": "LiteratureDocument",
+      "label": "Deposition and water repelling of temperature-responsive nanopesticides on leaves",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.8,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "document:lit-tunable-droplet-encapsulation-2023",
+      "type": "LiteratureDocument",
+      "label": "Tunable encapsulation of sessile droplets with solid and liquid shells",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.82,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
       "id": "document:manual-doc-001",
       "type": "LiteratureDocument",
       "label": "Rice and waxy brassica foliar delivery starter scope",
@@ -213,6 +485,54 @@
       "source": "source:manual-crop-stress-curation",
       "confidence": 0.55,
       "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "evidence:assay-droplet-impact-video-001",
+      "type": "EvidenceRecord",
+      "label": "Cloaked-droplet impact video assay metadata",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.78,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "evidence:assay-early-release-001",
+      "type": "EvidenceRecord",
+      "label": "Early release kinetics assay metadata",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.73,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "evidence:assay-evaporation-001",
+      "type": "EvidenceRecord",
+      "label": "Evaporation and residence-time assay metadata",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.76,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "evidence:assay-retained-fluorescence-001",
+      "type": "EvidenceRecord",
+      "label": "Retained fluorescence assay metadata",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.72,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "evidence:assay-simulated-rain-001",
+      "type": "EvidenceRecord",
+      "label": "Simulated rain and wash-off assay metadata",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.77,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "evidence:assay-spray-coverage-image-001",
+      "type": "EvidenceRecord",
+      "label": "Spray coverage image assay metadata",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.76,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
     },
     {
       "id": "evidence:manual-formulation-001",
@@ -359,6 +679,14 @@
       "provenance": "chunk:document-manual-doc-002-0"
     },
     {
+      "id": "mention:organismmention:bacillus-subtilis",
+      "type": "OrganismMention",
+      "label": "Bacillus subtilis",
+      "source": "structured-extraction",
+      "confidence": 0.66,
+      "provenance": "chunk:document-lit-bacillus-phyllosphere-dispersal-2016-0"
+    },
+    {
       "id": "mention:phenotypemention:evaporation-proxy",
       "type": "PhenotypeMention",
       "label": "evaporation proxy",
@@ -431,12 +759,68 @@
       "provenance": "chunk:document-manual-doc-001-0"
     },
     {
+      "id": "mention:stressmention:leaf-retention",
+      "type": "StressMention",
+      "label": "leaf retention",
+      "source": "structured-extraction",
+      "confidence": 0.84,
+      "provenance": "chunk:document-lit-cloaked-droplets-retention-2025-0"
+    },
+    {
       "id": "mention:stressmention:wash-off",
       "type": "StressMention",
       "label": "wash-off",
       "source": "structured-extraction",
       "confidence": 0.4,
       "provenance": "chunk:document-manual-doc-001-0"
+    },
+    {
+      "id": "phenotype:assay-droplet-impact-video-001-assay-endpoint-readiness",
+      "type": "Phenotype",
+      "label": "phenotype:assay-droplet-impact-video-001-assay-endpoint-readiness",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.78,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "phenotype:assay-early-release-001-assay-endpoint-readiness",
+      "type": "Phenotype",
+      "label": "phenotype:assay-early-release-001-assay-endpoint-readiness",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.73,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "phenotype:assay-evaporation-001-assay-endpoint-readiness",
+      "type": "Phenotype",
+      "label": "phenotype:assay-evaporation-001-assay-endpoint-readiness",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.76,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "phenotype:assay-retained-fluorescence-001-assay-endpoint-readiness",
+      "type": "Phenotype",
+      "label": "phenotype:assay-retained-fluorescence-001-assay-endpoint-readiness",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.72,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "phenotype:assay-simulated-rain-001-assay-endpoint-readiness",
+      "type": "Phenotype",
+      "label": "phenotype:assay-simulated-rain-001-assay-endpoint-readiness",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.77,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "phenotype:assay-spray-coverage-image-001-assay-endpoint-readiness",
+      "type": "Phenotype",
+      "label": "phenotype:assay-spray-coverage-image-001-assay-endpoint-readiness",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.76,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
     },
     {
       "id": "phenotype:manual-leaf-001-foliar-delivery-benchmark-relevance",
@@ -487,11 +871,35 @@
       "provenance": "data/raw/seed_strain_metadata.jsonl"
     },
     {
+      "id": "stress:rice-early-release-controlled-release-payload-availability-contained-laboratory-leaf-surface-release-bench",
+      "type": "StressContext",
+      "label": "stress:rice-early-release-controlled-release-payload-availability-contained-laboratory-leaf-surface-release-bench",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.73,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
       "id": "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel",
       "type": "StressContext",
       "label": "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel",
       "source": "source:manual-crop-stress-curation",
       "confidence": 0.55,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "stress:rice-retained-intensity-leaf-retention-nonliving-payload-contained-laboratory-fluorescence-imaging-bench",
+      "type": "StressContext",
+      "label": "stress:rice-retained-intensity-leaf-retention-nonliving-payload-contained-laboratory-fluorescence-imaging-bench",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.72,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "stress:rice-simulated-rain-wash-off-rainfastness-contained-laboratory-rainfastness-bench",
+      "type": "StressContext",
+      "label": "stress:rice-simulated-rain-wash-off-rainfastness-contained-laboratory-rainfastness-bench",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.77,
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
     },
     {
@@ -503,11 +911,35 @@
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
     },
     {
+      "id": "stress:waxy-brassica-leaf-droplet-impact-rebound-suppression-contact-line-motion-contained-laboratory-high-speed-imaging-bench",
+      "type": "StressContext",
+      "label": "stress:waxy-brassica-leaf-droplet-impact-rebound-suppression-contact-line-motion-contained-laboratory-high-speed-imaging-bench",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.78,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "stress:waxy-brassica-leaf-evaporation-leaf-residence-time-controlled-release-contained-laboratory-gravimetric-or-image-based-evaporation-bench",
+      "type": "StressContext",
+      "label": "stress:waxy-brassica-leaf-evaporation-leaf-residence-time-controlled-release-contained-laboratory-gravimetric-or-image-based-evaporation-bench",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.76,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
       "id": "stress:waxy-brassica-leaf-leaf-retention-rainfastness-contact-line-motion-contained-laboratory-leaf-panel",
       "type": "StressContext",
       "label": "stress:waxy-brassica-leaf-leaf-retention-rainfastness-contact-line-motion-contained-laboratory-leaf-panel",
       "source": "source:manual-crop-stress-curation",
       "confidence": 0.55,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "stress:waxy-brassica-leaf-spray-coverage-leaf-retention-contained-laboratory-spray-booth",
+      "type": "StressContext",
+      "label": "stress:waxy-brassica-leaf-spray-coverage-leaf-retention-contained-laboratory-spray-booth",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.76,
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
     },
     {
@@ -603,6 +1035,90 @@
       "confidence": 0.5
     },
     {
+      "source": "assay:assay-droplet-impact-video-001-high-speed-droplet-impact-video-assay",
+      "target": "crop:waxy-brassica-leaf",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.78
+    },
+    {
+      "source": "assay:assay-droplet-impact-video-001-high-speed-droplet-impact-video-assay",
+      "target": "stress:waxy-brassica-leaf-droplet-impact-rebound-suppression-contact-line-motion-contained-laboratory-high-speed-imaging-bench",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.78
+    },
+    {
+      "source": "assay:assay-early-release-001-early-release-kinetics-assay",
+      "target": "crop:rice",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.73
+    },
+    {
+      "source": "assay:assay-early-release-001-early-release-kinetics-assay",
+      "target": "stress:rice-early-release-controlled-release-payload-availability-contained-laboratory-leaf-surface-release-bench",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.73
+    },
+    {
+      "source": "assay:assay-evaporation-001-droplet-evaporation-and-residence-time-assay",
+      "target": "crop:waxy-brassica-leaf",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.76
+    },
+    {
+      "source": "assay:assay-evaporation-001-droplet-evaporation-and-residence-time-assay",
+      "target": "stress:waxy-brassica-leaf-evaporation-leaf-residence-time-controlled-release-contained-laboratory-gravimetric-or-image-based-evaporation-bench",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.76
+    },
+    {
+      "source": "assay:assay-retained-fluorescence-001-retained-fluorescence-intensity-assay",
+      "target": "crop:rice",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.72
+    },
+    {
+      "source": "assay:assay-retained-fluorescence-001-retained-fluorescence-intensity-assay",
+      "target": "stress:rice-retained-intensity-leaf-retention-nonliving-payload-contained-laboratory-fluorescence-imaging-bench",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.72
+    },
+    {
+      "source": "assay:assay-simulated-rain-001-simulated-rain-wash-off-assay",
+      "target": "crop:rice",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.77
+    },
+    {
+      "source": "assay:assay-simulated-rain-001-simulated-rain-wash-off-assay",
+      "target": "stress:rice-simulated-rain-wash-off-rainfastness-contained-laboratory-rainfastness-bench",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.77
+    },
+    {
+      "source": "assay:assay-spray-coverage-image-001-spray-coverage-image-assay",
+      "target": "crop:waxy-brassica-leaf",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.76
+    },
+    {
+      "source": "assay:assay-spray-coverage-image-001-spray-coverage-image-assay",
+      "target": "stress:waxy-brassica-leaf-spray-coverage-leaf-retention-contained-laboratory-spray-booth",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.76
+    },
+    {
       "source": "assay:manual-leaf-001-foliar-retention-and-wash-off-proxy",
       "target": "crop:rice",
       "relation": "tested_in",
@@ -643,6 +1159,237 @@
       "relation": "tested_in",
       "evidence_id": "",
       "confidence": 0.45
+    },
+    {
+      "source": "chunk:document-lit-bacillus-phyllosphere-dispersal-2016-0",
+      "target": "document:lit-bacillus-phyllosphere-dispersal-2016",
+      "relation": "chunk_of",
+      "evidence_id": "chunk:document-lit-bacillus-phyllosphere-dispersal-2016-0",
+      "confidence": 0.81
+    },
+    {
+      "source": "chunk:document-lit-bacillus-phyllosphere-dispersal-2016-0",
+      "target": "mention:organismmention:bacillus-like-payload",
+      "relation": "supports",
+      "evidence_id": "chunk:document-lit-bacillus-phyllosphere-dispersal-2016-0",
+      "confidence": 0.66
+    },
+    {
+      "source": "chunk:document-lit-bacillus-phyllosphere-dispersal-2016-0",
+      "target": "mention:organismmention:bacillus-subtilis",
+      "relation": "supports",
+      "evidence_id": "chunk:document-lit-bacillus-phyllosphere-dispersal-2016-0",
+      "confidence": 0.66
+    },
+    {
+      "source": "chunk:document-lit-bacillus-phyllosphere-dispersal-2016-0",
+      "target": "mention:phenotypemention:viability-signal",
+      "relation": "supports",
+      "evidence_id": "chunk:document-lit-bacillus-phyllosphere-dispersal-2016-0",
+      "confidence": 0.66
+    },
+    {
+      "source": "chunk:document-lit-bacillus-rice-blast-colonization-2016-0",
+      "target": "document:lit-bacillus-rice-blast-colonization-2016",
+      "relation": "chunk_of",
+      "evidence_id": "chunk:document-lit-bacillus-rice-blast-colonization-2016-0",
+      "confidence": 0.79
+    },
+    {
+      "source": "chunk:document-lit-bacillus-rice-blast-colonization-2016-0",
+      "target": "mention:cropmention:rice",
+      "relation": "tested_in",
+      "evidence_id": "chunk:document-lit-bacillus-rice-blast-colonization-2016-0",
+      "confidence": 0.64
+    },
+    {
+      "source": "chunk:document-lit-bacillus-rice-blast-colonization-2016-0",
+      "target": "mention:organismmention:bacillus-like-payload",
+      "relation": "supports",
+      "evidence_id": "chunk:document-lit-bacillus-rice-blast-colonization-2016-0",
+      "confidence": 0.64
+    },
+    {
+      "source": "chunk:document-lit-bacillus-rice-blast-colonization-2016-0",
+      "target": "mention:organismmention:bacillus-subtilis",
+      "relation": "supports",
+      "evidence_id": "chunk:document-lit-bacillus-rice-blast-colonization-2016-0",
+      "confidence": 0.64
+    },
+    {
+      "source": "chunk:document-lit-bacillus-rice-blast-colonization-2016-0",
+      "target": "mention:phenotypemention:viability-signal",
+      "relation": "supports",
+      "evidence_id": "chunk:document-lit-bacillus-rice-blast-colonization-2016-0",
+      "confidence": 0.64
+    },
+    {
+      "source": "chunk:document-lit-cloaked-droplets-retention-2025-0",
+      "target": "document:lit-cloaked-droplets-retention-2025",
+      "relation": "chunk_of",
+      "evidence_id": "chunk:document-lit-cloaked-droplets-retention-2025-0",
+      "confidence": 0.84
+    },
+    {
+      "source": "chunk:document-lit-cloaked-droplets-retention-2025-0",
+      "target": "mention:architecturemention:cloaked-droplet",
+      "relation": "encapsulated_by",
+      "evidence_id": "chunk:document-lit-cloaked-droplets-retention-2025-0",
+      "confidence": 0.84
+    },
+    {
+      "source": "chunk:document-lit-cloaked-droplets-retention-2025-0",
+      "target": "mention:cropmention:waxy-brassica-leaf",
+      "relation": "tested_in",
+      "evidence_id": "chunk:document-lit-cloaked-droplets-retention-2025-0",
+      "confidence": 0.84
+    },
+    {
+      "source": "chunk:document-lit-cloaked-droplets-retention-2025-0",
+      "target": "mention:materialmention:cloaked-droplet",
+      "relation": "encapsulated_by",
+      "evidence_id": "chunk:document-lit-cloaked-droplets-retention-2025-0",
+      "confidence": 0.84
+    },
+    {
+      "source": "chunk:document-lit-cloaked-droplets-retention-2025-0",
+      "target": "mention:phenotypemention:spray-coverage-proxy",
+      "relation": "supports",
+      "evidence_id": "chunk:document-lit-cloaked-droplets-retention-2025-0",
+      "confidence": 0.84
+    },
+    {
+      "source": "chunk:document-lit-cloaked-droplets-retention-2025-0",
+      "target": "mention:stressmention:leaf-retention",
+      "relation": "tested_in",
+      "evidence_id": "chunk:document-lit-cloaked-droplets-retention-2025-0",
+      "confidence": 0.84
+    },
+    {
+      "source": "chunk:document-lit-constrained-bo-2023-0",
+      "target": "document:lit-constrained-bo-2023",
+      "relation": "chunk_of",
+      "evidence_id": "chunk:document-lit-constrained-bo-2023-0",
+      "confidence": 0.8
+    },
+    {
+      "source": "chunk:document-lit-constrained-bo-2023-0",
+      "target": "mention:phenotypemention:sprayability-proxy",
+      "relation": "supports",
+      "evidence_id": "chunk:document-lit-constrained-bo-2023-0",
+      "confidence": 0.65
+    },
+    {
+      "source": "chunk:document-lit-polymer-additives-deposition-2021-0",
+      "target": "document:lit-polymer-additives-deposition-2021",
+      "relation": "chunk_of",
+      "evidence_id": "chunk:document-lit-polymer-additives-deposition-2021-0",
+      "confidence": 0.78
+    },
+    {
+      "source": "chunk:document-lit-polymer-additives-deposition-2021-0",
+      "target": "mention:materialmention:polymer-additive",
+      "relation": "encapsulated_by",
+      "evidence_id": "chunk:document-lit-polymer-additives-deposition-2021-0",
+      "confidence": 0.78
+    },
+    {
+      "source": "chunk:document-lit-polymer-additives-deposition-2021-0",
+      "target": "mention:phenotypemention:sprayability-proxy",
+      "relation": "supports",
+      "evidence_id": "chunk:document-lit-polymer-additives-deposition-2021-0",
+      "confidence": 0.78
+    },
+    {
+      "source": "chunk:document-lit-qnehvi-2021-0",
+      "target": "document:lit-qnehvi-2021",
+      "relation": "chunk_of",
+      "evidence_id": "chunk:document-lit-qnehvi-2021-0",
+      "confidence": 0.78
+    },
+    {
+      "source": "chunk:document-lit-qnehvi-2021-0",
+      "target": "mention:phenotypemention:sprayability-proxy",
+      "relation": "supports",
+      "evidence_id": "chunk:document-lit-qnehvi-2021-0",
+      "confidence": 0.78
+    },
+    {
+      "source": "chunk:document-lit-qnehvi-2021-0",
+      "target": "mention:phenotypemention:viability-signal",
+      "relation": "supports",
+      "evidence_id": "chunk:document-lit-qnehvi-2021-0",
+      "confidence": 0.78
+    },
+    {
+      "source": "chunk:document-lit-qnehvi-2021-0",
+      "target": "mention:phenotypemention:wash-off-proxy",
+      "relation": "supports",
+      "evidence_id": "chunk:document-lit-qnehvi-2021-0",
+      "confidence": 0.78
+    },
+    {
+      "source": "chunk:document-lit-qnehvi-2021-0",
+      "target": "mention:releasesignal:release",
+      "relation": "released_under",
+      "evidence_id": "chunk:document-lit-qnehvi-2021-0",
+      "confidence": 0.78
+    },
+    {
+      "source": "chunk:document-lit-qnehvi-2021-0",
+      "target": "mention:stressmention:wash-off",
+      "relation": "tested_in",
+      "evidence_id": "chunk:document-lit-qnehvi-2021-0",
+      "confidence": 0.78
+    },
+    {
+      "source": "chunk:document-lit-temperature-responsive-nanopesticides-2023-0",
+      "target": "document:lit-temperature-responsive-nanopesticides-2023",
+      "relation": "chunk_of",
+      "evidence_id": "chunk:document-lit-temperature-responsive-nanopesticides-2023-0",
+      "confidence": 0.8
+    },
+    {
+      "source": "chunk:document-lit-temperature-responsive-nanopesticides-2023-0",
+      "target": "mention:phenotypemention:retained-intensity-proxy",
+      "relation": "supports",
+      "evidence_id": "chunk:document-lit-temperature-responsive-nanopesticides-2023-0",
+      "confidence": 0.65
+    },
+    {
+      "source": "chunk:document-lit-temperature-responsive-nanopesticides-2023-0",
+      "target": "mention:releasesignal:release",
+      "relation": "released_under",
+      "evidence_id": "chunk:document-lit-temperature-responsive-nanopesticides-2023-0",
+      "confidence": 0.65
+    },
+    {
+      "source": "chunk:document-lit-tunable-droplet-encapsulation-2023-0",
+      "target": "document:lit-tunable-droplet-encapsulation-2023",
+      "relation": "chunk_of",
+      "evidence_id": "chunk:document-lit-tunable-droplet-encapsulation-2023-0",
+      "confidence": 0.82
+    },
+    {
+      "source": "chunk:document-lit-tunable-droplet-encapsulation-2023-0",
+      "target": "mention:phenotypemention:evaporation-proxy",
+      "relation": "supports",
+      "evidence_id": "chunk:document-lit-tunable-droplet-encapsulation-2023-0",
+      "confidence": 0.82
+    },
+    {
+      "source": "chunk:document-lit-tunable-droplet-encapsulation-2023-0",
+      "target": "mention:releasesignal:evaporation",
+      "relation": "released_under",
+      "evidence_id": "chunk:document-lit-tunable-droplet-encapsulation-2023-0",
+      "confidence": 0.82
+    },
+    {
+      "source": "chunk:document-lit-tunable-droplet-encapsulation-2023-0",
+      "target": "mention:releasesignal:release",
+      "relation": "released_under",
+      "evidence_id": "chunk:document-lit-tunable-droplet-encapsulation-2023-0",
+      "confidence": 0.82
     },
     {
       "source": "chunk:document-manual-doc-001-0",
@@ -806,6 +1553,90 @@
       "confidence": 0.4
     },
     {
+      "source": "evidence:assay-droplet-impact-video-001",
+      "target": "claim:droplet-impact-videos-should-quantify-rebound-suppression-and-contact-line-motion",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-droplet-impact-video-001",
+      "confidence": 0.78
+    },
+    {
+      "source": "evidence:assay-droplet-impact-video-001",
+      "target": "claim:hydrophobic-brassica-leaves-are-a-priority-target-for-dynamic-deposition-screening",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-droplet-impact-video-001",
+      "confidence": 0.78
+    },
+    {
+      "source": "evidence:assay-early-release-001",
+      "target": "claim:early-release-labels-should-distinguish-burst-release-from-retained-payload",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-early-release-001",
+      "confidence": 0.73
+    },
+    {
+      "source": "evidence:assay-early-release-001",
+      "target": "claim:nonliving-payload-release-assays-should-precede-living-payload-compatibility-tests",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-early-release-001",
+      "confidence": 0.73
+    },
+    {
+      "source": "evidence:assay-evaporation-001",
+      "target": "claim:evaporation-endpoints-are-needed-to-interpret-retention-and-early-release-labels",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-evaporation-001",
+      "confidence": 0.76
+    },
+    {
+      "source": "evidence:assay-evaporation-001",
+      "target": "claim:liquid-shell-or-oil-cloak-persistence-should-be-measured-independently-from-leaf-coverage",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-evaporation-001",
+      "confidence": 0.76
+    },
+    {
+      "source": "evidence:assay-retained-fluorescence-001",
+      "target": "claim:background-corrected-retained-fraction-is-a-required-promotion-metric",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-retained-fluorescence-001",
+      "confidence": 0.72
+    },
+    {
+      "source": "evidence:assay-retained-fluorescence-001",
+      "target": "claim:nonliving-fluorescent-payloads-should-provide-the-first-retained-intensity-labels",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-retained-fluorescence-001",
+      "confidence": 0.72
+    },
+    {
+      "source": "evidence:assay-simulated-rain-001",
+      "target": "claim:rainfastness-assays-should-compare-retained-signal-before-and-after-calibrated-rainfall",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-simulated-rain-001",
+      "confidence": 0.77
+    },
+    {
+      "source": "evidence:assay-simulated-rain-001",
+      "target": "claim:runoff-labels-are-needed-to-separate-adhesion-from-release-behavior",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-simulated-rain-001",
+      "confidence": 0.77
+    },
+    {
+      "source": "evidence:assay-spray-coverage-image-001",
+      "target": "claim:coverage-images-should-capture-deposited-area-and-coverage-uniformity-before-wash-off",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-spray-coverage-image-001",
+      "confidence": 0.76
+    },
+    {
+      "source": "evidence:assay-spray-coverage-image-001",
+      "target": "claim:coverage-labels-are-required-before-living-payload-promotion",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-spray-coverage-image-001",
+      "confidence": 0.76
+    },
+    {
       "source": "evidence:manual-formulation-001",
       "target": "claim:cloaked-droplets-are-in-scope-for-difficult-to-wet-foliar-retention",
       "relation": "supports",
@@ -881,6 +1712,90 @@
       "relation": "supports",
       "evidence_id": "evidence:manual-leaf-003",
       "confidence": 0.45
+    },
+    {
+      "source": "phenotype:assay-droplet-impact-video-001-assay-endpoint-readiness",
+      "target": "assay:assay-droplet-impact-video-001-high-speed-droplet-impact-video-assay",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.78
+    },
+    {
+      "source": "phenotype:assay-droplet-impact-video-001-assay-endpoint-readiness",
+      "target": "crop:waxy-brassica-leaf",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-droplet-impact-video-001",
+      "confidence": 0.78
+    },
+    {
+      "source": "phenotype:assay-early-release-001-assay-endpoint-readiness",
+      "target": "assay:assay-early-release-001-early-release-kinetics-assay",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.73
+    },
+    {
+      "source": "phenotype:assay-early-release-001-assay-endpoint-readiness",
+      "target": "crop:rice",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-early-release-001",
+      "confidence": 0.73
+    },
+    {
+      "source": "phenotype:assay-evaporation-001-assay-endpoint-readiness",
+      "target": "assay:assay-evaporation-001-droplet-evaporation-and-residence-time-assay",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.76
+    },
+    {
+      "source": "phenotype:assay-evaporation-001-assay-endpoint-readiness",
+      "target": "crop:waxy-brassica-leaf",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-evaporation-001",
+      "confidence": 0.76
+    },
+    {
+      "source": "phenotype:assay-retained-fluorescence-001-assay-endpoint-readiness",
+      "target": "assay:assay-retained-fluorescence-001-retained-fluorescence-intensity-assay",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.72
+    },
+    {
+      "source": "phenotype:assay-retained-fluorescence-001-assay-endpoint-readiness",
+      "target": "crop:rice",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-retained-fluorescence-001",
+      "confidence": 0.72
+    },
+    {
+      "source": "phenotype:assay-simulated-rain-001-assay-endpoint-readiness",
+      "target": "assay:assay-simulated-rain-001-simulated-rain-wash-off-assay",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.77
+    },
+    {
+      "source": "phenotype:assay-simulated-rain-001-assay-endpoint-readiness",
+      "target": "crop:rice",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-simulated-rain-001",
+      "confidence": 0.77
+    },
+    {
+      "source": "phenotype:assay-spray-coverage-image-001-assay-endpoint-readiness",
+      "target": "assay:assay-spray-coverage-image-001-spray-coverage-image-assay",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.76
+    },
+    {
+      "source": "phenotype:assay-spray-coverage-image-001-assay-endpoint-readiness",
+      "target": "crop:waxy-brassica-leaf",
+      "relation": "supports",
+      "evidence_id": "evidence:assay-spray-coverage-image-001",
+      "confidence": 0.76
     },
     {
       "source": "phenotype:manual-leaf-001-foliar-delivery-benchmark-relevance",

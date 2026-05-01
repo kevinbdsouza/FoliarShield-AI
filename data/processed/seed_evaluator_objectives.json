@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "artifact_id": "evaluator:objectives-v0.1",
-  "generated_at": "2026-05-01T16:20:05.646016+00:00",
+  "generated_at": "2026-05-01T17:34:34.083217+00:00",
   "evaluator_version": "deterministic-seed-evaluator-v0.1",
   "objective_definitions": [
     {

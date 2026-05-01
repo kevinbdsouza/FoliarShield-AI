@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "artifact_id": "baseline:optimizer-only-seed-v0.1",
-  "generated_at": "2026-05-01T16:20:55.516007+00:00",
+  "generated_at": "2026-05-01T17:34:51.138593+00:00",
   "baseline_version": "deterministic-optimizer-only-seed-v0.1",
   "random_seed": 1729,
   "initial_samples_per_task": 6,
@@ -21,7 +21,7 @@
             "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
           ],
           "formulation_material_id": "material:liquid-liquid-encapsulation-shell",
-          "overall_score": 0.476,
+          "overall_score": 0.481,
           "objective_scores": {
             "stress_tolerance_proxy": 0.667,
             "nutrient_use_efficiency_proxy": 0.0,
@@ -29,41 +29,42 @@
             "encapsulation_viability_proxy": 0.5,
             "release_profile_fit": 1.0,
             "manufacturability_proxy": 0.0,
-            "evidence_support": 0.744
+            "evidence_support": 0.784
           },
           "uncertainty_intervals": {
             "stress_tolerance_proxy": [
-              0.467,
-              0.867
+              0.497,
+              0.837
             ],
             "nutrient_use_efficiency_proxy": [
               0.0,
-              0.2
+              0.17
             ],
             "persistence_proxy": [
               0.0,
-              0.2
+              0.17
             ],
             "encapsulation_viability_proxy": [
-              0.3,
-              0.7
+              0.33,
+              0.67
             ],
             "release_profile_fit": [
-              0.8,
+              0.83,
               1.0
             ],
             "manufacturability_proxy": [
               0.0,
-              0.2
+              0.17
             ],
             "evidence_support": [
-              0.544,
-              0.944
+              0.614,
+              0.954
             ]
           },
           "evidence_ids": [
             "evidence:manual-leaf-001",
             "evidence:manual-leaf-003",
+            "evidence:assay-simulated-rain-001",
             "evidence:manual-formulation-001"
           ],
           "biosafety_flags": [],
@@ -81,7 +82,7 @@
             "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
           ],
           "formulation_material_id": "material:liquid-liquid-encapsulation-shell",
-          "overall_score": 0.476,
+          "overall_score": 0.481,
           "objective_scores": {
             "stress_tolerance_proxy": 0.667,
             "nutrient_use_efficiency_proxy": 0.0,
@@ -89,41 +90,42 @@
             "encapsulation_viability_proxy": 0.5,
             "release_profile_fit": 1.0,
             "manufacturability_proxy": 0.0,
-            "evidence_support": 0.744
+            "evidence_support": 0.784
           },
           "uncertainty_intervals": {
             "stress_tolerance_proxy": [
-              0.467,
-              0.867
+              0.497,
+              0.837
             ],
             "nutrient_use_efficiency_proxy": [
               0.0,
-              0.2
+              0.17
             ],
             "persistence_proxy": [
               0.0,
-              0.2
+              0.17
             ],
             "encapsulation_viability_proxy": [
-              0.3,
-              0.7
+              0.33,
+              0.67
             ],
             "release_profile_fit": [
-              0.8,
+              0.83,
               1.0
             ],
             "manufacturability_proxy": [
               0.0,
-              0.2
+              0.17
             ],
             "evidence_support": [
-              0.544,
-              0.944
+              0.614,
+              0.954
             ]
           },
           "evidence_ids": [
             "evidence:manual-leaf-001",
             "evidence:manual-leaf-003",
+            "evidence:assay-simulated-rain-001",
             "evidence:manual-formulation-001"
           ],
           "biosafety_flags": [],
@@ -141,7 +143,7 @@
             "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
           ],
           "formulation_material_id": "material:polymer-assisted-emulsion-spray",
-          "overall_score": 0.369,
+          "overall_score": 0.374,
           "objective_scores": {
             "stress_tolerance_proxy": 0.667,
             "nutrient_use_efficiency_proxy": 0.0,
@@ -149,41 +151,42 @@
             "encapsulation_viability_proxy": 0.5,
             "release_profile_fit": 0.333,
             "manufacturability_proxy": 0.0,
-            "evidence_support": 0.74
+            "evidence_support": 0.78
           },
           "uncertainty_intervals": {
             "stress_tolerance_proxy": [
-              0.467,
-              0.867
+              0.497,
+              0.837
             ],
             "nutrient_use_efficiency_proxy": [
               0.0,
-              0.2
+              0.17
             ],
             "persistence_proxy": [
               0.0,
-              0.2
+              0.17
             ],
             "encapsulation_viability_proxy": [
-              0.3,
-              0.7
+              0.33,
+              0.67
             ],
             "release_profile_fit": [
-              0.133,
-              0.533
+              0.163,
+              0.503
             ],
             "manufacturability_proxy": [
               0.0,
-              0.2
+              0.17
             ],
             "evidence_support": [
-              0.54,
-              0.94
+              0.61,
+              0.95
             ]
           },
           "evidence_ids": [
             "evidence:manual-leaf-001",
             "evidence:manual-leaf-003",
+            "evidence:assay-simulated-rain-001",
             "evidence:manual-formulation-001"
           ],
           "biosafety_flags": [],
@@ -200,27 +203,27 @@
         {
           "iteration": 1,
           "candidate_id": "candidate:random:pilot-1-foliar-retention-rainfastness:001:3fd52ac1",
-          "observed_score": 0.476,
-          "mean_uncertainty_width": 0.286,
+          "observed_score": 0.481,
+          "mean_uncertainty_width": 0.243,
           "responsible_use_status": "needs_review"
         },
         {
           "iteration": 2,
           "candidate_id": "candidate:random:pilot-1-foliar-retention-rainfastness:005:3fd52ac1",
-          "observed_score": 0.476,
-          "mean_uncertainty_width": 0.286,
+          "observed_score": 0.481,
+          "mean_uncertainty_width": 0.243,
           "responsible_use_status": "needs_review"
         },
         {
           "iteration": 3,
           "candidate_id": "candidate:random:pilot-1-foliar-retention-rainfastness:004:9e6fa9be",
-          "observed_score": 0.369,
-          "mean_uncertainty_width": 0.314,
+          "observed_score": 0.374,
+          "mean_uncertainty_width": 0.267,
           "responsible_use_status": "needs_review"
         }
       ],
       "summary": {
-        "best_score": 0.476,
+        "best_score": 0.481,
         "review_ready_candidates": 0,
         "search_cost_candidates_scored": 6
       },

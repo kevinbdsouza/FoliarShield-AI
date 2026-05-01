@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "artifact_id": "benchmark:seed-baseline-comparison-v0.1",
-  "generated_at": "2026-05-01T16:20:55.527103+00:00",
+  "generated_at": "2026-05-01T17:34:57.054929+00:00",
   "benchmark_version": "seed-baseline-comparison-v0.1",
   "review_threshold": 0.6,
   "top_k": 3,
@@ -14,20 +14,20 @@
           "candidate_count": 4,
           "hit_rate": 0.0,
           "top_k_enrichment": 0.0,
-          "mean_score": 0.369,
-          "mean_top_k_score": 0.387,
+          "mean_score": 0.374,
+          "mean_top_k_score": 0.392,
           "search_cost": 4,
           "calibration_proxy": {
-            "mean_uncertainty_width": 0.293,
-            "narrow_interval_fraction": 0.0
+            "mean_uncertainty_width": 0.249,
+            "narrow_interval_fraction": 0.75
           }
         },
         "heuristic_baseline": {
           "candidate_count": 3,
           "hit_rate": 0.333,
           "top_k_enrichment": 0.333,
-          "mean_score": 0.215,
-          "mean_top_k_score": 0.215,
+          "mean_score": 0.229,
+          "mean_top_k_score": 0.229,
           "search_cost": 3,
           "calibration_proxy": "not_applicable_without_uncertainty_intervals"
         },
@@ -35,20 +35,20 @@
           "candidate_count": 3,
           "hit_rate": 0.0,
           "top_k_enrichment": 0.0,
-          "mean_score": 0.44,
-          "mean_top_k_score": 0.44,
+          "mean_score": 0.445,
+          "mean_top_k_score": 0.445,
           "search_cost": 3,
           "calibration_proxy": {
-            "mean_uncertainty_width": 0.295,
-            "narrow_interval_fraction": 0.0
+            "mean_uncertainty_width": 0.251,
+            "narrow_interval_fraction": 0.667
           }
         },
         "reasoning_only": {
           "candidate_count": 3,
           "hit_rate": 0.333,
           "top_k_enrichment": 0.333,
-          "mean_score": 0.215,
-          "mean_top_k_score": 0.215,
+          "mean_score": 0.229,
+          "mean_top_k_score": 0.229,
           "search_cost": 3,
           "calibration_proxy": "not_applicable_without_uncertainty_intervals"
         }

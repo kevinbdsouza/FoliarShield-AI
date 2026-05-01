@@ -1,12 +1,20 @@
 {
   "status": "ok",
   "artifact_id": "evaluation:structured-extractions",
-  "generated_at": "2026-05-01T16:20:05.618932+00:00",
+  "generated_at": "2026-05-01T17:34:24.190927+00:00",
   "gold_example_count": 2,
-  "extraction_count": 3,
+  "extraction_count": 11,
   "matched_example_count": 2,
   "missing_gold_chunk_ids": [],
   "extra_extraction_chunk_ids": [
+    "chunk:document-lit-bacillus-phyllosphere-dispersal-2016-0",
+    "chunk:document-lit-bacillus-rice-blast-colonization-2016-0",
+    "chunk:document-lit-cloaked-droplets-retention-2025-0",
+    "chunk:document-lit-constrained-bo-2023-0",
+    "chunk:document-lit-polymer-additives-deposition-2021-0",
+    "chunk:document-lit-qnehvi-2021-0",
+    "chunk:document-lit-temperature-responsive-nanopesticides-2023-0",
+    "chunk:document-lit-tunable-droplet-encapsulation-2023-0",
     "chunk:document-manual-doc-002-0"
   ],
   "micro_average": {

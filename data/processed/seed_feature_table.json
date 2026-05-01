@@ -1,14 +1,14 @@
 {
   "status": "ok",
   "artifact_id": "features:seed-v0.1",
-  "generated_at": "2026-05-01T16:20:55.488322+00:00",
+  "generated_at": "2026-05-01T17:34:24.192182+00:00",
   "feature_version": "deterministic-seed-features-v0.1",
-  "record_count": 39,
+  "record_count": 79,
   "feature_counts": {
     "strain_features": 3,
     "consortium_pair_features": 0,
     "formulation_features": 3,
-    "crop_stress_context_features": 3,
+    "crop_stress_context_features": 9,
     "genome_records_linked": 0,
     "protein_or_gene_features_linked": 0,
     "soil_context_records": 0
@@ -273,6 +273,131 @@
       "soil_organic_matter_terms": [],
       "soil_context_available": false,
       "foliar_panel_relevance_score": 1.0
+    },
+    {
+      "stress_context_id": "stress:waxy-brassica-leaf-droplet-impact-rebound-suppression-contact-line-motion-contained-laboratory-high-speed-imaging-bench",
+      "crop_id": "crop:waxy-brassica-leaf",
+      "crop": "waxy brassica leaf",
+      "stressors": [
+        "droplet-impact",
+        "rebound-suppression",
+        "contact-line-motion"
+      ],
+      "moisture_regime": "controlled leaf-surface wetting before simulated field-spray impact",
+      "temperature_c": [
+        22.0,
+        28.0
+      ],
+      "soil_context_ids": [],
+      "soil_texture_terms": [],
+      "soil_ph_range": [],
+      "soil_organic_matter_terms": [],
+      "soil_context_available": false,
+      "foliar_panel_relevance_score": 1.0
+    },
+    {
+      "stress_context_id": "stress:waxy-brassica-leaf-spray-coverage-leaf-retention-contained-laboratory-spray-booth",
+      "crop_id": "crop:waxy-brassica-leaf",
+      "crop": "waxy brassica leaf",
+      "stressors": [
+        "spray-coverage",
+        "leaf-retention"
+      ],
+      "moisture_regime": "standardized spray pass followed by image acquisition before rain challenge",
+      "temperature_c": [
+        22.0,
+        30.0
+      ],
+      "soil_context_ids": [],
+      "soil_texture_terms": [],
+      "soil_ph_range": [],
+      "soil_organic_matter_terms": [],
+      "soil_context_available": false,
+      "foliar_panel_relevance_score": 1.0
+    },
+    {
+      "stress_context_id": "stress:rice-simulated-rain-wash-off-rainfastness-contained-laboratory-rainfastness-bench",
+      "crop_id": "crop:rice",
+      "crop": "rice",
+      "stressors": [
+        "simulated-rain",
+        "wash-off",
+        "rainfastness"
+      ],
+      "moisture_regime": "defined droplet aging interval followed by calibrated simulated rainfall",
+      "temperature_c": [
+        22.0,
+        30.0
+      ],
+      "soil_context_ids": [],
+      "soil_texture_terms": [],
+      "soil_ph_range": [],
+      "soil_organic_matter_terms": [],
+      "soil_context_available": false,
+      "foliar_panel_relevance_score": 0.8
+    },
+    {
+      "stress_context_id": "stress:rice-retained-intensity-leaf-retention-nonliving-payload-contained-laboratory-fluorescence-imaging-bench",
+      "crop_id": "crop:rice",
+      "crop": "rice",
+      "stressors": [
+        "retained-intensity",
+        "leaf-retention",
+        "nonliving-payload"
+      ],
+      "moisture_regime": "controlled deposition with repeated imaging before and after wash-off challenge",
+      "temperature_c": [
+        22.0,
+        30.0
+      ],
+      "soil_context_ids": [],
+      "soil_texture_terms": [],
+      "soil_ph_range": [],
+      "soil_organic_matter_terms": [],
+      "soil_context_available": false,
+      "foliar_panel_relevance_score": 0.8
+    },
+    {
+      "stress_context_id": "stress:waxy-brassica-leaf-evaporation-leaf-residence-time-controlled-release-contained-laboratory-gravimetric-or-image-based-evaporation-bench",
+      "crop_id": "crop:waxy-brassica-leaf",
+      "crop": "waxy brassica leaf",
+      "stressors": [
+        "evaporation",
+        "leaf-residence-time",
+        "controlled-release"
+      ],
+      "moisture_regime": "controlled humidity and airflow during post-deposition residence measurement",
+      "temperature_c": [
+        22.0,
+        30.0
+      ],
+      "soil_context_ids": [],
+      "soil_texture_terms": [],
+      "soil_ph_range": [],
+      "soil_organic_matter_terms": [],
+      "soil_context_available": false,
+      "foliar_panel_relevance_score": 1.0
+    },
+    {
+      "stress_context_id": "stress:rice-early-release-controlled-release-payload-availability-contained-laboratory-leaf-surface-release-bench",
+      "crop_id": "crop:rice",
+      "crop": "rice",
+      "stressors": [
+        "early-release",
+        "controlled-release",
+        "payload-availability"
+      ],
+      "moisture_regime": "defined hydration or rinse sampling schedule after foliar deposition",
+      "temperature_c": [
+        22.0,
+        30.0
+      ],
+      "soil_context_ids": [],
+      "soil_texture_terms": [],
+      "soil_ph_range": [],
+      "soil_organic_matter_terms": [],
+      "soil_context_available": false,
+      "foliar_panel_relevance_score": 0.8
     }
   ],
   "notes": [

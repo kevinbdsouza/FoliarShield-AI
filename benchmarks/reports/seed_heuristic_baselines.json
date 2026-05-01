@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "artifact_id": "baseline:seed-heuristics-v0.1",
-  "generated_at": "2026-05-01T16:20:05.657794+00:00",
+  "generated_at": "2026-05-01T17:34:34.084931+00:00",
   "baseline_version": "deterministic-heuristics-v0.1",
   "task_count": 2,
   "records": [
@@ -12,9 +12,9 @@
         {
           "strain_id": "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder",
           "taxon": "Bacillus subtilis",
-          "score": 0.645,
+          "score": 0.673,
           "components": {
-            "evidence_support": 0.76,
+            "evidence_support": 0.84,
             "stress_relevance": 0.667,
             "crop_relevance": 0.5,
             "biosafety_penalty": 0.0
@@ -22,6 +22,7 @@
           "evidence_ids": [
             "evidence:manual-leaf-001",
             "evidence:manual-leaf-003",
+            "evidence:assay-simulated-rain-001",
             "evidence:manual-formulation-001"
           ],
           "biosafety_flags": []
@@ -29,9 +30,9 @@
         {
           "strain_id": "strain:manual-payload-002-non-pathogenic-foliar-surrogate-placeholder",
           "taxon": "Bacillus velezensis",
-          "score": 0.0,
+          "score": 0.012,
           "components": {
-            "evidence_support": 0.74,
+            "evidence_support": 0.82,
             "stress_relevance": 0.0,
             "crop_relevance": 0.5,
             "biosafety_penalty": 0.45
@@ -39,6 +40,7 @@
           "evidence_ids": [
             "evidence:manual-leaf-001",
             "evidence:manual-leaf-003",
+            "evidence:assay-simulated-rain-001",
             "evidence:manual-formulation-001"
           ],
           "biosafety_flags": [
@@ -48,9 +50,9 @@
         {
           "strain_id": "strain:manual-payload-003-bacillus-like-viability-benchmark-placeholder",
           "taxon": "Bacillus amyloliquefaciens",
-          "score": 0.0,
+          "score": 0.001,
           "components": {
-            "evidence_support": 0.72,
+            "evidence_support": 0.8,
             "stress_relevance": 0.0,
             "crop_relevance": 0.5,
             "biosafety_penalty": 0.45
@@ -58,6 +60,7 @@
           "evidence_ids": [
             "evidence:manual-leaf-001",
             "evidence:manual-leaf-003",
+            "evidence:assay-simulated-rain-001",
             "evidence:manual-formulation-001"
           ],
           "biosafety_flags": [

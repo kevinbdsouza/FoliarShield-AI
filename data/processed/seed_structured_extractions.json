@@ -1,9 +1,9 @@
 {
   "status": "ok",
   "artifact_id": "extraction:seed-evidence",
-  "generated_at": "2026-05-01T16:20:05.609375+00:00",
+  "generated_at": "2026-05-01T17:34:14.969253+00:00",
   "extraction_version": "lexical-rules-v0.1",
-  "record_count": 3,
+  "record_count": 11,
   "records": [
     {
       "chunk_id": "chunk:document-manual-doc-001-0",
@@ -86,6 +86,187 @@
         "review"
       ],
       "evidence_type": "ai-method"
+    },
+    {
+      "chunk_id": "chunk:document-lit-cloaked-droplets-retention-2025-0",
+      "document_id": "document:lit-cloaked-droplets-retention-2025",
+      "citation": "Jayaprakash, V., Rufer, S., Panat, S. and Varanasi, K. K. Enhancing spray retention using cloaked droplets to reduce pesticide pollution. Soft Matter 21, 3688-3699 (2025). https://doi.org/10.1039/D4SM01496K",
+      "confidence": 0.84,
+      "crops": [
+        "waxy brassica leaf"
+      ],
+      "stressors": [
+        "leaf retention"
+      ],
+      "organisms": [],
+      "reported_phenotypes": [
+        "spray coverage proxy"
+      ],
+      "materials": [
+        "cloaked droplet"
+      ],
+      "encapsulation_architectures": [
+        "cloaked droplet"
+      ],
+      "release_or_viability_signals": [],
+      "assay_or_fidelity": [],
+      "review_flags": [],
+      "evidence_type": "formulation-retention"
+    },
+    {
+      "chunk_id": "chunk:document-lit-tunable-droplet-encapsulation-2023-0",
+      "document_id": "document:lit-tunable-droplet-encapsulation-2023",
+      "citation": "Lathia, R., Nagpal, S., Dey Modak, C. et al. Tunable encapsulation of sessile droplets with solid and liquid shells. Nature Communications 14, 6445 (2023). https://doi.org/10.1038/s41467-023-41977-1",
+      "confidence": 0.82,
+      "crops": [],
+      "stressors": [],
+      "organisms": [],
+      "reported_phenotypes": [
+        "evaporation proxy"
+      ],
+      "materials": [],
+      "encapsulation_architectures": [],
+      "release_or_viability_signals": [
+        "evaporation",
+        "release"
+      ],
+      "assay_or_fidelity": [],
+      "review_flags": [],
+      "evidence_type": "liquid-liquid-encapsulation"
+    },
+    {
+      "chunk_id": "chunk:document-lit-polymer-additives-deposition-2021-0",
+      "document_id": "document:lit-polymer-additives-deposition-2021",
+      "citation": "Song, Y., Huang, G., Zheng, L. et al. Polymer additives regulate the deposition behavior of pesticide droplets on target plants. Polymer Testing 93, 106958 (2021). https://doi.org/10.1016/j.polymertesting.2020.106958",
+      "confidence": 0.78,
+      "crops": [],
+      "stressors": [],
+      "organisms": [],
+      "reported_phenotypes": [
+        "sprayability proxy"
+      ],
+      "materials": [
+        "polymer additive"
+      ],
+      "encapsulation_architectures": [],
+      "release_or_viability_signals": [],
+      "assay_or_fidelity": [],
+      "review_flags": [],
+      "evidence_type": "polymer-droplet-deposition"
+    },
+    {
+      "chunk_id": "chunk:document-lit-temperature-responsive-nanopesticides-2023-0",
+      "document_id": "document:lit-temperature-responsive-nanopesticides-2023",
+      "citation": "Tang, J., Tong, X., Chen, Y. et al. Deposition and water repelling of temperature-responsive nanopesticides on leaves. Nature Communications 14, 6401 (2023). https://doi.org/10.1038/s41467-023-41878-3",
+      "confidence": 0.65,
+      "crops": [],
+      "stressors": [],
+      "organisms": [],
+      "reported_phenotypes": [
+        "retained intensity proxy"
+      ],
+      "materials": [],
+      "encapsulation_architectures": [],
+      "release_or_viability_signals": [
+        "release"
+      ],
+      "assay_or_fidelity": [],
+      "review_flags": [
+        "review"
+      ],
+      "evidence_type": "responsive-foliar-formulation"
+    },
+    {
+      "chunk_id": "chunk:document-lit-bacillus-phyllosphere-dispersal-2016-0",
+      "document_id": "document:lit-bacillus-phyllosphere-dispersal-2016",
+      "citation": "Wei, F., Hu, X. and Xu, X. Dispersal of Bacillus subtilis and its effect on strawberry phyllosphere microbiota under open field and protection conditions. Scientific Reports 6, 22611 (2016). https://doi.org/10.1038/srep22611",
+      "confidence": 0.66,
+      "crops": [],
+      "stressors": [],
+      "organisms": [
+        "Bacillus subtilis",
+        "Bacillus-like payload"
+      ],
+      "reported_phenotypes": [
+        "viability signal"
+      ],
+      "materials": [],
+      "encapsulation_architectures": [],
+      "release_or_viability_signals": [],
+      "assay_or_fidelity": [],
+      "review_flags": [
+        "review"
+      ],
+      "evidence_type": "foliar-bacillus-delivery"
+    },
+    {
+      "chunk_id": "chunk:document-lit-bacillus-rice-blast-colonization-2016-0",
+      "document_id": "document:lit-bacillus-rice-blast-colonization-2016",
+      "citation": "Sha, Y., Wang, Q. and Li, Y. Suppression of Magnaporthe oryzae and interaction between Bacillus subtilis and rice plants in the control of rice blast. SpringerPlus 5, 1238 (2016). https://doi.org/10.1186/s40064-016-2858-1",
+      "confidence": 0.64,
+      "crops": [
+        "rice"
+      ],
+      "stressors": [],
+      "organisms": [
+        "Bacillus subtilis",
+        "Bacillus-like payload"
+      ],
+      "reported_phenotypes": [
+        "viability signal"
+      ],
+      "materials": [],
+      "encapsulation_architectures": [],
+      "release_or_viability_signals": [],
+      "assay_or_fidelity": [],
+      "review_flags": [
+        "review"
+      ],
+      "evidence_type": "foliar-bacillus-rice"
+    },
+    {
+      "chunk_id": "chunk:document-lit-constrained-bo-2023-0",
+      "document_id": "document:lit-constrained-bo-2023",
+      "citation": "Khatamsaz, D., Vela, B., Singh, P. et al. Bayesian optimization with active learning of design constraints using an entropy-based approach. npj Computational Materials 9, 49 (2023). https://doi.org/10.1038/s41524-023-01006-7",
+      "confidence": 0.65,
+      "crops": [],
+      "stressors": [],
+      "organisms": [],
+      "reported_phenotypes": [
+        "sprayability proxy"
+      ],
+      "materials": [],
+      "encapsulation_architectures": [],
+      "release_or_viability_signals": [],
+      "assay_or_fidelity": [],
+      "review_flags": [
+        "review"
+      ],
+      "evidence_type": "constrained-bayesian-optimization"
+    },
+    {
+      "chunk_id": "chunk:document-lit-qnehvi-2021-0",
+      "document_id": "document:lit-qnehvi-2021",
+      "citation": "Daulton, S., Balandat, M. and Bakshy, E. Parallel Bayesian Optimization of Multiple Noisy Objectives with Expected Hypervolume Improvement. NeurIPS (2021). arXiv:2105.08195. https://arxiv.org/abs/2105.08195",
+      "confidence": 0.78,
+      "crops": [],
+      "stressors": [
+        "wash-off"
+      ],
+      "organisms": [],
+      "reported_phenotypes": [
+        "sprayability proxy",
+        "viability signal",
+        "wash-off proxy"
+      ],
+      "materials": [],
+      "encapsulation_architectures": [],
+      "release_or_viability_signals": [
+        "release"
+      ],
+      "assay_or_fidelity": [],
+      "review_flags": [],
+      "evidence_type": "multi-objective-bayesian-optimization"
     }
   ],
   "notes": [

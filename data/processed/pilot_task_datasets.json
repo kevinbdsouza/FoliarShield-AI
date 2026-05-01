@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "artifact_id": "dataset:pilot-tasks-seed-v0.1",
-  "generated_at": "2026-05-01T16:20:05.641002+00:00",
+  "generated_at": "2026-05-01T17:34:24.199144+00:00",
   "dataset_version": "seed-pilot-datasets-v0.1",
   "task_count": 2,
   "records": [
@@ -28,7 +28,12 @@
         "stress_contexts": [
           "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel",
           "stress:waxy-brassica-leaf-leaf-retention-rainfastness-contact-line-motion-contained-laboratory-leaf-panel",
-          "stress:tomato-leaf-retention-controlled-release-optional-laboratory-leaf-panel-expansion"
+          "stress:tomato-leaf-retention-controlled-release-optional-laboratory-leaf-panel-expansion",
+          "stress:waxy-brassica-leaf-droplet-impact-rebound-suppression-contact-line-motion-contained-laboratory-high-speed-imaging-bench",
+          "stress:waxy-brassica-leaf-spray-coverage-leaf-retention-contained-laboratory-spray-booth",
+          "stress:rice-simulated-rain-wash-off-rainfastness-contained-laboratory-rainfastness-bench",
+          "stress:rice-retained-intensity-leaf-retention-nonliving-payload-contained-laboratory-fluorescence-imaging-bench",
+          "stress:rice-early-release-controlled-release-payload-availability-contained-laboratory-leaf-surface-release-bench"
         ],
         "crop_stress_evidence": [],
         "formulation_evidence": [
@@ -37,7 +42,8 @@
           "evidence:manual-formulation-003"
         ],
         "literature_chunks": [
-          "chunk:document-manual-doc-001-0"
+          "chunk:document-manual-doc-001-0",
+          "chunk:document-lit-bacillus-rice-blast-colonization-2016-0"
         ],
         "candidate_strains": [
           "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
@@ -50,10 +56,10 @@
       },
       "coverage_counts": {
         "crop_records": 1,
-        "stress_contexts": 3,
+        "stress_contexts": 8,
         "crop_stress_evidence": 0,
         "formulation_evidence": 3,
-        "literature_chunks": 1,
+        "literature_chunks": 2,
         "candidate_strains": 1,
         "candidate_materials": 3
       },
@@ -89,7 +95,11 @@
         ],
         "stress_contexts": [
           "stress:waxy-brassica-leaf-leaf-retention-rainfastness-contact-line-motion-contained-laboratory-leaf-panel",
-          "stress:tomato-leaf-retention-controlled-release-optional-laboratory-leaf-panel-expansion"
+          "stress:tomato-leaf-retention-controlled-release-optional-laboratory-leaf-panel-expansion",
+          "stress:waxy-brassica-leaf-droplet-impact-rebound-suppression-contact-line-motion-contained-laboratory-high-speed-imaging-bench",
+          "stress:waxy-brassica-leaf-spray-coverage-leaf-retention-contained-laboratory-spray-booth",
+          "stress:waxy-brassica-leaf-evaporation-leaf-residence-time-controlled-release-contained-laboratory-gravimetric-or-image-based-evaporation-bench",
+          "stress:rice-early-release-controlled-release-payload-availability-contained-laboratory-leaf-surface-release-bench"
         ],
         "crop_stress_evidence": [],
         "formulation_evidence": [
@@ -99,17 +109,21 @@
         ],
         "literature_chunks": [
           "chunk:document-manual-doc-002-0",
-          "chunk:document-manual-doc-003-0"
+          "chunk:document-manual-doc-003-0",
+          "chunk:document-lit-cloaked-droplets-retention-2025-0",
+          "chunk:document-lit-polymer-additives-deposition-2021-0",
+          "chunk:document-lit-constrained-bo-2023-0",
+          "chunk:document-lit-qnehvi-2021-0"
         ],
         "candidate_strains": [],
         "candidate_materials": []
       },
       "coverage_counts": {
         "crop_records": 1,
-        "stress_contexts": 2,
+        "stress_contexts": 6,
         "crop_stress_evidence": 0,
         "formulation_evidence": 3,
-        "literature_chunks": 2,
+        "literature_chunks": 6,
         "candidate_strains": 0,
         "candidate_materials": 0
       },

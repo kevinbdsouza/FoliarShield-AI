@@ -68,10 +68,10 @@ class CliTests(unittest.TestCase):
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
             self.assertEqual(payload["status"], "ok")
             self.assertEqual(payload["artifact_id"], "ingest:seed-crop-stress")
-            self.assertEqual(payload["input_records"], 3)
+            self.assertEqual(payload["input_records"], 9)
             self.assertEqual(payload["crop_records"], 3)
-            self.assertEqual(payload["evidence_records"], 3)
-            self.assertEqual(manifest["record_count"], 3)
+            self.assertEqual(payload["evidence_records"], 9)
+            self.assertEqual(manifest["record_count"], 9)
 
     def test_ingest_formulation_writes_records_and_manifest(self) -> None:
         with TemporaryDirectory() as temp_dir:
@@ -118,10 +118,10 @@ class CliTests(unittest.TestCase):
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
             self.assertEqual(payload["status"], "ok")
             self.assertEqual(payload["artifact_id"], "ingest:seed-literature-chunks")
-            self.assertEqual(payload["input_records"], 3)
-            self.assertEqual(payload["document_records"], 3)
-            self.assertGreaterEqual(payload["chunk_records"], 3)
-            self.assertEqual(manifest["record_count"], 3)
+            self.assertEqual(payload["input_records"], 11)
+            self.assertEqual(payload["document_records"], 11)
+            self.assertGreaterEqual(payload["chunk_records"], 11)
+            self.assertEqual(manifest["record_count"], 11)
 
     def test_data_quality_report_summarizes_processed_artifacts(self) -> None:
         with TemporaryDirectory() as temp_dir:

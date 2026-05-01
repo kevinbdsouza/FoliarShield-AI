@@ -33,9 +33,9 @@ fixtures, then make the interfaces ready for real batched assay data.
   assay-context examples.
 - [x] Maintain deterministic chunking, retrieval, extraction, review queue, and KG export
   scaffolds.
-- [ ] Add real literature-derived records for cloaked droplets, emulsion impact,
+- [x] Add real literature-derived records for cloaked droplets, emulsion impact,
   polymer droplets, liquid-liquid encapsulation, foliar Bacillus delivery, and BO.
-- [ ] Add assay metadata for droplet impact videos, spray coverage images, simulated rain,
+- [x] Add assay metadata for droplet impact videos, spray coverage images, simulated rain,
   retained fluorescence, evaporation, and early release.
 
 ## Milestone C: Candidate And Evaluator Layer

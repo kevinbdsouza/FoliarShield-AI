@@ -1,7 +1,7 @@
 {
   "status": "ok",
   "artifact_id": "baseline:reasoning-only-seed-v0.1",
-  "generated_at": "2026-05-01T16:20:05.694514+00:00",
+  "generated_at": "2026-05-01T17:34:51.136843+00:00",
   "baseline_version": "deterministic-reasoning-only-seed-v0.1",
   "top_k": 3,
   "task_count": 2,
@@ -16,7 +16,7 @@
           "hypothesis_id": "hypothesis:pilot-1-foliar-retention-rainfastness:strain:001",
           "hypothesis_type": "strain",
           "subject_id": "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder",
-          "score": 0.645,
+          "score": 0.673,
           "task_context": {
             "crop": "rice",
             "stressors": [
@@ -29,10 +29,12 @@
           "supporting_evidence_ids": [
             "evidence:manual-leaf-001",
             "evidence:manual-leaf-003",
+            "evidence:assay-simulated-rain-001",
             "evidence:manual-formulation-001"
           ],
           "supporting_citation_ids": [
-            "chunk:document-manual-doc-001-0"
+            "chunk:document-manual-doc-001-0",
+            "chunk:document-lit-bacillus-rice-blast-colonization-2016-0"
           ],
           "rationale_factors": [
             "evidence_support",
@@ -47,7 +49,7 @@
           "hypothesis_id": "hypothesis:pilot-1-foliar-retention-rainfastness:strain:002",
           "hypothesis_type": "strain",
           "subject_id": "strain:manual-payload-002-non-pathogenic-foliar-surrogate-placeholder",
-          "score": 0.0,
+          "score": 0.012,
           "task_context": {
             "crop": "rice",
             "stressors": [
@@ -60,10 +62,12 @@
           "supporting_evidence_ids": [
             "evidence:manual-leaf-001",
             "evidence:manual-leaf-003",
+            "evidence:assay-simulated-rain-001",
             "evidence:manual-formulation-001"
           ],
           "supporting_citation_ids": [
-            "chunk:document-manual-doc-001-0"
+            "chunk:document-manual-doc-001-0",
+            "chunk:document-lit-bacillus-rice-blast-colonization-2016-0"
           ],
           "rationale_factors": [
             "evidence_support",
@@ -78,7 +82,7 @@
           "hypothesis_id": "hypothesis:pilot-1-foliar-retention-rainfastness:strain:003",
           "hypothesis_type": "strain",
           "subject_id": "strain:manual-payload-003-bacillus-like-viability-benchmark-placeholder",
-          "score": 0.0,
+          "score": 0.001,
           "task_context": {
             "crop": "rice",
             "stressors": [
@@ -91,10 +95,12 @@
           "supporting_evidence_ids": [
             "evidence:manual-leaf-001",
             "evidence:manual-leaf-003",
+            "evidence:assay-simulated-rain-001",
             "evidence:manual-formulation-001"
           ],
           "supporting_citation_ids": [
-            "chunk:document-manual-doc-001-0"
+            "chunk:document-manual-doc-001-0",
+            "chunk:document-lit-bacillus-rice-blast-colonization-2016-0"
           ],
           "rationale_factors": [
             "evidence_support",
@@ -111,9 +117,9 @@
         "Emit cited research-review hypotheses without optimizer search."
       ],
       "summary": {
-        "top_hypothesis_score": 0.645,
-        "citation_count": 1,
-        "evidence_record_count": 3
+        "top_hypothesis_score": 0.673,
+        "citation_count": 2,
+        "evidence_record_count": 4
       },
       "limitations": [
         "No candidate-space search is performed.",
@@ -151,7 +157,10 @@
           ],
           "supporting_citation_ids": [
             "chunk:document-manual-doc-002-0",
-            "chunk:document-manual-doc-003-0"
+            "chunk:document-manual-doc-003-0",
+            "chunk:document-lit-cloaked-droplets-retention-2025-0",
+            "chunk:document-lit-polymer-additives-deposition-2021-0",
+            "chunk:document-lit-constrained-bo-2023-0"
           ],
           "rationale_factors": [
             "evidence_support",
@@ -185,7 +194,10 @@
           ],
           "supporting_citation_ids": [
             "chunk:document-manual-doc-002-0",
-            "chunk:document-manual-doc-003-0"
+            "chunk:document-manual-doc-003-0",
+            "chunk:document-lit-cloaked-droplets-retention-2025-0",
+            "chunk:document-lit-polymer-additives-deposition-2021-0",
+            "chunk:document-lit-constrained-bo-2023-0"
           ],
           "rationale_factors": [
             "evidence_support",
@@ -221,7 +233,10 @@
           ],
           "supporting_citation_ids": [
             "chunk:document-manual-doc-002-0",
-            "chunk:document-manual-doc-003-0"
+            "chunk:document-manual-doc-003-0",
+            "chunk:document-lit-cloaked-droplets-retention-2025-0",
+            "chunk:document-lit-polymer-additives-deposition-2021-0",
+            "chunk:document-lit-constrained-bo-2023-0"
           ],
           "rationale_factors": [
             "evidence_support",
@@ -256,7 +271,10 @@
           ],
           "supporting_citation_ids": [
             "chunk:document-manual-doc-002-0",
-            "chunk:document-manual-doc-003-0"
+            "chunk:document-manual-doc-003-0",
+            "chunk:document-lit-cloaked-droplets-retention-2025-0",
+            "chunk:document-lit-polymer-additives-deposition-2021-0",
+            "chunk:document-lit-constrained-bo-2023-0"
           ],
           "rationale_factors": [
             "release_profile_match",
@@ -290,7 +308,10 @@
           ],
           "supporting_citation_ids": [
             "chunk:document-manual-doc-002-0",
-            "chunk:document-manual-doc-003-0"
+            "chunk:document-manual-doc-003-0",
+            "chunk:document-lit-cloaked-droplets-retention-2025-0",
+            "chunk:document-lit-polymer-additives-deposition-2021-0",
+            "chunk:document-lit-constrained-bo-2023-0"
           ],
           "rationale_factors": [
             "release_profile_match",
@@ -324,7 +345,10 @@
           ],
           "supporting_citation_ids": [
             "chunk:document-manual-doc-002-0",
-            "chunk:document-manual-doc-003-0"
+            "chunk:document-manual-doc-003-0",
+            "chunk:document-lit-cloaked-droplets-retention-2025-0",
+            "chunk:document-lit-polymer-additives-deposition-2021-0",
+            "chunk:document-lit-constrained-bo-2023-0"
           ],
           "rationale_factors": [
             "viability_risk"
@@ -340,7 +364,7 @@
       ],
       "summary": {
         "top_hypothesis_score": 0.454,
-        "citation_count": 2,
+        "citation_count": 6,
         "evidence_record_count": 2
       },
       "limitations": [

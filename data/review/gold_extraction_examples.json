@@ -1,0 +1,52 @@
+{
+  "status": "ok",
+  "artifact_id": "gold:seed-extraction-examples",
+  "gold_version": "manual-seed-v0.1",
+  "notes": [
+    "Project-authored gold examples for validating extraction workflow mechanics only.",
+    "These examples do not make biological benchmark claims."
+  ],
+  "records": [
+    {
+      "chunk_id": "chunk:document-manual-doc-001-0",
+      "crops": [
+        "pearl millet"
+      ],
+      "stressors": [
+        "drought",
+        "heat"
+      ],
+      "organisms": [],
+      "reported_phenotypes": [],
+      "materials": [],
+      "encapsulation_architectures": [],
+      "release_or_viability_signals": [],
+      "assay_or_fidelity": [
+        "literature_seed",
+        "workflow_validation"
+      ]
+    },
+    {
+      "chunk_id": "chunk:document-manual-doc-003-0",
+      "crops": [],
+      "stressors": [],
+      "organisms": [],
+      "reported_phenotypes": [
+        "shelf-life signal",
+        "viability signal"
+      ],
+      "materials": [
+        "hydrogel",
+        "sodium alginate"
+      ],
+      "encapsulation_architectures": [],
+      "release_or_viability_signals": [
+        "release"
+      ],
+      "assay_or_fidelity": [
+        "literature_seed",
+        "workflow_validation"
+      ]
+    }
+  ]
+}

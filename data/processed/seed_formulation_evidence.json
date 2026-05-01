@@ -1,0 +1,243 @@
+{
+  "status": "ok",
+  "artifact_id": "ingest:seed-formulation",
+  "source_manifest": {
+    "id": "manifest:source-manual-material-curation-seed-formulation-evidence-jsonl",
+    "source": "local-ingestion",
+    "license": "CC-BY-4.0",
+    "provenance": "data/raw/seed_formulation_evidence.jsonl",
+    "confidence": 1.0,
+    "created_at": "2026-05-01T16:19:38.957973+00:00",
+    "version": "0.1",
+    "source_id": "source:manual-material-curation",
+    "source_url": "https://example.org/foliarshield-ai/manual-material-curation",
+    "retrieval_method": "local_seed_file",
+    "raw_path": "data/raw/seed_formulation_evidence.jsonl",
+    "content_type": "seed_formulation_evidence",
+    "source_license": "CC-BY-4.0",
+    "license_review_status": "approved_open",
+    "redistribution_mode": "redistributable",
+    "retrieved_at": "2026-05-01T16:19:38.957904+00:00",
+    "record_count": 3,
+    "checksum_sha256": "f838c2dec35f24307d04f8975c9b764f9de8cc9ca9f5882fb41f5e7e48fb6a55",
+    "transformation_notes": [
+      "Parsed local formulation evidence seed rows into domain records.",
+      "Evidence claims are seed scaffolding and require human review before use."
+    ],
+    "record_type": "SourceManifest"
+  },
+  "input_records": 3,
+  "material_records": 3,
+  "trigger_records": 3,
+  "architecture_records": 3,
+  "evidence_records": 3,
+  "records": [
+    {
+      "id": "material:oil-cloaked-aqueous-droplet-system",
+      "source": "source:manual-material-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_formulation_evidence.jsonl",
+      "confidence": 0.52,
+      "created_at": "2026-05-01T16:19:38.957792+00:00",
+      "version": "0.1",
+      "material_class": "cloaked foliar droplet",
+      "release_triggers": [
+        "leaf-deposition",
+        "evaporation",
+        "simulated-rainfall"
+      ],
+      "viability_notes": "Starter formulation concept for retention and rainfastness scoring; requires measured foliar data before benchmarking.",
+      "record_type": "FormulationMaterial"
+    },
+    {
+      "id": "trigger:manual-formulation-001-surface-retention",
+      "source": "source:manual-material-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_formulation_evidence.jsonl",
+      "confidence": 0.52,
+      "created_at": "2026-05-01T16:19:38.957802+00:00",
+      "version": "0.1",
+      "trigger_type": "surface-retention",
+      "condition": "impact on hydrophobic leaf followed by wash-off challenge",
+      "target_release_window": "early post-deposition retention and release",
+      "record_type": "ReleaseTrigger"
+    },
+    {
+      "id": "architecture:manual-formulation-001-cloaked-droplet",
+      "source": "source:manual-material-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_formulation_evidence.jsonl",
+      "confidence": 0.52,
+      "created_at": "2026-05-01T16:19:38.957812+00:00",
+      "version": "0.1",
+      "architecture_type": "cloaked_droplet",
+      "material_ids": [
+        "material:oil-cloaked-aqueous-droplet-system"
+      ],
+      "release_trigger_ids": [
+        "trigger:manual-formulation-001-surface-retention"
+      ],
+      "shell_layers": 1,
+      "viability_constraints": [
+        "verify Bacillus-like payload compatibility before living assay",
+        "avoid phytotoxic solvent assumptions"
+      ],
+      "record_type": "EncapsulationArchitecture"
+    },
+    {
+      "id": "evidence:manual-formulation-001",
+      "source": "source:manual-material-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_formulation_evidence.jsonl",
+      "confidence": 0.52,
+      "created_at": "2026-05-01T16:19:38.957819+00:00",
+      "version": "0.1",
+      "title": "Starter cloaked droplet foliar retention concept",
+      "citation": "Project-authored starter record for workflow validation; replace with license-compatible literature and assay data before benchmarking.",
+      "evidence_type": "formulation",
+      "claims": [
+        "cloaked droplets are in scope for difficult-to-wet foliar retention",
+        "rainfastness and retained-intensity labels are required before candidate promotion"
+      ],
+      "record_type": "EvidenceRecord"
+    },
+    {
+      "id": "material:liquid-liquid-encapsulation-shell",
+      "source": "source:manual-material-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_formulation_evidence.jsonl",
+      "confidence": 0.52,
+      "created_at": "2026-05-01T16:19:38.957833+00:00",
+      "version": "0.1",
+      "material_class": "liquid-liquid encapsulation",
+      "release_triggers": [
+        "diffusion",
+        "hydration",
+        "leaf-surface-residence-time"
+      ],
+      "viability_notes": "Starter liquid-liquid encapsulation concept for nonliving payload release and later Bacillus-like viability checks.",
+      "record_type": "FormulationMaterial"
+    },
+    {
+      "id": "trigger:manual-formulation-002-controlled-release",
+      "source": "source:manual-material-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_formulation_evidence.jsonl",
+      "confidence": 0.52,
+      "created_at": "2026-05-01T16:19:38.957838+00:00",
+      "version": "0.1",
+      "trigger_type": "controlled-release",
+      "condition": "contained foliar release assay",
+      "target_release_window": "hours-to-days post-deposition release checkpoint",
+      "record_type": "ReleaseTrigger"
+    },
+    {
+      "id": "architecture:manual-formulation-002-liquid-liquid-encapsulated-payload",
+      "source": "source:manual-material-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_formulation_evidence.jsonl",
+      "confidence": 0.52,
+      "created_at": "2026-05-01T16:19:38.957845+00:00",
+      "version": "0.1",
+      "architecture_type": "liquid-liquid_encapsulated_payload",
+      "material_ids": [
+        "material:liquid-liquid-encapsulation-shell"
+      ],
+      "release_trigger_ids": [
+        "trigger:manual-formulation-002-controlled-release"
+      ],
+      "shell_layers": 2,
+      "viability_constraints": [
+        "screen processing stress for living payload",
+        "measure early release with nonliving payload first"
+      ],
+      "record_type": "EncapsulationArchitecture"
+    },
+    {
+      "id": "evidence:manual-formulation-002",
+      "source": "source:manual-material-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_formulation_evidence.jsonl",
+      "confidence": 0.52,
+      "created_at": "2026-05-01T16:19:38.957851+00:00",
+      "version": "0.1",
+      "title": "Starter liquid-liquid encapsulation foliar delivery concept",
+      "citation": "Project-authored starter record for workflow validation; replace with license-compatible literature and assay data before benchmarking.",
+      "evidence_type": "formulation",
+      "claims": [
+        "liquid-liquid encapsulation is in scope for controlled foliar release",
+        "nonliving payload assays should precede living-payload viability checks"
+      ],
+      "record_type": "EvidenceRecord"
+    },
+    {
+      "id": "material:polymer-assisted-emulsion-spray",
+      "source": "source:manual-material-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_formulation_evidence.jsonl",
+      "confidence": 0.5,
+      "created_at": "2026-05-01T16:19:38.957862+00:00",
+      "version": "0.1",
+      "material_class": "polymer emulsion additive",
+      "release_triggers": [
+        "evaporation",
+        "film-formation",
+        "rainfall-challenge"
+      ],
+      "viability_notes": "Starter polymer/emulsion concept for droplet impact, coverage, and wash-off endpoints.",
+      "record_type": "FormulationMaterial"
+    },
+    {
+      "id": "trigger:manual-formulation-003-rainfastness",
+      "source": "source:manual-material-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_formulation_evidence.jsonl",
+      "confidence": 0.5,
+      "created_at": "2026-05-01T16:19:38.957866+00:00",
+      "version": "0.1",
+      "trigger_type": "rainfastness",
+      "condition": "spray coverage and simulated rainfall assay",
+      "target_release_window": "post-spray retained coverage and early release",
+      "record_type": "ReleaseTrigger"
+    },
+    {
+      "id": "architecture:manual-formulation-003-polymer-emulsion-foliar-film",
+      "source": "source:manual-material-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_formulation_evidence.jsonl",
+      "confidence": 0.5,
+      "created_at": "2026-05-01T16:19:38.957873+00:00",
+      "version": "0.1",
+      "architecture_type": "polymer-emulsion_foliar_film",
+      "material_ids": [
+        "material:polymer-assisted-emulsion-spray"
+      ],
+      "release_trigger_ids": [
+        "trigger:manual-formulation-003-rainfastness"
+      ],
+      "shell_layers": 1,
+      "viability_constraints": [
+        "check sprayability and payload compatibility",
+        "avoid unreviewed phytotoxicity assumptions"
+      ],
+      "record_type": "EncapsulationArchitecture"
+    },
+    {
+      "id": "evidence:manual-formulation-003",
+      "source": "source:manual-material-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_formulation_evidence.jsonl",
+      "confidence": 0.5,
+      "created_at": "2026-05-01T16:19:38.957879+00:00",
+      "version": "0.1",
+      "title": "Starter polymer-emulsion foliar film concept",
+      "citation": "Project-authored starter record for workflow validation; replace with license-compatible literature and assay data before benchmarking.",
+      "evidence_type": "formulation",
+      "claims": [
+        "polymer and emulsion descriptors are in scope for physics-aware foliar optimization",
+        "sprayability, retention, and wash-off are required fast labels"
+      ],
+      "record_type": "EvidenceRecord"
+    }
+  ]
+}

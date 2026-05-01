@@ -1,0 +1,136 @@
+{
+  "status": "ok",
+  "artifact_id": "review:seed-evidence-queue",
+  "generated_at": "2026-05-01T16:20:05.613599+00:00",
+  "min_confidence": 0.5,
+  "queue_count": 2,
+  "records": [
+    {
+      "review_id": "review:chunk-document-manual-doc-001-0",
+      "chunk_id": "chunk:document-manual-doc-001-0",
+      "document_id": "document:manual-doc-001",
+      "citation": "Project-authored starter document for FoliarShield-AI retrieval workflow validation; replace with license-compatible public literature before benchmarking.",
+      "confidence": 0.4,
+      "evidence_type": "leaf-assay-context",
+      "review_reasons": [
+        "low_confidence",
+        "review"
+      ],
+      "extracted_fields": {
+        "crops": [
+          "rice",
+          "waxy brassica leaf"
+        ],
+        "stressors": [
+          "contact-line motion",
+          "wash-off"
+        ],
+        "organisms": [],
+        "reported_phenotypes": [
+          "evaporation proxy",
+          "retained intensity proxy",
+          "spray coverage proxy",
+          "wash-off proxy"
+        ],
+        "materials": [],
+        "encapsulation_architectures": [],
+        "release_or_viability_signals": [
+          "evaporation",
+          "release"
+        ],
+        "assay_or_fidelity": []
+      },
+      "manual_correction_template": {
+        "chunk_id": "chunk:document-manual-doc-001-0",
+        "accepted": null,
+        "corrected_fields": {
+          "crops": [
+            "rice",
+            "waxy brassica leaf"
+          ],
+          "stressors": [
+            "contact-line motion",
+            "wash-off"
+          ],
+          "organisms": [],
+          "reported_phenotypes": [
+            "evaporation proxy",
+            "retained intensity proxy",
+            "spray coverage proxy",
+            "wash-off proxy"
+          ],
+          "materials": [],
+          "encapsulation_architectures": [],
+          "release_or_viability_signals": [
+            "evaporation",
+            "release"
+          ],
+          "assay_or_fidelity": []
+        },
+        "reviewer": "",
+        "reviewed_at": "",
+        "review_notes": ""
+      }
+    },
+    {
+      "review_id": "review:chunk-document-manual-doc-003-0",
+      "chunk_id": "chunk:document-manual-doc-003-0",
+      "document_id": "document:manual-doc-003",
+      "citation": "Project-authored starter document for FoliarShield-AI retrieval workflow validation; replace with license-compatible public literature before benchmarking.",
+      "confidence": 0.4,
+      "evidence_type": "ai-method",
+      "review_reasons": [
+        "low_confidence",
+        "review"
+      ],
+      "extracted_fields": {
+        "crops": [],
+        "stressors": [],
+        "organisms": [],
+        "reported_phenotypes": [
+          "sprayability proxy"
+        ],
+        "materials": [],
+        "encapsulation_architectures": [],
+        "release_or_viability_signals": [],
+        "assay_or_fidelity": []
+      },
+      "manual_correction_template": {
+        "chunk_id": "chunk:document-manual-doc-003-0",
+        "accepted": null,
+        "corrected_fields": {
+          "crops": [],
+          "stressors": [],
+          "organisms": [],
+          "reported_phenotypes": [
+            "sprayability proxy"
+          ],
+          "materials": [],
+          "encapsulation_architectures": [],
+          "release_or_viability_signals": [],
+          "assay_or_fidelity": []
+        },
+        "reviewer": "",
+        "reviewed_at": "",
+        "review_notes": ""
+      }
+    }
+  ],
+  "manual_correction_format": {
+    "chunk_id": "LiteratureChunk ID under review.",
+    "accepted": "Boolean review decision; false requires corrected_fields or notes.",
+    "corrected_fields": {
+      "crops": "List of accepted values.",
+      "stressors": "List of accepted values.",
+      "organisms": "List of accepted values.",
+      "reported_phenotypes": "List of accepted values.",
+      "materials": "List of accepted values.",
+      "encapsulation_architectures": "List of accepted values.",
+      "release_or_viability_signals": "List of accepted values.",
+      "assay_or_fidelity": "List of accepted values."
+    },
+    "reviewer": "Reviewer name or stable reviewer ID.",
+    "reviewed_at": "ISO-8601 review timestamp.",
+    "review_notes": "Short rationale for corrections or rejection."
+  }
+}

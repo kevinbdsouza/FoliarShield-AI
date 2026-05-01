@@ -1,0 +1,117 @@
+{
+  "status": "ok",
+  "artifact_id": "evaluator:objectives-v0.1",
+  "generated_at": "2026-05-01T16:20:05.646016+00:00",
+  "evaluator_version": "deterministic-seed-evaluator-v0.1",
+  "objective_definitions": [
+    {
+      "objective": "stress_tolerance_proxy",
+      "direction": "maximize",
+      "description": "Starter proxy for foliar retention and rainfastness relevance.",
+      "evidence_basis": [
+        "phenotype_tags",
+        "crop_stress_evidence",
+        "stress_context"
+      ]
+    },
+    {
+      "objective": "nutrient_use_efficiency_proxy",
+      "direction": "maximize",
+      "description": "Starter proxy for payload compatibility and spray-response support.",
+      "evidence_basis": [
+        "phenotype_tags",
+        "phenotype_records"
+      ]
+    },
+    {
+      "objective": "persistence_proxy",
+      "direction": "maximize",
+      "description": "Starter proxy for leaf-surface persistence and post-deposition residence.",
+      "evidence_basis": [
+        "phenotype_tags",
+        "formulation_persistence_flags"
+      ]
+    },
+    {
+      "objective": "encapsulation_viability_proxy",
+      "direction": "maximize",
+      "description": "Inverse risk proxy for storage and processing viability constraints.",
+      "evidence_basis": [
+        "viability_constraints",
+        "viability_notes"
+      ]
+    },
+    {
+      "objective": "release_profile_fit",
+      "direction": "maximize",
+      "description": "Fit between material triggers, architecture, and task release context.",
+      "evidence_basis": [
+        "release_triggers",
+        "architecture_types",
+        "task_context"
+      ]
+    },
+    {
+      "objective": "manufacturability_proxy",
+      "direction": "maximize",
+      "description": "Seed proxy for coating, carrier, matrix, and simple material readiness.",
+      "evidence_basis": [
+        "material_class",
+        "manufacturability_flags"
+      ]
+    },
+    {
+      "objective": "evidence_support",
+      "direction": "maximize",
+      "description": "Citation and record-confidence proxy for candidate support.",
+      "evidence_basis": [
+        "evidence_records",
+        "record_confidence"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "task_id": "pilot-1-foliar-retention-rainfastness",
+      "evaluation_tier": "fast_physical_assay",
+      "objective_weights": {
+        "stress_tolerance_proxy": 0.22,
+        "nutrient_use_efficiency_proxy": 0.12,
+        "persistence_proxy": 0.12,
+        "encapsulation_viability_proxy": 0.16,
+        "release_profile_fit": 0.16,
+        "manufacturability_proxy": 0.1,
+        "evidence_support": 0.12
+      },
+      "promotion_policy": {
+        "minimum_overall_score_for_review": 0.6,
+        "minimum_evidence_support_for_review": 0.35,
+        "biosafety_blocker_bypass_allowed": false,
+        "requires_human_review": true
+      }
+    },
+    {
+      "task_id": "pilot-2-controlled-release-payload-compatibility",
+      "evaluation_tier": "tiered_assay",
+      "objective_weights": {
+        "stress_tolerance_proxy": 0.18,
+        "nutrient_use_efficiency_proxy": 0.08,
+        "persistence_proxy": 0.08,
+        "encapsulation_viability_proxy": 0.2,
+        "release_profile_fit": 0.21,
+        "manufacturability_proxy": 0.13,
+        "evidence_support": 0.12
+      },
+      "promotion_policy": {
+        "minimum_overall_score_for_review": 0.6,
+        "minimum_evidence_support_for_review": 0.35,
+        "biosafety_blocker_bypass_allowed": false,
+        "requires_human_review": true
+      }
+    }
+  ],
+  "notes": [
+    "Objective weights are explicit seed defaults for local evaluator scaffolding.",
+    "Thresholds require domain review before benchmark or shortlist use."
+  ]
+}

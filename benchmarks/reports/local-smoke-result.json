@@ -1,0 +1,356 @@
+{
+  "status": "ok",
+  "artifact_id": "run:local-smoke-001",
+  "random_seed": 1729,
+  "validated_files": [
+    "configs/pilot_tasks.yaml",
+    "configs/modeling.yaml",
+    "configs/reproducibility_manifest.example.json",
+    "configs/source_registry.seed.json",
+    "docs/data_contracts.md"
+  ],
+  "source_registry_entries": 10,
+  "records": [
+    {
+      "id": "taxon:smoke-bacillus-subtilis",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 0.75,
+      "created_at": "2026-05-01T16:20:05.710167+00:00",
+      "version": "0.1",
+      "scientific_name": "Bacillus subtilis",
+      "rank": "species",
+      "synonyms": [],
+      "taxonomy_authority": "",
+      "record_type": "Taxon"
+    },
+    {
+      "id": "strain:smoke-bacillus-like-payload-foliar",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 0.75,
+      "created_at": "2026-05-01T16:20:05.710173+00:00",
+      "version": "0.1",
+      "taxon": "Bacillus subtilis",
+      "strain_label": "contained foliar payload placeholder",
+      "biosafety_flags": [],
+      "phenotype_tags": [
+        "foliar-viability-proxy"
+      ],
+      "record_type": "Strain"
+    },
+    {
+      "id": "strain:smoke-bacillus-like-payload",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 0.72,
+      "created_at": "2026-05-01T16:20:05.710177+00:00",
+      "version": "0.1",
+      "taxon": "Bacillus subtilis",
+      "strain_label": "Bacillus-like compatibility placeholder",
+      "biosafety_flags": [],
+      "phenotype_tags": [
+        "release-compatibility-proxy"
+      ],
+      "record_type": "Strain"
+    },
+    {
+      "id": "genome:smoke-bacillus",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 0.6,
+      "created_at": "2026-05-01T16:20:05.710182+00:00",
+      "version": "0.1",
+      "taxon_id": "taxon:smoke-bacillus-subtilis",
+      "strain_id": "strain:smoke-bacillus-like-payload-foliar",
+      "accession": "GCF_SMOKE_000001",
+      "assembly_level": "synthetic",
+      "feature_source": "",
+      "record_type": "Genome"
+    },
+    {
+      "id": "feature:smoke-spore-viability",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 0.55,
+      "created_at": "2026-05-01T16:20:05.710189+00:00",
+      "version": "0.1",
+      "genome_id": "genome:smoke-bacillus",
+      "feature_name": "spore-viability-marker",
+      "feature_type": "functional_marker",
+      "function_label": "foliar viability proxy",
+      "evidence_ids": [
+        "evidence:smoke-foliar-retention-001"
+      ],
+      "record_type": "ProteinOrGeneFeature"
+    },
+    {
+      "id": "crop:smoke-rice",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 0.9,
+      "created_at": "2026-05-01T16:20:05.710194+00:00",
+      "version": "0.1",
+      "common_name": "rice",
+      "scientific_name": "Oryza sativa",
+      "region_tags": [
+        "foliar-delivery"
+      ],
+      "record_type": "Crop"
+    },
+    {
+      "id": "stress:smoke-leaf-retention-rainfastness",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 0.8,
+      "created_at": "2026-05-01T16:20:05.710200+00:00",
+      "version": "0.1",
+      "stressors": [
+        "leaf-retention",
+        "rainfastness"
+      ],
+      "crop_id": "crop:smoke-rice",
+      "region": "contained leaf-panel assays",
+      "temperature_c": [
+        32.0,
+        42.0
+      ],
+      "moisture_regime": "controlled leaf wetting and simulated rainfall",
+      "record_type": "StressContext"
+    },
+    {
+      "id": "soil:smoke-leaf-surface",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 0.65,
+      "created_at": "2026-05-01T16:20:05.710206+00:00",
+      "version": "0.1",
+      "texture": "waxy cuticle proxy",
+      "ph_range": [
+        6.0,
+        8.0
+      ],
+      "organic_matter_level": "low-to-medium",
+      "region": "contained leaf-panel assays",
+      "record_type": "SoilContext"
+    },
+    {
+      "id": "assay:smoke-foliar-retention",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 0.6,
+      "created_at": "2026-05-01T16:20:05.710211+00:00",
+      "version": "0.1",
+      "assay_type": "foliar-retention-proxy",
+      "fidelity_tier": "low",
+      "measured_traits": [
+        "retained_intensity_proxy",
+        "wash_off_proxy"
+      ],
+      "crop_id": "crop:smoke-rice",
+      "stress_context_id": "stress:smoke-leaf-retention-rainfastness",
+      "record_type": "Assay"
+    },
+    {
+      "id": "phenotype:smoke-foliar-viability",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 0.58,
+      "created_at": "2026-05-01T16:20:05.710216+00:00",
+      "version": "0.1",
+      "subject_id": "strain:smoke-bacillus-like-payload-foliar",
+      "trait": "foliar viability proxy",
+      "value": "starter compatibility signal",
+      "assay_id": "assay:smoke-foliar-retention",
+      "evidence_ids": [
+        "evidence:smoke-foliar-retention-001"
+      ],
+      "record_type": "Phenotype"
+    },
+    {
+      "id": "consortium:smoke-payload-compatibility-001",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 0.55,
+      "created_at": "2026-05-01T16:20:05.710222+00:00",
+      "version": "0.1",
+      "member_strain_ids": [
+        "strain:smoke-bacillus-like-payload-foliar",
+        "strain:smoke-bacillus-like-payload"
+      ],
+      "ratios": {
+        "strain:smoke-bacillus-like-payload-foliar": 0.6,
+        "strain:smoke-bacillus-like-payload": 0.4
+      },
+      "qualitative_composition": [],
+      "compatibility_notes": [
+        "Synthetic payload compatibility placeholder."
+      ],
+      "record_type": "Consortium"
+    },
+    {
+      "id": "material:smoke-cloaked-droplet",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 0.7,
+      "created_at": "2026-05-01T16:20:05.710227+00:00",
+      "version": "0.1",
+      "material_class": "cloaked droplet",
+      "release_triggers": [
+        "leaf-deposition",
+        "rainfall-challenge"
+      ],
+      "viability_notes": "Synthetic local foliar formulation record.",
+      "record_type": "FormulationMaterial"
+    },
+    {
+      "id": "trigger:smoke-rainfastness",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 0.65,
+      "created_at": "2026-05-01T16:20:05.710231+00:00",
+      "version": "0.1",
+      "trigger_type": "rainfastness",
+      "condition": "simulated rainfall after leaf deposition",
+      "target_release_window": "early post-deposition release",
+      "record_type": "ReleaseTrigger"
+    },
+    {
+      "id": "architecture:smoke-cloaked-droplet",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 0.62,
+      "created_at": "2026-05-01T16:20:05.710236+00:00",
+      "version": "0.1",
+      "architecture_type": "cloaked_droplet",
+      "material_ids": [
+        "material:smoke-cloaked-droplet"
+      ],
+      "release_trigger_ids": [
+        "trigger:smoke-rainfastness"
+      ],
+      "shell_layers": 1,
+      "viability_constraints": [
+        "verify sprayability and payload compatibility"
+      ],
+      "record_type": "EncapsulationArchitecture"
+    },
+    {
+      "id": "evidence:smoke-foliar-retention-001",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 0.7,
+      "created_at": "2026-05-01T16:20:05.710148+00:00",
+      "version": "0.1",
+      "title": "",
+      "citation": "Synthetic smoke-test evidence record",
+      "evidence_type": "foliar-retention-release",
+      "claims": [
+        "foliar retention and release proxy signals are available for CLI validation"
+      ],
+      "record_type": "EvidenceRecord"
+    },
+    {
+      "id": "candidate:pilot-1-smoke-001",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 0.6,
+      "created_at": "2026-05-01T16:20:05.710158+00:00",
+      "version": "0.1",
+      "strain_ids": [
+        "strain:smoke-bacillus-like-payload-foliar",
+        "strain:smoke-bacillus-like-payload"
+      ],
+      "consortium_id": "consortium:smoke-payload-compatibility-001",
+      "consortium_ratios": {
+        "strain:smoke-bacillus-like-payload-foliar": 0.6,
+        "strain:smoke-bacillus-like-payload": 0.4
+      },
+      "qualitative_composition": [],
+      "crop": "rice",
+      "stress_context": "leaf-retention+rainfastness",
+      "formulation_material_id": "material:smoke-cloaked-droplet",
+      "encapsulation_architecture": "cloaked_droplet",
+      "target_release_profile": "foliar retention and early controlled release",
+      "evaluation_tier": "in_silico",
+      "responsible_use_status": "research_only",
+      "biosafety_flags": [],
+      "record_type": "CandidateDesign"
+    },
+    {
+      "id": "eval:pilot-1-smoke-001",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 0.65,
+      "created_at": "2026-05-01T16:20:05.710242+00:00",
+      "version": "0.1",
+      "candidate_id": "candidate:pilot-1-smoke-001",
+      "objective_scores": {
+        "retention_proxy": 0.62,
+        "evidence_support": 0.7
+      },
+      "uncertainty_intervals": {
+        "retention_proxy": [
+          0.45,
+          0.75
+        ]
+      },
+      "evidence_ids": [
+        "evidence:smoke-foliar-retention-001"
+      ],
+      "biosafety_flags": [],
+      "manufacturability_flags": [],
+      "proxy_to_target_risk_notes": [
+        "Synthetic smoke score; not a foliar efficacy claim."
+      ],
+      "recommendation_rationale": "CLI smoke candidate validates schema wiring only.",
+      "record_type": "EvaluationResult"
+    },
+    {
+      "id": "benchmark:local-smoke-001",
+      "source": "cli-smoke",
+      "license": "CC-BY-4.0",
+      "provenance": "src/foliarshield_ai/cli.py",
+      "confidence": 1.0,
+      "created_at": "2026-05-01T16:20:05.710248+00:00",
+      "version": "0.1",
+      "task_id": "pilot-1-foliar-retention-rainfastness",
+      "run_id": "run:local-smoke-001",
+      "method": "schema-smoke",
+      "metrics": {
+        "records_validated": 18.0,
+        "candidate_count": 1.0
+      },
+      "baseline_metrics": {
+        "minimum_expected_records": 5.0
+      },
+      "candidate_ids": [
+        "candidate:pilot-1-smoke-001"
+      ],
+      "artifact_paths": [
+        "benchmarks/reports/local-smoke-result.json"
+      ],
+      "notes": [
+        "Synthetic local validation result; no data ingestion or ranking performed."
+      ],
+      "record_type": "BenchmarkResult"
+    }
+  ]
+}

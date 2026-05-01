@@ -1,0 +1,233 @@
+{
+  "status": "ok",
+  "artifact_id": "baseline:random-valid-candidates-v0.1",
+  "generated_at": "2026-05-01T16:20:05.650935+00:00",
+  "baseline_version": "deterministic-random-valid-sampler-v0.1",
+  "random_seed": 1729,
+  "samples_per_task": 4,
+  "task_count": 2,
+  "records": [
+    {
+      "task_id": "pilot-1-foliar-retention-rainfastness",
+      "candidate_designs": [
+        {
+          "candidate_id": "candidate:random:pilot-1-foliar-retention-rainfastness:001:3fd52ac1",
+          "source": "deterministic_random_valid_sampler",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "consortium_ratios": {
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder": 1.0
+          },
+          "crop": "rice",
+          "stress_context": "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel",
+          "formulation_material_id": "material:liquid-liquid-encapsulation-shell",
+          "encapsulation_architecture": "architecture:manual-formulation-002-liquid-liquid-encapsulated-payload",
+          "target_release_profile": null,
+          "evaluation_tier": "fast_physical_assay",
+          "responsible_use_status": "research_only",
+          "biosafety_flags": [],
+          "validity_checks": {
+            "has_strain": true,
+            "biosafety_clear": true,
+            "has_crop": true,
+            "has_stress_context": true,
+            "has_required_formulation": true
+          }
+        },
+        {
+          "candidate_id": "candidate:random:pilot-1-foliar-retention-rainfastness:002:821a23c2",
+          "source": "deterministic_random_valid_sampler",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "consortium_ratios": {
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder": 1.0
+          },
+          "crop": "rice",
+          "stress_context": "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel",
+          "formulation_material_id": "material:oil-cloaked-aqueous-droplet-system",
+          "encapsulation_architecture": "architecture:manual-formulation-001-cloaked-droplet",
+          "target_release_profile": null,
+          "evaluation_tier": "fast_physical_assay",
+          "responsible_use_status": "research_only",
+          "biosafety_flags": [],
+          "validity_checks": {
+            "has_strain": true,
+            "biosafety_clear": true,
+            "has_crop": true,
+            "has_stress_context": true,
+            "has_required_formulation": true
+          }
+        },
+        {
+          "candidate_id": "candidate:random:pilot-1-foliar-retention-rainfastness:003:821a23c2",
+          "source": "deterministic_random_valid_sampler",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "consortium_ratios": {
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder": 1.0
+          },
+          "crop": "rice",
+          "stress_context": "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel",
+          "formulation_material_id": "material:oil-cloaked-aqueous-droplet-system",
+          "encapsulation_architecture": "architecture:manual-formulation-001-cloaked-droplet",
+          "target_release_profile": null,
+          "evaluation_tier": "fast_physical_assay",
+          "responsible_use_status": "research_only",
+          "biosafety_flags": [],
+          "validity_checks": {
+            "has_strain": true,
+            "biosafety_clear": true,
+            "has_crop": true,
+            "has_stress_context": true,
+            "has_required_formulation": true
+          }
+        },
+        {
+          "candidate_id": "candidate:random:pilot-1-foliar-retention-rainfastness:004:9e6fa9be",
+          "source": "deterministic_random_valid_sampler",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "consortium_ratios": {
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder": 1.0
+          },
+          "crop": "rice",
+          "stress_context": "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel",
+          "formulation_material_id": "material:polymer-assisted-emulsion-spray",
+          "encapsulation_architecture": "architecture:manual-formulation-003-polymer-emulsion-foliar-film",
+          "target_release_profile": null,
+          "evaluation_tier": "fast_physical_assay",
+          "responsible_use_status": "research_only",
+          "biosafety_flags": [],
+          "validity_checks": {
+            "has_strain": true,
+            "biosafety_clear": true,
+            "has_crop": true,
+            "has_stress_context": true,
+            "has_required_formulation": true
+          }
+        }
+      ],
+      "validity_notes": [
+        "Candidates are sampled from local seed feature records.",
+        "Equal consortium ratios are placeholders for schema-valid baseline candidates."
+      ]
+    },
+    {
+      "task_id": "pilot-2-controlled-release-payload-compatibility",
+      "candidate_designs": [
+        {
+          "candidate_id": "candidate:random:pilot-2-controlled-release-payload-compatibility:001:3fd52ac1",
+          "source": "deterministic_random_valid_sampler",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "consortium_ratios": {
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder": 1.0
+          },
+          "crop": "waxy brassica leaf",
+          "stress_context": "stress:waxy-brassica-leaf-leaf-retention-rainfastness-contact-line-motion-contained-laboratory-leaf-panel",
+          "formulation_material_id": "material:liquid-liquid-encapsulation-shell",
+          "encapsulation_architecture": "architecture:manual-formulation-002-liquid-liquid-encapsulated-payload",
+          "target_release_profile": "task-matched formulation release",
+          "evaluation_tier": "tiered_assay",
+          "responsible_use_status": "research_only",
+          "biosafety_flags": [],
+          "validity_checks": {
+            "has_strain": true,
+            "biosafety_clear": true,
+            "has_crop": true,
+            "has_stress_context": true,
+            "has_required_formulation": true
+          }
+        },
+        {
+          "candidate_id": "candidate:random:pilot-2-controlled-release-payload-compatibility:002:821a23c2",
+          "source": "deterministic_random_valid_sampler",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "consortium_ratios": {
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder": 1.0
+          },
+          "crop": "waxy brassica leaf",
+          "stress_context": "stress:waxy-brassica-leaf-leaf-retention-rainfastness-contact-line-motion-contained-laboratory-leaf-panel",
+          "formulation_material_id": "material:oil-cloaked-aqueous-droplet-system",
+          "encapsulation_architecture": "architecture:manual-formulation-001-cloaked-droplet",
+          "target_release_profile": "task-matched formulation release",
+          "evaluation_tier": "tiered_assay",
+          "responsible_use_status": "research_only",
+          "biosafety_flags": [],
+          "validity_checks": {
+            "has_strain": true,
+            "biosafety_clear": true,
+            "has_crop": true,
+            "has_stress_context": true,
+            "has_required_formulation": true
+          }
+        },
+        {
+          "candidate_id": "candidate:random:pilot-2-controlled-release-payload-compatibility:003:821a23c2",
+          "source": "deterministic_random_valid_sampler",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "consortium_ratios": {
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder": 1.0
+          },
+          "crop": "waxy brassica leaf",
+          "stress_context": "stress:waxy-brassica-leaf-leaf-retention-rainfastness-contact-line-motion-contained-laboratory-leaf-panel",
+          "formulation_material_id": "material:oil-cloaked-aqueous-droplet-system",
+          "encapsulation_architecture": "architecture:manual-formulation-001-cloaked-droplet",
+          "target_release_profile": "task-matched formulation release",
+          "evaluation_tier": "tiered_assay",
+          "responsible_use_status": "research_only",
+          "biosafety_flags": [],
+          "validity_checks": {
+            "has_strain": true,
+            "biosafety_clear": true,
+            "has_crop": true,
+            "has_stress_context": true,
+            "has_required_formulation": true
+          }
+        },
+        {
+          "candidate_id": "candidate:random:pilot-2-controlled-release-payload-compatibility:004:3fd52ac1",
+          "source": "deterministic_random_valid_sampler",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "consortium_ratios": {
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder": 1.0
+          },
+          "crop": "waxy brassica leaf",
+          "stress_context": "stress:waxy-brassica-leaf-leaf-retention-rainfastness-contact-line-motion-contained-laboratory-leaf-panel",
+          "formulation_material_id": "material:liquid-liquid-encapsulation-shell",
+          "encapsulation_architecture": "architecture:manual-formulation-002-liquid-liquid-encapsulated-payload",
+          "target_release_profile": "task-matched formulation release",
+          "evaluation_tier": "tiered_assay",
+          "responsible_use_status": "research_only",
+          "biosafety_flags": [],
+          "validity_checks": {
+            "has_strain": true,
+            "biosafety_clear": true,
+            "has_crop": true,
+            "has_stress_context": true,
+            "has_required_formulation": true
+          }
+        }
+      ],
+      "validity_notes": [
+        "Candidates are sampled from local seed feature records.",
+        "Equal consortium ratios are placeholders for schema-valid baseline candidates."
+      ]
+    }
+  ],
+  "notes": [
+    "Random candidates are constrained to schema-valid, biosafety-clear seed records.",
+    "This is a baseline search scaffold, not a recommendation generator."
+  ]
+}

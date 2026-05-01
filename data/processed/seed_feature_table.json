@@ -1,0 +1,282 @@
+{
+  "status": "ok",
+  "artifact_id": "features:seed-v0.1",
+  "generated_at": "2026-05-01T16:20:55.488322+00:00",
+  "feature_version": "deterministic-seed-features-v0.1",
+  "record_count": 39,
+  "feature_counts": {
+    "strain_features": 3,
+    "consortium_pair_features": 0,
+    "formulation_features": 3,
+    "crop_stress_context_features": 3,
+    "genome_records_linked": 0,
+    "protein_or_gene_features_linked": 0,
+    "soil_context_records": 0
+  },
+  "strain_features": [
+    {
+      "strain_id": "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder",
+      "taxon": "Bacillus subtilis",
+      "genus": "Bacillus",
+      "confidence": 0.52,
+      "phenotype_tags": [
+        "foliar-compatible placeholder",
+        "leaf-retention proxy",
+        "rainfastness compatibility proxy",
+        "spore-forming viability proxy",
+        "contained-use review required"
+      ],
+      "phenotype_terms": [],
+      "taxonomic_feature": "bacillus_subtilis",
+      "genome_accessions": [],
+      "genome_assembly_levels": [],
+      "genome_marker_embedding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gene_function_summary_terms": [],
+      "gene_feature_count": 0,
+      "gene_evidence_ids": [],
+      "stress_response_flag": 0,
+      "root_growth_proxy_flag": 0,
+      "nutrient_use_proxy_flag": 0,
+      "formulation_viability_proxy_flag": 1,
+      "soil_persistence_proxy_flag": 0,
+      "genome_feature_available": false,
+      "biosafety_flags": [],
+      "biosafety_review_required": false
+    },
+    {
+      "strain_id": "strain:manual-payload-002-non-pathogenic-foliar-surrogate-placeholder",
+      "taxon": "Bacillus velezensis",
+      "genus": "Bacillus",
+      "confidence": 0.5,
+      "phenotype_tags": [
+        "phyllosphere persistence proxy",
+        "formulation compatibility proxy",
+        "contained-use review required"
+      ],
+      "phenotype_terms": [],
+      "taxonomic_feature": "bacillus_velezensis",
+      "genome_accessions": [],
+      "genome_assembly_levels": [],
+      "genome_marker_embedding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gene_function_summary_terms": [],
+      "gene_feature_count": 0,
+      "gene_evidence_ids": [],
+      "stress_response_flag": 0,
+      "root_growth_proxy_flag": 0,
+      "nutrient_use_proxy_flag": 0,
+      "formulation_viability_proxy_flag": 0,
+      "soil_persistence_proxy_flag": 1,
+      "genome_feature_available": false,
+      "biosafety_flags": [
+        "institutional approval required before living-payload assay"
+      ],
+      "biosafety_review_required": true
+    },
+    {
+      "strain_id": "strain:manual-payload-003-bacillus-like-viability-benchmark-placeholder",
+      "taxon": "Bacillus amyloliquefaciens",
+      "genus": "Bacillus",
+      "confidence": 0.48,
+      "phenotype_tags": [
+        "leaf-surface survival proxy",
+        "controlled-release compatibility proxy"
+      ],
+      "phenotype_terms": [],
+      "taxonomic_feature": "bacillus_amyloliquefaciens",
+      "genome_accessions": [],
+      "genome_assembly_levels": [],
+      "genome_marker_embedding": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gene_function_summary_terms": [],
+      "gene_feature_count": 0,
+      "gene_evidence_ids": [],
+      "stress_response_flag": 0,
+      "root_growth_proxy_flag": 0,
+      "nutrient_use_proxy_flag": 0,
+      "formulation_viability_proxy_flag": 0,
+      "soil_persistence_proxy_flag": 0,
+      "genome_feature_available": false,
+      "biosafety_flags": [
+        "institutional approval required before living-payload assay"
+      ],
+      "biosafety_review_required": true
+    }
+  ],
+  "consortium_pair_features": [],
+  "formulation_features": [
+    {
+      "material_id": "material:oil-cloaked-aqueous-droplet-system",
+      "material_class": "cloaked foliar droplet",
+      "confidence": 0.52,
+      "release_triggers": [
+        "leaf-deposition",
+        "evaporation",
+        "simulated-rainfall"
+      ],
+      "architecture_ids": [
+        "architecture:manual-formulation-001-cloaked-droplet"
+      ],
+      "architecture_types": [
+        "cloaked_droplet"
+      ],
+      "trigger_types": [
+        "surface-retention"
+      ],
+      "water_response_proxy_flag": 0,
+      "temperature_process_risk_flag": 0,
+      "persistence_proxy_flag": 0,
+      "manufacturability_proxy_flag": 0,
+      "viability_constraints": [
+        "verify Bacillus-like payload compatibility before living assay",
+        "avoid phytotoxic solvent assumptions"
+      ]
+    },
+    {
+      "material_id": "material:liquid-liquid-encapsulation-shell",
+      "material_class": "liquid-liquid encapsulation",
+      "confidence": 0.52,
+      "release_triggers": [
+        "diffusion",
+        "hydration",
+        "leaf-surface-residence-time"
+      ],
+      "architecture_ids": [
+        "architecture:manual-formulation-002-liquid-liquid-encapsulated-payload"
+      ],
+      "architecture_types": [
+        "liquid-liquid_encapsulated_payload"
+      ],
+      "trigger_types": [
+        "controlled-release"
+      ],
+      "water_response_proxy_flag": 1,
+      "temperature_process_risk_flag": 0,
+      "persistence_proxy_flag": 0,
+      "manufacturability_proxy_flag": 0,
+      "viability_constraints": [
+        "screen processing stress for living payload",
+        "measure early release with nonliving payload first"
+      ]
+    },
+    {
+      "material_id": "material:polymer-assisted-emulsion-spray",
+      "material_class": "polymer emulsion additive",
+      "confidence": 0.5,
+      "release_triggers": [
+        "evaporation",
+        "film-formation",
+        "rainfall-challenge"
+      ],
+      "architecture_ids": [
+        "architecture:manual-formulation-003-polymer-emulsion-foliar-film"
+      ],
+      "architecture_types": [
+        "polymer-emulsion_foliar_film"
+      ],
+      "trigger_types": [
+        "rainfastness"
+      ],
+      "water_response_proxy_flag": 0,
+      "temperature_process_risk_flag": 0,
+      "persistence_proxy_flag": 0,
+      "manufacturability_proxy_flag": 0,
+      "viability_constraints": [
+        "check sprayability and payload compatibility",
+        "avoid unreviewed phytotoxicity assumptions"
+      ]
+    }
+  ],
+  "crop_stress_context_features": [
+    {
+      "stress_context_id": "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel",
+      "crop_id": "crop:rice",
+      "crop": "rice",
+      "stressors": [
+        "leaf-retention",
+        "rainfastness"
+      ],
+      "moisture_regime": "controlled leaf-surface wetting and simulated rainfall",
+      "temperature_c": [
+        24.0,
+        32.0
+      ],
+      "soil_context_ids": [],
+      "soil_texture_terms": [],
+      "soil_ph_range": [],
+      "soil_organic_matter_terms": [],
+      "soil_context_available": false,
+      "foliar_panel_relevance_score": 0.8
+    },
+    {
+      "stress_context_id": "stress:waxy-brassica-leaf-leaf-retention-rainfastness-contact-line-motion-contained-laboratory-leaf-panel",
+      "crop_id": "crop:waxy-brassica-leaf",
+      "crop": "waxy brassica leaf",
+      "stressors": [
+        "leaf-retention",
+        "rainfastness",
+        "contact-line-motion"
+      ],
+      "moisture_regime": "controlled leaf-surface wetting and simulated rainfall",
+      "temperature_c": [
+        24.0,
+        32.0
+      ],
+      "soil_context_ids": [],
+      "soil_texture_terms": [],
+      "soil_ph_range": [],
+      "soil_organic_matter_terms": [],
+      "soil_context_available": false,
+      "foliar_panel_relevance_score": 1.0
+    },
+    {
+      "stress_context_id": "stress:tomato-leaf-retention-controlled-release-optional-laboratory-leaf-panel-expansion",
+      "crop_id": "crop:tomato",
+      "crop": "tomato",
+      "stressors": [
+        "leaf-retention",
+        "controlled-release"
+      ],
+      "moisture_regime": "controlled leaf-surface wetting",
+      "temperature_c": [
+        24.0,
+        32.0
+      ],
+      "soil_context_ids": [],
+      "soil_texture_terms": [],
+      "soil_ph_range": [],
+      "soil_organic_matter_terms": [],
+      "soil_context_available": false,
+      "foliar_panel_relevance_score": 1.0
+    }
+  ],
+  "notes": [
+    "Seed features are deterministic proxies for local workflow validation.",
+    "They are not benchmark-ready biological descriptors until reviewed datasets land."
+  ]
+}

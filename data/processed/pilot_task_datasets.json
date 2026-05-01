@@ -1,0 +1,132 @@
+{
+  "status": "ok",
+  "artifact_id": "dataset:pilot-tasks-seed-v0.1",
+  "generated_at": "2026-05-01T16:20:05.641002+00:00",
+  "dataset_version": "seed-pilot-datasets-v0.1",
+  "task_count": 2,
+  "records": [
+    {
+      "task_id": "pilot-1-foliar-retention-rainfastness",
+      "name": "Rice and waxy-brassica foliar retention and rainfastness ranking",
+      "crop": "rice",
+      "stressors": [
+        "leaf-retention",
+        "rainfastness",
+        "contact-line-motion"
+      ],
+      "evaluation_tier": "fast_physical_assay",
+      "outputs": [
+        "ranked_formulations",
+        "retained_intensity_scores",
+        "wash_off_risk_notes",
+        "candidate_scorecards"
+      ],
+      "matched_record_ids": {
+        "crop_records": [
+          "crop:rice"
+        ],
+        "stress_contexts": [
+          "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel",
+          "stress:waxy-brassica-leaf-leaf-retention-rainfastness-contact-line-motion-contained-laboratory-leaf-panel",
+          "stress:tomato-leaf-retention-controlled-release-optional-laboratory-leaf-panel-expansion"
+        ],
+        "crop_stress_evidence": [],
+        "formulation_evidence": [
+          "evidence:manual-formulation-001",
+          "evidence:manual-formulation-002",
+          "evidence:manual-formulation-003"
+        ],
+        "literature_chunks": [
+          "chunk:document-manual-doc-001-0"
+        ],
+        "candidate_strains": [
+          "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+        ],
+        "candidate_materials": [
+          "material:oil-cloaked-aqueous-droplet-system",
+          "material:liquid-liquid-encapsulation-shell",
+          "material:polymer-assisted-emulsion-spray"
+        ]
+      },
+      "coverage_counts": {
+        "crop_records": 1,
+        "stress_contexts": 3,
+        "crop_stress_evidence": 0,
+        "formulation_evidence": 3,
+        "literature_chunks": 1,
+        "candidate_strains": 1,
+        "candidate_materials": 3
+      },
+      "weak_or_review_gated_evidence_ids": [
+        "evidence:manual-formulation-001",
+        "evidence:manual-formulation-002",
+        "evidence:manual-formulation-003"
+      ],
+      "readiness_status": "needs_review",
+      "readiness_notes": [
+        "Seed dataset slice is usable for CLI workflow validation.",
+        "Evidence count and review status remain below benchmark-readiness thresholds."
+      ]
+    },
+    {
+      "task_id": "pilot-2-controlled-release-payload-compatibility",
+      "name": "Controlled-release and Bacillus-like payload compatibility scoring",
+      "crop": "waxy brassica leaf",
+      "stressors": [
+        "controlled-release",
+        "payload-viability",
+        "sprayability"
+      ],
+      "evaluation_tier": "tiered_assay",
+      "outputs": [
+        "release_fit_scores",
+        "viability_risk_notes",
+        "responsible_use_flags"
+      ],
+      "matched_record_ids": {
+        "crop_records": [
+          "crop:waxy-brassica-leaf"
+        ],
+        "stress_contexts": [
+          "stress:waxy-brassica-leaf-leaf-retention-rainfastness-contact-line-motion-contained-laboratory-leaf-panel",
+          "stress:tomato-leaf-retention-controlled-release-optional-laboratory-leaf-panel-expansion"
+        ],
+        "crop_stress_evidence": [],
+        "formulation_evidence": [
+          "evidence:manual-formulation-001",
+          "evidence:manual-formulation-002",
+          "evidence:manual-formulation-003"
+        ],
+        "literature_chunks": [
+          "chunk:document-manual-doc-002-0",
+          "chunk:document-manual-doc-003-0"
+        ],
+        "candidate_strains": [],
+        "candidate_materials": []
+      },
+      "coverage_counts": {
+        "crop_records": 1,
+        "stress_contexts": 2,
+        "crop_stress_evidence": 0,
+        "formulation_evidence": 3,
+        "literature_chunks": 2,
+        "candidate_strains": 0,
+        "candidate_materials": 0
+      },
+      "weak_or_review_gated_evidence_ids": [
+        "evidence:manual-formulation-001",
+        "evidence:manual-formulation-002",
+        "evidence:manual-formulation-003"
+      ],
+      "readiness_status": "needs_review",
+      "readiness_notes": [
+        "Seed dataset slice is usable for CLI workflow validation.",
+        "Evidence count and review status remain below benchmark-readiness thresholds."
+      ]
+    }
+  ],
+  "notes": [
+    "Pilot datasets are assembled from the current local seed fixtures.",
+    "Coverage is intentionally small and review-gated before benchmark claims."
+  ]
+}

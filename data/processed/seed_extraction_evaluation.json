@@ -1,0 +1,86 @@
+{
+  "status": "ok",
+  "artifact_id": "evaluation:structured-extractions",
+  "generated_at": "2026-05-01T16:20:05.618932+00:00",
+  "gold_example_count": 2,
+  "extraction_count": 3,
+  "matched_example_count": 2,
+  "missing_gold_chunk_ids": [],
+  "extra_extraction_chunk_ids": [
+    "chunk:document-manual-doc-002-0"
+  ],
+  "micro_average": {
+    "true_positive": 0,
+    "false_positive": 11,
+    "false_negative": 12,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "per_field": {
+    "assay_or_fidelity": {
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "crops": {
+      "true_positive": 0,
+      "false_positive": 2,
+      "false_negative": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "encapsulation_architectures": {
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "materials": {
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "organisms": {
+      "true_positive": 0,
+      "false_positive": 0,
+      "false_negative": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "release_or_viability_signals": {
+      "true_positive": 0,
+      "false_positive": 2,
+      "false_negative": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "reported_phenotypes": {
+      "true_positive": 0,
+      "false_positive": 5,
+      "false_negative": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "stressors": {
+      "true_positive": 0,
+      "false_positive": 2,
+      "false_negative": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  }
+}

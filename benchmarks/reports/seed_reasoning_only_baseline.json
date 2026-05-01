@@ -1,0 +1,357 @@
+{
+  "status": "ok",
+  "artifact_id": "baseline:reasoning-only-seed-v0.1",
+  "generated_at": "2026-05-01T16:20:05.694514+00:00",
+  "baseline_version": "deterministic-reasoning-only-seed-v0.1",
+  "top_k": 3,
+  "task_count": 2,
+  "records": [
+    {
+      "task_id": "pilot-1-foliar-retention-rainfastness",
+      "method": "deterministic_retrieval_grounded_reasoning_only",
+      "hypothesis_count": 3,
+      "hypotheses": [
+        {
+          "rank": 1,
+          "hypothesis_id": "hypothesis:pilot-1-foliar-retention-rainfastness:strain:001",
+          "hypothesis_type": "strain",
+          "subject_id": "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder",
+          "score": 0.645,
+          "task_context": {
+            "crop": "rice",
+            "stressors": [
+              "leaf-retention",
+              "rainfastness",
+              "contact-line-motion"
+            ],
+            "formulation_context": []
+          },
+          "supporting_evidence_ids": [
+            "evidence:manual-leaf-001",
+            "evidence:manual-leaf-003",
+            "evidence:manual-formulation-001"
+          ],
+          "supporting_citation_ids": [
+            "chunk:document-manual-doc-001-0"
+          ],
+          "rationale_factors": [
+            "evidence_support",
+            "stress_relevance",
+            "crop_relevance"
+          ],
+          "responsible_use_status": "research_review_only",
+          "claim": "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder is a seed reasoning-only candidate for Rice and waxy-brassica foliar retention and rainfastness ranking."
+        },
+        {
+          "rank": 2,
+          "hypothesis_id": "hypothesis:pilot-1-foliar-retention-rainfastness:strain:002",
+          "hypothesis_type": "strain",
+          "subject_id": "strain:manual-payload-002-non-pathogenic-foliar-surrogate-placeholder",
+          "score": 0.0,
+          "task_context": {
+            "crop": "rice",
+            "stressors": [
+              "leaf-retention",
+              "rainfastness",
+              "contact-line-motion"
+            ],
+            "formulation_context": []
+          },
+          "supporting_evidence_ids": [
+            "evidence:manual-leaf-001",
+            "evidence:manual-leaf-003",
+            "evidence:manual-formulation-001"
+          ],
+          "supporting_citation_ids": [
+            "chunk:document-manual-doc-001-0"
+          ],
+          "rationale_factors": [
+            "evidence_support",
+            "crop_relevance",
+            "biosafety_penalty"
+          ],
+          "responsible_use_status": "research_review_only",
+          "claim": "strain:manual-payload-002-non-pathogenic-foliar-surrogate-placeholder is a seed reasoning-only candidate for Rice and waxy-brassica foliar retention and rainfastness ranking."
+        },
+        {
+          "rank": 3,
+          "hypothesis_id": "hypothesis:pilot-1-foliar-retention-rainfastness:strain:003",
+          "hypothesis_type": "strain",
+          "subject_id": "strain:manual-payload-003-bacillus-like-viability-benchmark-placeholder",
+          "score": 0.0,
+          "task_context": {
+            "crop": "rice",
+            "stressors": [
+              "leaf-retention",
+              "rainfastness",
+              "contact-line-motion"
+            ],
+            "formulation_context": []
+          },
+          "supporting_evidence_ids": [
+            "evidence:manual-leaf-001",
+            "evidence:manual-leaf-003",
+            "evidence:manual-formulation-001"
+          ],
+          "supporting_citation_ids": [
+            "chunk:document-manual-doc-001-0"
+          ],
+          "rationale_factors": [
+            "evidence_support",
+            "crop_relevance",
+            "biosafety_penalty"
+          ],
+          "responsible_use_status": "research_review_only",
+          "claim": "strain:manual-payload-003-bacillus-like-viability-benchmark-placeholder is a seed reasoning-only candidate for Rice and waxy-brassica foliar retention and rainfastness ranking."
+        }
+      ],
+      "reasoning_trace": [
+        "Select task-matching evidence and literature chunks by crop, stress, and formulation terms.",
+        "Rank seed entities with deterministic evidence, relevance, and guardrail components.",
+        "Emit cited research-review hypotheses without optimizer search."
+      ],
+      "summary": {
+        "top_hypothesis_score": 0.645,
+        "citation_count": 1,
+        "evidence_record_count": 3
+      },
+      "limitations": [
+        "No candidate-space search is performed.",
+        "No language model reasoning is used in this local seed scaffold.",
+        "Hypotheses are not deployment recommendations."
+      ]
+    },
+    {
+      "task_id": "pilot-2-controlled-release-payload-compatibility",
+      "method": "deterministic_retrieval_grounded_reasoning_only",
+      "hypothesis_count": 6,
+      "hypotheses": [
+        {
+          "rank": 1,
+          "hypothesis_id": "hypothesis:pilot-2-controlled-release-payload-compatibility:strain:001",
+          "hypothesis_type": "strain",
+          "subject_id": "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder",
+          "score": 0.389,
+          "task_context": {
+            "crop": "waxy brassica leaf",
+            "stressors": [
+              "controlled-release",
+              "payload-viability",
+              "sprayability"
+            ],
+            "formulation_context": [
+              "cloaked_droplet",
+              "liquid_liquid_encapsulation",
+              "polymer_emulsion_spray"
+            ]
+          },
+          "supporting_evidence_ids": [
+            "evidence:manual-formulation-001",
+            "evidence:manual-formulation-003"
+          ],
+          "supporting_citation_ids": [
+            "chunk:document-manual-doc-002-0",
+            "chunk:document-manual-doc-003-0"
+          ],
+          "rationale_factors": [
+            "evidence_support",
+            "crop_relevance"
+          ],
+          "responsible_use_status": "research_review_only",
+          "claim": "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder is a seed reasoning-only candidate for Controlled-release and Bacillus-like payload compatibility scoring."
+        },
+        {
+          "rank": 2,
+          "hypothesis_id": "hypothesis:pilot-2-controlled-release-payload-compatibility:strain:002",
+          "hypothesis_type": "strain",
+          "subject_id": "strain:manual-payload-003-bacillus-like-viability-benchmark-placeholder",
+          "score": 0.017,
+          "task_context": {
+            "crop": "waxy brassica leaf",
+            "stressors": [
+              "controlled-release",
+              "payload-viability",
+              "sprayability"
+            ],
+            "formulation_context": [
+              "cloaked_droplet",
+              "liquid_liquid_encapsulation",
+              "polymer_emulsion_spray"
+            ]
+          },
+          "supporting_evidence_ids": [
+            "evidence:manual-formulation-001",
+            "evidence:manual-formulation-003"
+          ],
+          "supporting_citation_ids": [
+            "chunk:document-manual-doc-002-0",
+            "chunk:document-manual-doc-003-0"
+          ],
+          "rationale_factors": [
+            "evidence_support",
+            "stress_relevance",
+            "crop_relevance",
+            "biosafety_penalty"
+          ],
+          "responsible_use_status": "research_review_only",
+          "claim": "strain:manual-payload-003-bacillus-like-viability-benchmark-placeholder is a seed reasoning-only candidate for Controlled-release and Bacillus-like payload compatibility scoring."
+        },
+        {
+          "rank": 3,
+          "hypothesis_id": "hypothesis:pilot-2-controlled-release-payload-compatibility:strain:003",
+          "hypothesis_type": "strain",
+          "subject_id": "strain:manual-payload-002-non-pathogenic-foliar-surrogate-placeholder",
+          "score": 0.0,
+          "task_context": {
+            "crop": "waxy brassica leaf",
+            "stressors": [
+              "controlled-release",
+              "payload-viability",
+              "sprayability"
+            ],
+            "formulation_context": [
+              "cloaked_droplet",
+              "liquid_liquid_encapsulation",
+              "polymer_emulsion_spray"
+            ]
+          },
+          "supporting_evidence_ids": [
+            "evidence:manual-formulation-001",
+            "evidence:manual-formulation-003"
+          ],
+          "supporting_citation_ids": [
+            "chunk:document-manual-doc-002-0",
+            "chunk:document-manual-doc-003-0"
+          ],
+          "rationale_factors": [
+            "evidence_support",
+            "crop_relevance",
+            "biosafety_penalty"
+          ],
+          "responsible_use_status": "research_review_only",
+          "claim": "strain:manual-payload-002-non-pathogenic-foliar-surrogate-placeholder is a seed reasoning-only candidate for Controlled-release and Bacillus-like payload compatibility scoring."
+        },
+        {
+          "rank": 1,
+          "hypothesis_id": "hypothesis:pilot-2-controlled-release-payload-compatibility:formulation:001",
+          "hypothesis_type": "formulation",
+          "subject_id": "material:liquid-liquid-encapsulation-shell",
+          "score": 0.454,
+          "task_context": {
+            "crop": "waxy brassica leaf",
+            "stressors": [
+              "controlled-release",
+              "payload-viability",
+              "sprayability"
+            ],
+            "formulation_context": [
+              "cloaked_droplet",
+              "liquid_liquid_encapsulation",
+              "polymer_emulsion_spray"
+            ]
+          },
+          "supporting_evidence_ids": [
+            "evidence:manual-formulation-001",
+            "evidence:manual-formulation-003"
+          ],
+          "supporting_citation_ids": [
+            "chunk:document-manual-doc-002-0",
+            "chunk:document-manual-doc-003-0"
+          ],
+          "rationale_factors": [
+            "release_profile_match",
+            "viability_risk"
+          ],
+          "responsible_use_status": "research_review_only",
+          "claim": "material:liquid-liquid-encapsulation-shell is a seed reasoning-only candidate for Controlled-release and Bacillus-like payload compatibility scoring."
+        },
+        {
+          "rank": 2,
+          "hypothesis_id": "hypothesis:pilot-2-controlled-release-payload-compatibility:formulation:002",
+          "hypothesis_type": "formulation",
+          "subject_id": "material:polymer-assisted-emulsion-spray",
+          "score": 0.075,
+          "task_context": {
+            "crop": "waxy brassica leaf",
+            "stressors": [
+              "controlled-release",
+              "payload-viability",
+              "sprayability"
+            ],
+            "formulation_context": [
+              "cloaked_droplet",
+              "liquid_liquid_encapsulation",
+              "polymer_emulsion_spray"
+            ]
+          },
+          "supporting_evidence_ids": [
+            "evidence:manual-formulation-001",
+            "evidence:manual-formulation-003"
+          ],
+          "supporting_citation_ids": [
+            "chunk:document-manual-doc-002-0",
+            "chunk:document-manual-doc-003-0"
+          ],
+          "rationale_factors": [
+            "release_profile_match",
+            "viability_risk"
+          ],
+          "responsible_use_status": "research_review_only",
+          "claim": "material:polymer-assisted-emulsion-spray is a seed reasoning-only candidate for Controlled-release and Bacillus-like payload compatibility scoring."
+        },
+        {
+          "rank": 3,
+          "hypothesis_id": "hypothesis:pilot-2-controlled-release-payload-compatibility:formulation:003",
+          "hypothesis_type": "formulation",
+          "subject_id": "material:oil-cloaked-aqueous-droplet-system",
+          "score": 0.004,
+          "task_context": {
+            "crop": "waxy brassica leaf",
+            "stressors": [
+              "controlled-release",
+              "payload-viability",
+              "sprayability"
+            ],
+            "formulation_context": [
+              "cloaked_droplet",
+              "liquid_liquid_encapsulation",
+              "polymer_emulsion_spray"
+            ]
+          },
+          "supporting_evidence_ids": [
+            "evidence:manual-formulation-001",
+            "evidence:manual-formulation-003"
+          ],
+          "supporting_citation_ids": [
+            "chunk:document-manual-doc-002-0",
+            "chunk:document-manual-doc-003-0"
+          ],
+          "rationale_factors": [
+            "viability_risk"
+          ],
+          "responsible_use_status": "research_review_only",
+          "claim": "material:oil-cloaked-aqueous-droplet-system is a seed reasoning-only candidate for Controlled-release and Bacillus-like payload compatibility scoring."
+        }
+      ],
+      "reasoning_trace": [
+        "Select task-matching evidence and literature chunks by crop, stress, and formulation terms.",
+        "Rank seed entities with deterministic evidence, relevance, and guardrail components.",
+        "Emit cited research-review hypotheses without optimizer search."
+      ],
+      "summary": {
+        "top_hypothesis_score": 0.454,
+        "citation_count": 2,
+        "evidence_record_count": 2
+      },
+      "limitations": [
+        "No candidate-space search is performed.",
+        "No language model reasoning is used in this local seed scaffold.",
+        "Hypotheses are not deployment recommendations."
+      ]
+    }
+  ],
+  "notes": [
+    "Reasoning-only baseline uses evidence-linked heuristic rankings without optimizer search.",
+    "It is a deterministic ablation scaffold for future tool-using reasoning agents."
+  ]
+}

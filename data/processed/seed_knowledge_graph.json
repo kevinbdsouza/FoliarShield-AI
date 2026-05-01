@@ -1,0 +1,949 @@
+{
+  "status": "ok",
+  "artifact_id": "graph:seed-evidence-v0.1",
+  "generated_at": "2026-05-01T16:20:05.625349+00:00",
+  "graph_version": "json-node-edge-v0.1",
+  "node_count": 69,
+  "edge_count": 55,
+  "nodes": [
+    {
+      "id": "architecture:manual-formulation-001-cloaked-droplet",
+      "type": "EncapsulationArchitecture",
+      "label": "cloaked_droplet",
+      "source": "source:manual-material-curation",
+      "confidence": 0.52,
+      "provenance": "data/raw/seed_formulation_evidence.jsonl"
+    },
+    {
+      "id": "architecture:manual-formulation-002-liquid-liquid-encapsulated-payload",
+      "type": "EncapsulationArchitecture",
+      "label": "liquid-liquid_encapsulated_payload",
+      "source": "source:manual-material-curation",
+      "confidence": 0.52,
+      "provenance": "data/raw/seed_formulation_evidence.jsonl"
+    },
+    {
+      "id": "architecture:manual-formulation-003-polymer-emulsion-foliar-film",
+      "type": "EncapsulationArchitecture",
+      "label": "polymer-emulsion_foliar_film",
+      "source": "source:manual-material-curation",
+      "confidence": 0.5,
+      "provenance": "data/raw/seed_formulation_evidence.jsonl"
+    },
+    {
+      "id": "assay:manual-leaf-001-foliar-retention-and-wash-off-proxy",
+      "type": "Assay",
+      "label": "assay:manual-leaf-001-foliar-retention-and-wash-off-proxy",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "assay:manual-leaf-002-hydrophobic-leaf-retention-benchmark",
+      "type": "Assay",
+      "label": "assay:manual-leaf-002-hydrophobic-leaf-retention-benchmark",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "assay:manual-leaf-003-moderate-wettability-optional-benchmark",
+      "type": "Assay",
+      "label": "assay:manual-leaf-003-moderate-wettability-optional-benchmark",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.45,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "chunk:document-manual-doc-001-0",
+      "type": "LiteratureChunk",
+      "label": "Project-authored starter document for FoliarShield-AI retrieval workflow validation; replace with license-compatible public literature before benchmarking.",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "chunk:document-manual-doc-002-0",
+      "type": "LiteratureChunk",
+      "label": "Project-authored starter document for FoliarShield-AI retrieval workflow validation; replace with license-compatible public literature before benchmarking.",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.52,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "chunk:document-manual-doc-003-0",
+      "type": "LiteratureChunk",
+      "label": "Project-authored starter document for FoliarShield-AI retrieval workflow validation; replace with license-compatible public literature before benchmarking.",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "claim:a-moderate-wettability-leaf-can-test-transfer-after-the-core-workflow-stabilizes",
+      "type": "Claim",
+      "label": "a moderate-wettability leaf can test transfer after the core workflow stabilizes",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.45,
+      "provenance": "evidence:manual-leaf-003"
+    },
+    {
+      "id": "claim:cloaked-droplets-are-in-scope-for-difficult-to-wet-foliar-retention",
+      "type": "Claim",
+      "label": "cloaked droplets are in scope for difficult-to-wet foliar retention",
+      "source": "source:manual-material-curation",
+      "confidence": 0.52,
+      "provenance": "evidence:manual-formulation-001"
+    },
+    {
+      "id": "claim:fast-physical-labels-should-precede-living-payload-assays",
+      "type": "Claim",
+      "label": "fast physical labels should precede living-payload assays",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "evidence:manual-leaf-001"
+    },
+    {
+      "id": "claim:liquid-liquid-encapsulation-is-in-scope-for-controlled-foliar-release",
+      "type": "Claim",
+      "label": "liquid-liquid encapsulation is in scope for controlled foliar release",
+      "source": "source:manual-material-curation",
+      "confidence": 0.52,
+      "provenance": "evidence:manual-formulation-002"
+    },
+    {
+      "id": "claim:nonliving-payload-assays-should-precede-living-payload-viability-checks",
+      "type": "Claim",
+      "label": "nonliving payload assays should precede living-payload viability checks",
+      "source": "source:manual-material-curation",
+      "confidence": 0.52,
+      "provenance": "evidence:manual-formulation-002"
+    },
+    {
+      "id": "claim:polymer-and-emulsion-descriptors-are-in-scope-for-physics-aware-foliar-optimization",
+      "type": "Claim",
+      "label": "polymer and emulsion descriptors are in scope for physics-aware foliar optimization",
+      "source": "source:manual-material-curation",
+      "confidence": 0.5,
+      "provenance": "evidence:manual-formulation-003"
+    },
+    {
+      "id": "claim:rainfastness-and-retained-intensity-labels-are-required-before-candidate-promotion",
+      "type": "Claim",
+      "label": "rainfastness and retained-intensity labels are required before candidate promotion",
+      "source": "source:manual-material-curation",
+      "confidence": 0.52,
+      "provenance": "evidence:manual-formulation-001"
+    },
+    {
+      "id": "claim:retention-and-wash-off-endpoints-should-be-measured-before-biological-labels",
+      "type": "Claim",
+      "label": "retention and wash-off endpoints should be measured before biological labels",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "evidence:manual-leaf-002"
+    },
+    {
+      "id": "claim:rice-anchors-the-agriculturally-relevant-cereal-leaf-panel",
+      "type": "Claim",
+      "label": "rice anchors the agriculturally relevant cereal leaf panel",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "evidence:manual-leaf-001"
+    },
+    {
+      "id": "claim:sprayability-retention-and-wash-off-are-required-fast-labels",
+      "type": "Claim",
+      "label": "sprayability, retention, and wash-off are required fast labels",
+      "source": "source:manual-material-curation",
+      "confidence": 0.5,
+      "provenance": "evidence:manual-formulation-003"
+    },
+    {
+      "id": "claim:waxy-brassica-or-cabbage-like-leaves-provide-a-stringent-difficult-to-wet-benchmark",
+      "type": "Claim",
+      "label": "waxy brassica or cabbage-like leaves provide a stringent difficult-to-wet benchmark",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "evidence:manual-leaf-002"
+    },
+    {
+      "id": "crop:rice",
+      "type": "Crop",
+      "label": "Oryza sativa",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "crop:tomato",
+      "type": "Crop",
+      "label": "Solanum lycopersicum",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.45,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "crop:waxy-brassica-leaf",
+      "type": "Crop",
+      "label": "Brassica oleracea",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "document:manual-doc-001",
+      "type": "LiteratureDocument",
+      "label": "Rice and waxy brassica foliar delivery starter scope",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "document:manual-doc-002",
+      "type": "LiteratureDocument",
+      "label": "Cloaked droplets and liquid-liquid encapsulation starter scope",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.52,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "document:manual-doc-003",
+      "type": "LiteratureDocument",
+      "label": "Batched active learning starter scope",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "data/raw/seed_literature_documents.jsonl"
+    },
+    {
+      "id": "evidence:manual-formulation-001",
+      "type": "EvidenceRecord",
+      "label": "Starter cloaked droplet foliar retention concept",
+      "source": "source:manual-material-curation",
+      "confidence": 0.52,
+      "provenance": "data/raw/seed_formulation_evidence.jsonl"
+    },
+    {
+      "id": "evidence:manual-formulation-002",
+      "type": "EvidenceRecord",
+      "label": "Starter liquid-liquid encapsulation foliar delivery concept",
+      "source": "source:manual-material-curation",
+      "confidence": 0.52,
+      "provenance": "data/raw/seed_formulation_evidence.jsonl"
+    },
+    {
+      "id": "evidence:manual-formulation-003",
+      "type": "EvidenceRecord",
+      "label": "Starter polymer-emulsion foliar film concept",
+      "source": "source:manual-material-curation",
+      "confidence": 0.5,
+      "provenance": "data/raw/seed_formulation_evidence.jsonl"
+    },
+    {
+      "id": "evidence:manual-leaf-001",
+      "type": "EvidenceRecord",
+      "label": "Starter rice leaf foliar delivery benchmark context",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "evidence:manual-leaf-002",
+      "type": "EvidenceRecord",
+      "label": "Starter waxy brassica difficult-to-wet benchmark context",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "evidence:manual-leaf-003",
+      "type": "EvidenceRecord",
+      "label": "Optional moderate-wettability leaf expansion context",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.45,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "material:liquid-liquid-encapsulation-shell",
+      "type": "FormulationMaterial",
+      "label": "liquid-liquid encapsulation",
+      "source": "source:manual-material-curation",
+      "confidence": 0.52,
+      "provenance": "data/raw/seed_formulation_evidence.jsonl"
+    },
+    {
+      "id": "material:oil-cloaked-aqueous-droplet-system",
+      "type": "FormulationMaterial",
+      "label": "cloaked foliar droplet",
+      "source": "source:manual-material-curation",
+      "confidence": 0.52,
+      "provenance": "data/raw/seed_formulation_evidence.jsonl"
+    },
+    {
+      "id": "material:polymer-assisted-emulsion-spray",
+      "type": "FormulationMaterial",
+      "label": "polymer emulsion additive",
+      "source": "source:manual-material-curation",
+      "confidence": 0.5,
+      "provenance": "data/raw/seed_formulation_evidence.jsonl"
+    },
+    {
+      "id": "mention:architecturemention:cloaked-droplet",
+      "type": "ArchitectureMention",
+      "label": "cloaked droplet",
+      "source": "structured-extraction",
+      "confidence": 0.52,
+      "provenance": "chunk:document-manual-doc-002-0"
+    },
+    {
+      "id": "mention:architecturemention:liquid-liquid-encapsulation",
+      "type": "ArchitectureMention",
+      "label": "liquid-liquid encapsulation",
+      "source": "structured-extraction",
+      "confidence": 0.52,
+      "provenance": "chunk:document-manual-doc-002-0"
+    },
+    {
+      "id": "mention:cropmention:rice",
+      "type": "CropMention",
+      "label": "rice",
+      "source": "structured-extraction",
+      "confidence": 0.4,
+      "provenance": "chunk:document-manual-doc-001-0"
+    },
+    {
+      "id": "mention:cropmention:waxy-brassica-leaf",
+      "type": "CropMention",
+      "label": "waxy brassica leaf",
+      "source": "structured-extraction",
+      "confidence": 0.4,
+      "provenance": "chunk:document-manual-doc-001-0"
+    },
+    {
+      "id": "mention:materialmention:cloaked-droplet",
+      "type": "MaterialMention",
+      "label": "cloaked droplet",
+      "source": "structured-extraction",
+      "confidence": 0.52,
+      "provenance": "chunk:document-manual-doc-002-0"
+    },
+    {
+      "id": "mention:materialmention:emulsion",
+      "type": "MaterialMention",
+      "label": "emulsion",
+      "source": "structured-extraction",
+      "confidence": 0.52,
+      "provenance": "chunk:document-manual-doc-002-0"
+    },
+    {
+      "id": "mention:materialmention:liquid-liquid-encapsulation",
+      "type": "MaterialMention",
+      "label": "liquid-liquid encapsulation",
+      "source": "structured-extraction",
+      "confidence": 0.52,
+      "provenance": "chunk:document-manual-doc-002-0"
+    },
+    {
+      "id": "mention:materialmention:polymer-additive",
+      "type": "MaterialMention",
+      "label": "polymer additive",
+      "source": "structured-extraction",
+      "confidence": 0.52,
+      "provenance": "chunk:document-manual-doc-002-0"
+    },
+    {
+      "id": "mention:organismmention:bacillus-like-payload",
+      "type": "OrganismMention",
+      "label": "Bacillus-like payload",
+      "source": "structured-extraction",
+      "confidence": 0.52,
+      "provenance": "chunk:document-manual-doc-002-0"
+    },
+    {
+      "id": "mention:phenotypemention:evaporation-proxy",
+      "type": "PhenotypeMention",
+      "label": "evaporation proxy",
+      "source": "structured-extraction",
+      "confidence": 0.4,
+      "provenance": "chunk:document-manual-doc-001-0"
+    },
+    {
+      "id": "mention:phenotypemention:retained-intensity-proxy",
+      "type": "PhenotypeMention",
+      "label": "retained intensity proxy",
+      "source": "structured-extraction",
+      "confidence": 0.4,
+      "provenance": "chunk:document-manual-doc-001-0"
+    },
+    {
+      "id": "mention:phenotypemention:spray-coverage-proxy",
+      "type": "PhenotypeMention",
+      "label": "spray coverage proxy",
+      "source": "structured-extraction",
+      "confidence": 0.4,
+      "provenance": "chunk:document-manual-doc-001-0"
+    },
+    {
+      "id": "mention:phenotypemention:sprayability-proxy",
+      "type": "PhenotypeMention",
+      "label": "sprayability proxy",
+      "source": "structured-extraction",
+      "confidence": 0.4,
+      "provenance": "chunk:document-manual-doc-003-0"
+    },
+    {
+      "id": "mention:phenotypemention:viability-signal",
+      "type": "PhenotypeMention",
+      "label": "viability signal",
+      "source": "structured-extraction",
+      "confidence": 0.52,
+      "provenance": "chunk:document-manual-doc-002-0"
+    },
+    {
+      "id": "mention:phenotypemention:wash-off-proxy",
+      "type": "PhenotypeMention",
+      "label": "wash-off proxy",
+      "source": "structured-extraction",
+      "confidence": 0.4,
+      "provenance": "chunk:document-manual-doc-001-0"
+    },
+    {
+      "id": "mention:releasesignal:evaporation",
+      "type": "ReleaseSignal",
+      "label": "evaporation",
+      "source": "structured-extraction",
+      "confidence": 0.4,
+      "provenance": "chunk:document-manual-doc-001-0"
+    },
+    {
+      "id": "mention:releasesignal:release",
+      "type": "ReleaseSignal",
+      "label": "release",
+      "source": "structured-extraction",
+      "confidence": 0.4,
+      "provenance": "chunk:document-manual-doc-001-0"
+    },
+    {
+      "id": "mention:stressmention:contact-line-motion",
+      "type": "StressMention",
+      "label": "contact-line motion",
+      "source": "structured-extraction",
+      "confidence": 0.4,
+      "provenance": "chunk:document-manual-doc-001-0"
+    },
+    {
+      "id": "mention:stressmention:wash-off",
+      "type": "StressMention",
+      "label": "wash-off",
+      "source": "structured-extraction",
+      "confidence": 0.4,
+      "provenance": "chunk:document-manual-doc-001-0"
+    },
+    {
+      "id": "phenotype:manual-leaf-001-foliar-delivery-benchmark-relevance",
+      "type": "Phenotype",
+      "label": "phenotype:manual-leaf-001-foliar-delivery-benchmark-relevance",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "phenotype:manual-leaf-002-hydrophobic-retention-benchmark-relevance",
+      "type": "Phenotype",
+      "label": "phenotype:manual-leaf-002-hydrophobic-retention-benchmark-relevance",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "phenotype:manual-leaf-003-optional-foliar-delivery-expansion-relevance",
+      "type": "Phenotype",
+      "label": "phenotype:manual-leaf-003-optional-foliar-delivery-expansion-relevance",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.45,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder",
+      "type": "Strain",
+      "label": "contained foliar Bacillus-like payload placeholder",
+      "source": "source:manual-strain-curation",
+      "confidence": 0.52,
+      "provenance": "data/raw/seed_strain_metadata.jsonl"
+    },
+    {
+      "id": "strain:manual-payload-002-non-pathogenic-foliar-surrogate-placeholder",
+      "type": "Strain",
+      "label": "non-pathogenic foliar surrogate placeholder",
+      "source": "source:manual-strain-curation",
+      "confidence": 0.5,
+      "provenance": "data/raw/seed_strain_metadata.jsonl"
+    },
+    {
+      "id": "strain:manual-payload-003-bacillus-like-viability-benchmark-placeholder",
+      "type": "Strain",
+      "label": "Bacillus-like viability benchmark placeholder",
+      "source": "source:manual-strain-curation",
+      "confidence": 0.48,
+      "provenance": "data/raw/seed_strain_metadata.jsonl"
+    },
+    {
+      "id": "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel",
+      "type": "StressContext",
+      "label": "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "stress:tomato-leaf-retention-controlled-release-optional-laboratory-leaf-panel-expansion",
+      "type": "StressContext",
+      "label": "stress:tomato-leaf-retention-controlled-release-optional-laboratory-leaf-panel-expansion",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.45,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "stress:waxy-brassica-leaf-leaf-retention-rainfastness-contact-line-motion-contained-laboratory-leaf-panel",
+      "type": "StressContext",
+      "label": "stress:waxy-brassica-leaf-leaf-retention-rainfastness-contact-line-motion-contained-laboratory-leaf-panel",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "taxon:bacillus-amyloliquefaciens",
+      "type": "Taxon",
+      "label": "Bacillus amyloliquefaciens",
+      "source": "source:manual-strain-curation",
+      "confidence": 0.48,
+      "provenance": "data/raw/seed_strain_metadata.jsonl"
+    },
+    {
+      "id": "taxon:bacillus-subtilis",
+      "type": "Taxon",
+      "label": "Bacillus subtilis",
+      "source": "source:manual-strain-curation",
+      "confidence": 0.52,
+      "provenance": "data/raw/seed_strain_metadata.jsonl"
+    },
+    {
+      "id": "taxon:bacillus-velezensis",
+      "type": "Taxon",
+      "label": "Bacillus velezensis",
+      "source": "source:manual-strain-curation",
+      "confidence": 0.5,
+      "provenance": "data/raw/seed_strain_metadata.jsonl"
+    },
+    {
+      "id": "trigger:manual-formulation-001-surface-retention",
+      "type": "ReleaseTrigger",
+      "label": "surface-retention",
+      "source": "source:manual-material-curation",
+      "confidence": 0.52,
+      "provenance": "data/raw/seed_formulation_evidence.jsonl"
+    },
+    {
+      "id": "trigger:manual-formulation-002-controlled-release",
+      "type": "ReleaseTrigger",
+      "label": "controlled-release",
+      "source": "source:manual-material-curation",
+      "confidence": 0.52,
+      "provenance": "data/raw/seed_formulation_evidence.jsonl"
+    },
+    {
+      "id": "trigger:manual-formulation-003-rainfastness",
+      "type": "ReleaseTrigger",
+      "label": "rainfastness",
+      "source": "source:manual-material-curation",
+      "confidence": 0.5,
+      "provenance": "data/raw/seed_formulation_evidence.jsonl"
+    }
+  ],
+  "edges": [
+    {
+      "source": "architecture:manual-formulation-001-cloaked-droplet",
+      "target": "material:oil-cloaked-aqueous-droplet-system",
+      "relation": "encapsulated_by",
+      "evidence_id": "",
+      "confidence": 0.52
+    },
+    {
+      "source": "architecture:manual-formulation-001-cloaked-droplet",
+      "target": "trigger:manual-formulation-001-surface-retention",
+      "relation": "released_under",
+      "evidence_id": "",
+      "confidence": 0.52
+    },
+    {
+      "source": "architecture:manual-formulation-002-liquid-liquid-encapsulated-payload",
+      "target": "material:liquid-liquid-encapsulation-shell",
+      "relation": "encapsulated_by",
+      "evidence_id": "",
+      "confidence": 0.52
+    },
+    {
+      "source": "architecture:manual-formulation-002-liquid-liquid-encapsulated-payload",
+      "target": "trigger:manual-formulation-002-controlled-release",
+      "relation": "released_under",
+      "evidence_id": "",
+      "confidence": 0.52
+    },
+    {
+      "source": "architecture:manual-formulation-003-polymer-emulsion-foliar-film",
+      "target": "material:polymer-assisted-emulsion-spray",
+      "relation": "encapsulated_by",
+      "evidence_id": "",
+      "confidence": 0.5
+    },
+    {
+      "source": "architecture:manual-formulation-003-polymer-emulsion-foliar-film",
+      "target": "trigger:manual-formulation-003-rainfastness",
+      "relation": "released_under",
+      "evidence_id": "",
+      "confidence": 0.5
+    },
+    {
+      "source": "assay:manual-leaf-001-foliar-retention-and-wash-off-proxy",
+      "target": "crop:rice",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.55
+    },
+    {
+      "source": "assay:manual-leaf-001-foliar-retention-and-wash-off-proxy",
+      "target": "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.55
+    },
+    {
+      "source": "assay:manual-leaf-002-hydrophobic-leaf-retention-benchmark",
+      "target": "crop:waxy-brassica-leaf",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.55
+    },
+    {
+      "source": "assay:manual-leaf-002-hydrophobic-leaf-retention-benchmark",
+      "target": "stress:waxy-brassica-leaf-leaf-retention-rainfastness-contact-line-motion-contained-laboratory-leaf-panel",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.55
+    },
+    {
+      "source": "assay:manual-leaf-003-moderate-wettability-optional-benchmark",
+      "target": "crop:tomato",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.45
+    },
+    {
+      "source": "assay:manual-leaf-003-moderate-wettability-optional-benchmark",
+      "target": "stress:tomato-leaf-retention-controlled-release-optional-laboratory-leaf-panel-expansion",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.45
+    },
+    {
+      "source": "chunk:document-manual-doc-001-0",
+      "target": "document:manual-doc-001",
+      "relation": "chunk_of",
+      "evidence_id": "chunk:document-manual-doc-001-0",
+      "confidence": 0.55
+    },
+    {
+      "source": "chunk:document-manual-doc-001-0",
+      "target": "mention:cropmention:rice",
+      "relation": "tested_in",
+      "evidence_id": "chunk:document-manual-doc-001-0",
+      "confidence": 0.4
+    },
+    {
+      "source": "chunk:document-manual-doc-001-0",
+      "target": "mention:cropmention:waxy-brassica-leaf",
+      "relation": "tested_in",
+      "evidence_id": "chunk:document-manual-doc-001-0",
+      "confidence": 0.4
+    },
+    {
+      "source": "chunk:document-manual-doc-001-0",
+      "target": "mention:phenotypemention:evaporation-proxy",
+      "relation": "supports",
+      "evidence_id": "chunk:document-manual-doc-001-0",
+      "confidence": 0.4
+    },
+    {
+      "source": "chunk:document-manual-doc-001-0",
+      "target": "mention:phenotypemention:retained-intensity-proxy",
+      "relation": "supports",
+      "evidence_id": "chunk:document-manual-doc-001-0",
+      "confidence": 0.4
+    },
+    {
+      "source": "chunk:document-manual-doc-001-0",
+      "target": "mention:phenotypemention:spray-coverage-proxy",
+      "relation": "supports",
+      "evidence_id": "chunk:document-manual-doc-001-0",
+      "confidence": 0.4
+    },
+    {
+      "source": "chunk:document-manual-doc-001-0",
+      "target": "mention:phenotypemention:wash-off-proxy",
+      "relation": "supports",
+      "evidence_id": "chunk:document-manual-doc-001-0",
+      "confidence": 0.4
+    },
+    {
+      "source": "chunk:document-manual-doc-001-0",
+      "target": "mention:releasesignal:evaporation",
+      "relation": "released_under",
+      "evidence_id": "chunk:document-manual-doc-001-0",
+      "confidence": 0.4
+    },
+    {
+      "source": "chunk:document-manual-doc-001-0",
+      "target": "mention:releasesignal:release",
+      "relation": "released_under",
+      "evidence_id": "chunk:document-manual-doc-001-0",
+      "confidence": 0.4
+    },
+    {
+      "source": "chunk:document-manual-doc-001-0",
+      "target": "mention:stressmention:contact-line-motion",
+      "relation": "tested_in",
+      "evidence_id": "chunk:document-manual-doc-001-0",
+      "confidence": 0.4
+    },
+    {
+      "source": "chunk:document-manual-doc-001-0",
+      "target": "mention:stressmention:wash-off",
+      "relation": "tested_in",
+      "evidence_id": "chunk:document-manual-doc-001-0",
+      "confidence": 0.4
+    },
+    {
+      "source": "chunk:document-manual-doc-002-0",
+      "target": "document:manual-doc-002",
+      "relation": "chunk_of",
+      "evidence_id": "chunk:document-manual-doc-002-0",
+      "confidence": 0.52
+    },
+    {
+      "source": "chunk:document-manual-doc-002-0",
+      "target": "mention:architecturemention:cloaked-droplet",
+      "relation": "encapsulated_by",
+      "evidence_id": "chunk:document-manual-doc-002-0",
+      "confidence": 0.52
+    },
+    {
+      "source": "chunk:document-manual-doc-002-0",
+      "target": "mention:architecturemention:liquid-liquid-encapsulation",
+      "relation": "encapsulated_by",
+      "evidence_id": "chunk:document-manual-doc-002-0",
+      "confidence": 0.52
+    },
+    {
+      "source": "chunk:document-manual-doc-002-0",
+      "target": "mention:materialmention:cloaked-droplet",
+      "relation": "encapsulated_by",
+      "evidence_id": "chunk:document-manual-doc-002-0",
+      "confidence": 0.52
+    },
+    {
+      "source": "chunk:document-manual-doc-002-0",
+      "target": "mention:materialmention:emulsion",
+      "relation": "encapsulated_by",
+      "evidence_id": "chunk:document-manual-doc-002-0",
+      "confidence": 0.52
+    },
+    {
+      "source": "chunk:document-manual-doc-002-0",
+      "target": "mention:materialmention:liquid-liquid-encapsulation",
+      "relation": "encapsulated_by",
+      "evidence_id": "chunk:document-manual-doc-002-0",
+      "confidence": 0.52
+    },
+    {
+      "source": "chunk:document-manual-doc-002-0",
+      "target": "mention:materialmention:polymer-additive",
+      "relation": "encapsulated_by",
+      "evidence_id": "chunk:document-manual-doc-002-0",
+      "confidence": 0.52
+    },
+    {
+      "source": "chunk:document-manual-doc-002-0",
+      "target": "mention:organismmention:bacillus-like-payload",
+      "relation": "supports",
+      "evidence_id": "chunk:document-manual-doc-002-0",
+      "confidence": 0.52
+    },
+    {
+      "source": "chunk:document-manual-doc-002-0",
+      "target": "mention:phenotypemention:viability-signal",
+      "relation": "supports",
+      "evidence_id": "chunk:document-manual-doc-002-0",
+      "confidence": 0.52
+    },
+    {
+      "source": "chunk:document-manual-doc-002-0",
+      "target": "mention:releasesignal:release",
+      "relation": "released_under",
+      "evidence_id": "chunk:document-manual-doc-002-0",
+      "confidence": 0.52
+    },
+    {
+      "source": "chunk:document-manual-doc-003-0",
+      "target": "document:manual-doc-003",
+      "relation": "chunk_of",
+      "evidence_id": "chunk:document-manual-doc-003-0",
+      "confidence": 0.55
+    },
+    {
+      "source": "chunk:document-manual-doc-003-0",
+      "target": "mention:phenotypemention:sprayability-proxy",
+      "relation": "supports",
+      "evidence_id": "chunk:document-manual-doc-003-0",
+      "confidence": 0.4
+    },
+    {
+      "source": "evidence:manual-formulation-001",
+      "target": "claim:cloaked-droplets-are-in-scope-for-difficult-to-wet-foliar-retention",
+      "relation": "supports",
+      "evidence_id": "evidence:manual-formulation-001",
+      "confidence": 0.52
+    },
+    {
+      "source": "evidence:manual-formulation-001",
+      "target": "claim:rainfastness-and-retained-intensity-labels-are-required-before-candidate-promotion",
+      "relation": "supports",
+      "evidence_id": "evidence:manual-formulation-001",
+      "confidence": 0.52
+    },
+    {
+      "source": "evidence:manual-formulation-002",
+      "target": "claim:liquid-liquid-encapsulation-is-in-scope-for-controlled-foliar-release",
+      "relation": "supports",
+      "evidence_id": "evidence:manual-formulation-002",
+      "confidence": 0.52
+    },
+    {
+      "source": "evidence:manual-formulation-002",
+      "target": "claim:nonliving-payload-assays-should-precede-living-payload-viability-checks",
+      "relation": "supports",
+      "evidence_id": "evidence:manual-formulation-002",
+      "confidence": 0.52
+    },
+    {
+      "source": "evidence:manual-formulation-003",
+      "target": "claim:polymer-and-emulsion-descriptors-are-in-scope-for-physics-aware-foliar-optimization",
+      "relation": "supports",
+      "evidence_id": "evidence:manual-formulation-003",
+      "confidence": 0.5
+    },
+    {
+      "source": "evidence:manual-formulation-003",
+      "target": "claim:sprayability-retention-and-wash-off-are-required-fast-labels",
+      "relation": "supports",
+      "evidence_id": "evidence:manual-formulation-003",
+      "confidence": 0.5
+    },
+    {
+      "source": "evidence:manual-leaf-001",
+      "target": "claim:fast-physical-labels-should-precede-living-payload-assays",
+      "relation": "supports",
+      "evidence_id": "evidence:manual-leaf-001",
+      "confidence": 0.55
+    },
+    {
+      "source": "evidence:manual-leaf-001",
+      "target": "claim:rice-anchors-the-agriculturally-relevant-cereal-leaf-panel",
+      "relation": "supports",
+      "evidence_id": "evidence:manual-leaf-001",
+      "confidence": 0.55
+    },
+    {
+      "source": "evidence:manual-leaf-002",
+      "target": "claim:retention-and-wash-off-endpoints-should-be-measured-before-biological-labels",
+      "relation": "supports",
+      "evidence_id": "evidence:manual-leaf-002",
+      "confidence": 0.55
+    },
+    {
+      "source": "evidence:manual-leaf-002",
+      "target": "claim:waxy-brassica-or-cabbage-like-leaves-provide-a-stringent-difficult-to-wet-benchmark",
+      "relation": "supports",
+      "evidence_id": "evidence:manual-leaf-002",
+      "confidence": 0.55
+    },
+    {
+      "source": "evidence:manual-leaf-003",
+      "target": "claim:a-moderate-wettability-leaf-can-test-transfer-after-the-core-workflow-stabilizes",
+      "relation": "supports",
+      "evidence_id": "evidence:manual-leaf-003",
+      "confidence": 0.45
+    },
+    {
+      "source": "phenotype:manual-leaf-001-foliar-delivery-benchmark-relevance",
+      "target": "assay:manual-leaf-001-foliar-retention-and-wash-off-proxy",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.55
+    },
+    {
+      "source": "phenotype:manual-leaf-001-foliar-delivery-benchmark-relevance",
+      "target": "crop:rice",
+      "relation": "supports",
+      "evidence_id": "evidence:manual-leaf-001",
+      "confidence": 0.55
+    },
+    {
+      "source": "phenotype:manual-leaf-002-hydrophobic-retention-benchmark-relevance",
+      "target": "assay:manual-leaf-002-hydrophobic-leaf-retention-benchmark",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.55
+    },
+    {
+      "source": "phenotype:manual-leaf-002-hydrophobic-retention-benchmark-relevance",
+      "target": "crop:waxy-brassica-leaf",
+      "relation": "supports",
+      "evidence_id": "evidence:manual-leaf-002",
+      "confidence": 0.55
+    },
+    {
+      "source": "phenotype:manual-leaf-003-optional-foliar-delivery-expansion-relevance",
+      "target": "assay:manual-leaf-003-moderate-wettability-optional-benchmark",
+      "relation": "tested_in",
+      "evidence_id": "",
+      "confidence": 0.45
+    },
+    {
+      "source": "phenotype:manual-leaf-003-optional-foliar-delivery-expansion-relevance",
+      "target": "crop:tomato",
+      "relation": "supports",
+      "evidence_id": "evidence:manual-leaf-003",
+      "confidence": 0.45
+    },
+    {
+      "source": "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder",
+      "target": "taxon:bacillus-subtilis",
+      "relation": "has_taxon",
+      "evidence_id": "",
+      "confidence": 0.52
+    },
+    {
+      "source": "strain:manual-payload-002-non-pathogenic-foliar-surrogate-placeholder",
+      "target": "taxon:bacillus-velezensis",
+      "relation": "has_taxon",
+      "evidence_id": "",
+      "confidence": 0.5
+    },
+    {
+      "source": "strain:manual-payload-003-bacillus-like-viability-benchmark-placeholder",
+      "target": "taxon:bacillus-amyloliquefaciens",
+      "relation": "has_taxon",
+      "evidence_id": "",
+      "confidence": 0.48
+    }
+  ]
+}

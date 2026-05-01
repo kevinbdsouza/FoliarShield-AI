@@ -1,0 +1,7 @@
+modeling:
+  retrieval_backend: local_vector_index
+  knowledge_graph_backend: file_backed_jsonl
+  optimizer_backend: scikit_or_botorch_pending
+  experiment_tracking: filesystem_manifests
+  model_serving: local_cli_first
+  random_seed: 1729

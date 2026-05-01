@@ -1,0 +1,312 @@
+{
+  "status": "ok",
+  "artifact_id": "ingest:seed-crop-stress",
+  "source_manifest": {
+    "id": "manifest:source-manual-crop-stress-curation-seed-crop-stress-evidence-jsonl",
+    "source": "local-ingestion",
+    "license": "CC-BY-4.0",
+    "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+    "confidence": 1.0,
+    "created_at": "2026-05-01T16:19:38.952163+00:00",
+    "version": "0.1",
+    "source_id": "source:manual-crop-stress-curation",
+    "source_url": "https://example.org/foliarshield-ai/manual-crop-stress-curation",
+    "retrieval_method": "local_seed_file",
+    "raw_path": "data/raw/seed_crop_stress_evidence.jsonl",
+    "content_type": "seed_crop_stress_evidence",
+    "source_license": "CC-BY-4.0",
+    "license_review_status": "approved_open",
+    "redistribution_mode": "redistributable",
+    "retrieved_at": "2026-05-01T16:19:38.952115+00:00",
+    "record_count": 3,
+    "checksum_sha256": "13a017c72227e25a3840b70aedb50c4c1c5b61594bde3d823ac87beed7c9461c",
+    "transformation_notes": [
+      "Parsed local crop-stress evidence seed rows into domain records.",
+      "Evidence claims are seed scaffolding and require human review before use."
+    ],
+    "record_type": "SourceManifest"
+  },
+  "input_records": 3,
+  "crop_records": 3,
+  "stress_context_records": 3,
+  "assay_records": 3,
+  "evidence_records": 3,
+  "phenotype_records": 3,
+  "records": [
+    {
+      "id": "crop:rice",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.55,
+      "created_at": "2026-05-01T16:19:38.951960+00:00",
+      "version": "0.1",
+      "common_name": "rice",
+      "scientific_name": "Oryza sativa",
+      "region_tags": [
+        "foliar-delivery",
+        "cereal-leaf",
+        "india-relevant"
+      ],
+      "record_type": "Crop"
+    },
+    {
+      "id": "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.55,
+      "created_at": "2026-05-01T16:19:38.951972+00:00",
+      "version": "0.1",
+      "stressors": [
+        "leaf-retention",
+        "rainfastness"
+      ],
+      "crop_id": "crop:rice",
+      "region": "contained laboratory leaf panel",
+      "temperature_c": [
+        24.0,
+        32.0
+      ],
+      "moisture_regime": "controlled leaf-surface wetting and simulated rainfall",
+      "record_type": "StressContext"
+    },
+    {
+      "id": "evidence:manual-leaf-001",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.55,
+      "created_at": "2026-05-01T16:19:38.951979+00:00",
+      "version": "0.1",
+      "title": "Starter rice leaf foliar delivery benchmark context",
+      "citation": "Project-authored starter record for FoliarShield-AI workflow validation; replace with license-compatible public literature or assay data before benchmarking.",
+      "evidence_type": "leaf-assay-context",
+      "claims": [
+        "rice anchors the agriculturally relevant cereal leaf panel",
+        "fast physical labels should precede living-payload assays"
+      ],
+      "record_type": "EvidenceRecord"
+    },
+    {
+      "id": "assay:manual-leaf-001-foliar-retention-and-wash-off-proxy",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.55,
+      "created_at": "2026-05-01T16:19:38.951987+00:00",
+      "version": "0.1",
+      "assay_type": "foliar retention and wash-off proxy",
+      "fidelity_tier": "fast_physical_assay_seed",
+      "measured_traits": [
+        "droplet-impact-proxy",
+        "spray-coverage-proxy",
+        "retained-fluorescence-proxy",
+        "wash-off-proxy"
+      ],
+      "crop_id": "crop:rice",
+      "stress_context_id": "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel",
+      "record_type": "Assay"
+    },
+    {
+      "id": "phenotype:manual-leaf-001-foliar-delivery-benchmark-relevance",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.55,
+      "created_at": "2026-05-01T16:19:38.951995+00:00",
+      "version": "0.1",
+      "subject_id": "crop:rice",
+      "trait": "foliar delivery benchmark relevance",
+      "value": "primary cereal leaf context placeholder",
+      "assay_id": "assay:manual-leaf-001-foliar-retention-and-wash-off-proxy",
+      "evidence_ids": [
+        "evidence:manual-leaf-001"
+      ],
+      "record_type": "Phenotype"
+    },
+    {
+      "id": "crop:waxy-brassica-leaf",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.55,
+      "created_at": "2026-05-01T16:19:38.952017+00:00",
+      "version": "0.1",
+      "common_name": "waxy brassica leaf",
+      "scientific_name": "Brassica oleracea",
+      "region_tags": [
+        "foliar-delivery",
+        "hydrophobic-leaf",
+        "difficult-to-wet"
+      ],
+      "record_type": "Crop"
+    },
+    {
+      "id": "stress:waxy-brassica-leaf-leaf-retention-rainfastness-contact-line-motion-contained-laboratory-leaf-panel",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.55,
+      "created_at": "2026-05-01T16:19:38.952026+00:00",
+      "version": "0.1",
+      "stressors": [
+        "leaf-retention",
+        "rainfastness",
+        "contact-line-motion"
+      ],
+      "crop_id": "crop:waxy-brassica-leaf",
+      "region": "contained laboratory leaf panel",
+      "temperature_c": [
+        24.0,
+        32.0
+      ],
+      "moisture_regime": "controlled leaf-surface wetting and simulated rainfall",
+      "record_type": "StressContext"
+    },
+    {
+      "id": "evidence:manual-leaf-002",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.55,
+      "created_at": "2026-05-01T16:19:38.952031+00:00",
+      "version": "0.1",
+      "title": "Starter waxy brassica difficult-to-wet benchmark context",
+      "citation": "Project-authored starter record for FoliarShield-AI workflow validation; replace with license-compatible public literature or assay data before benchmarking.",
+      "evidence_type": "leaf-assay-context",
+      "claims": [
+        "waxy brassica or cabbage-like leaves provide a stringent difficult-to-wet benchmark",
+        "retention and wash-off endpoints should be measured before biological labels"
+      ],
+      "record_type": "EvidenceRecord"
+    },
+    {
+      "id": "assay:manual-leaf-002-hydrophobic-leaf-retention-benchmark",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.55,
+      "created_at": "2026-05-01T16:19:38.952036+00:00",
+      "version": "0.1",
+      "assay_type": "hydrophobic-leaf retention benchmark",
+      "fidelity_tier": "fast_physical_assay_seed",
+      "measured_traits": [
+        "contact-line-motion-proxy",
+        "retained-intensity-proxy",
+        "wash-off-proxy",
+        "evaporation-proxy"
+      ],
+      "crop_id": "crop:waxy-brassica-leaf",
+      "stress_context_id": "stress:waxy-brassica-leaf-leaf-retention-rainfastness-contact-line-motion-contained-laboratory-leaf-panel",
+      "record_type": "Assay"
+    },
+    {
+      "id": "phenotype:manual-leaf-002-hydrophobic-retention-benchmark-relevance",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.55,
+      "created_at": "2026-05-01T16:19:38.952042+00:00",
+      "version": "0.1",
+      "subject_id": "crop:waxy-brassica-leaf",
+      "trait": "hydrophobic retention benchmark relevance",
+      "value": "primary difficult-to-wet benchmark placeholder",
+      "assay_id": "assay:manual-leaf-002-hydrophobic-leaf-retention-benchmark",
+      "evidence_ids": [
+        "evidence:manual-leaf-002"
+      ],
+      "record_type": "Phenotype"
+    },
+    {
+      "id": "crop:tomato",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.45,
+      "created_at": "2026-05-01T16:19:38.952060+00:00",
+      "version": "0.1",
+      "common_name": "tomato",
+      "scientific_name": "Solanum lycopersicum",
+      "region_tags": [
+        "foliar-delivery",
+        "moderate-wettability",
+        "optional-expansion"
+      ],
+      "record_type": "Crop"
+    },
+    {
+      "id": "stress:tomato-leaf-retention-controlled-release-optional-laboratory-leaf-panel-expansion",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.45,
+      "created_at": "2026-05-01T16:19:38.952067+00:00",
+      "version": "0.1",
+      "stressors": [
+        "leaf-retention",
+        "controlled-release"
+      ],
+      "crop_id": "crop:tomato",
+      "region": "optional laboratory leaf panel expansion",
+      "temperature_c": [
+        24.0,
+        32.0
+      ],
+      "moisture_regime": "controlled leaf-surface wetting",
+      "record_type": "StressContext"
+    },
+    {
+      "id": "evidence:manual-leaf-003",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.45,
+      "created_at": "2026-05-01T16:19:38.952072+00:00",
+      "version": "0.1",
+      "title": "Optional moderate-wettability leaf expansion context",
+      "citation": "Project-authored starter record for FoliarShield-AI workflow validation; use only after rice and waxy brassica assays stabilize.",
+      "evidence_type": "leaf-assay-context",
+      "claims": [
+        "a moderate-wettability leaf can test transfer after the core workflow stabilizes"
+      ],
+      "record_type": "EvidenceRecord"
+    },
+    {
+      "id": "assay:manual-leaf-003-moderate-wettability-optional-benchmark",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.45,
+      "created_at": "2026-05-01T16:19:38.952077+00:00",
+      "version": "0.1",
+      "assay_type": "moderate-wettability optional benchmark",
+      "fidelity_tier": "expansion_seed",
+      "measured_traits": [
+        "spray-coverage-proxy",
+        "early-release-proxy",
+        "retained-intensity-proxy"
+      ],
+      "crop_id": "crop:tomato",
+      "stress_context_id": "stress:tomato-leaf-retention-controlled-release-optional-laboratory-leaf-panel-expansion",
+      "record_type": "Assay"
+    },
+    {
+      "id": "phenotype:manual-leaf-003-optional-foliar-delivery-expansion-relevance",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.45,
+      "created_at": "2026-05-01T16:19:38.952083+00:00",
+      "version": "0.1",
+      "subject_id": "crop:tomato",
+      "trait": "optional foliar delivery expansion relevance",
+      "value": "deferred optional context placeholder",
+      "assay_id": "assay:manual-leaf-003-moderate-wettability-optional-benchmark",
+      "evidence_ids": [
+        "evidence:manual-leaf-003"
+      ],
+      "record_type": "Phenotype"
+    }
+  ]
+}

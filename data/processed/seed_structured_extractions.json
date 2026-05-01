@@ -1,0 +1,95 @@
+{
+  "status": "ok",
+  "artifact_id": "extraction:seed-evidence",
+  "generated_at": "2026-05-01T16:20:05.609375+00:00",
+  "extraction_version": "lexical-rules-v0.1",
+  "record_count": 3,
+  "records": [
+    {
+      "chunk_id": "chunk:document-manual-doc-001-0",
+      "document_id": "document:manual-doc-001",
+      "citation": "Project-authored starter document for FoliarShield-AI retrieval workflow validation; replace with license-compatible public literature before benchmarking.",
+      "confidence": 0.4,
+      "crops": [
+        "rice",
+        "waxy brassica leaf"
+      ],
+      "stressors": [
+        "contact-line motion",
+        "wash-off"
+      ],
+      "organisms": [],
+      "reported_phenotypes": [
+        "evaporation proxy",
+        "retained intensity proxy",
+        "spray coverage proxy",
+        "wash-off proxy"
+      ],
+      "materials": [],
+      "encapsulation_architectures": [],
+      "release_or_viability_signals": [
+        "evaporation",
+        "release"
+      ],
+      "assay_or_fidelity": [],
+      "review_flags": [
+        "review"
+      ],
+      "evidence_type": "leaf-assay-context"
+    },
+    {
+      "chunk_id": "chunk:document-manual-doc-002-0",
+      "document_id": "document:manual-doc-002",
+      "citation": "Project-authored starter document for FoliarShield-AI retrieval workflow validation; replace with license-compatible public literature before benchmarking.",
+      "confidence": 0.52,
+      "crops": [],
+      "stressors": [],
+      "organisms": [
+        "Bacillus-like payload"
+      ],
+      "reported_phenotypes": [
+        "viability signal"
+      ],
+      "materials": [
+        "cloaked droplet",
+        "emulsion",
+        "liquid-liquid encapsulation",
+        "polymer additive"
+      ],
+      "encapsulation_architectures": [
+        "cloaked droplet",
+        "liquid-liquid encapsulation"
+      ],
+      "release_or_viability_signals": [
+        "release"
+      ],
+      "assay_or_fidelity": [],
+      "review_flags": [],
+      "evidence_type": "formulation"
+    },
+    {
+      "chunk_id": "chunk:document-manual-doc-003-0",
+      "document_id": "document:manual-doc-003",
+      "citation": "Project-authored starter document for FoliarShield-AI retrieval workflow validation; replace with license-compatible public literature before benchmarking.",
+      "confidence": 0.4,
+      "crops": [],
+      "stressors": [],
+      "organisms": [],
+      "reported_phenotypes": [
+        "sprayability proxy"
+      ],
+      "materials": [],
+      "encapsulation_architectures": [],
+      "release_or_viability_signals": [],
+      "assay_or_fidelity": [],
+      "review_flags": [
+        "review"
+      ],
+      "evidence_type": "ai-method"
+    }
+  ],
+  "notes": [
+    "Rule-based seed extraction is intentionally conservative.",
+    "Records with review_flags should enter human review before benchmark use."
+  ]
+}

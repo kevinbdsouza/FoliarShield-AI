@@ -1,0 +1,25 @@
+{
+  "id": "manifest:source-manual-material-curation-seed-formulation-evidence-jsonl",
+  "source": "local-ingestion",
+  "license": "CC-BY-4.0",
+  "provenance": "data/raw/seed_formulation_evidence.jsonl",
+  "confidence": 1.0,
+  "created_at": "2026-05-01T16:19:38.957973+00:00",
+  "version": "0.1",
+  "source_id": "source:manual-material-curation",
+  "source_url": "https://example.org/foliarshield-ai/manual-material-curation",
+  "retrieval_method": "local_seed_file",
+  "raw_path": "data/raw/seed_formulation_evidence.jsonl",
+  "content_type": "seed_formulation_evidence",
+  "source_license": "CC-BY-4.0",
+  "license_review_status": "approved_open",
+  "redistribution_mode": "redistributable",
+  "retrieved_at": "2026-05-01T16:19:38.957904+00:00",
+  "record_count": 3,
+  "checksum_sha256": "f838c2dec35f24307d04f8975c9b764f9de8cc9ca9f5882fb41f5e7e48fb6a55",
+  "transformation_notes": [
+    "Parsed local formulation evidence seed rows into domain records.",
+    "Evidence claims are seed scaffolding and require human review before use."
+  ],
+  "record_type": "SourceManifest"
+}

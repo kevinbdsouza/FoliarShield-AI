@@ -1,0 +1,204 @@
+{
+  "status": "ok",
+  "artifact_id": "optimizer:seed-surrogate-proposals-v0.1",
+  "generated_at": "2026-05-01T16:20:55.510030+00:00",
+  "optimizer_version": "deterministic-seed-surrogate-ucb-v0.1",
+  "random_seed": 1729,
+  "initial_observations_per_task": 1,
+  "proposal_batch_size": 3,
+  "encoding_artifact_id": "optimizer:seed-candidate-encoding-v0.1",
+  "objective_artifact_id": "evaluator:objectives-v0.1",
+  "task_count": 2,
+  "records": [
+    {
+      "task_id": "pilot-1-foliar-retention-rainfastness",
+      "method": "deterministic_seed_surrogate_ucb",
+      "surrogate_model": {
+        "type": "inverse_distance_weighted_regression",
+        "training_observations": 1,
+        "target": "overall_score",
+        "feature_schema": [
+          "mean_strain_confidence",
+          "mean_stress_response",
+          "mean_nutrient_use",
+          "mean_soil_persistence",
+          "consortium_size_norm",
+          "genus_diversity",
+          "formulation_confidence",
+          "release_fit_proxy",
+          "viability_proxy",
+          "manufacturability_proxy",
+          "foliar_panel_relevance"
+        ]
+      },
+      "acquisition_function": {
+        "type": "upper_confidence_bound",
+        "exploration_weight": 0.35,
+        "formula": "predicted_mean + exploration_weight * predictive_uncertainty"
+      },
+      "candidate_pool_size": 2,
+      "proposal_batch_size": 3,
+      "initial_observations": [
+        {
+          "candidate_id": "candidate:encoded:pilot-1-foliar-retention-rainfastness:9e6fa9be",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "formulation_material_id": "material:polymer-assisted-emulsion-spray",
+          "observed_score": 0.369,
+          "responsible_use_status": "needs_review"
+        }
+      ],
+      "proposed_candidates": [
+        {
+          "candidate_id": "candidate:encoded:pilot-1-foliar-retention-rainfastness:3fd52ac1",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "formulation_material_id": "material:liquid-liquid-encapsulation-shell",
+          "overall_score": 0.476,
+          "objective_scores": {
+            "stress_tolerance_proxy": 0.667,
+            "nutrient_use_efficiency_proxy": 0.0,
+            "persistence_proxy": 0.0,
+            "encapsulation_viability_proxy": 0.5,
+            "release_profile_fit": 1.0,
+            "manufacturability_proxy": 0.0,
+            "evidence_support": 0.744
+          },
+          "uncertainty_intervals": {
+            "stress_tolerance_proxy": [
+              0.467,
+              0.867
+            ],
+            "nutrient_use_efficiency_proxy": [
+              0.0,
+              0.2
+            ],
+            "persistence_proxy": [
+              0.0,
+              0.2
+            ],
+            "encapsulation_viability_proxy": [
+              0.3,
+              0.7
+            ],
+            "release_profile_fit": [
+              0.8,
+              1.0
+            ],
+            "manufacturability_proxy": [
+              0.0,
+              0.2
+            ],
+            "evidence_support": [
+              0.544,
+              0.944
+            ]
+          },
+          "evidence_ids": [
+            "evidence:manual-leaf-001",
+            "evidence:manual-leaf-003",
+            "evidence:manual-formulation-001"
+          ],
+          "biosafety_flags": [],
+          "manufacturability_flags": [],
+          "responsible_use_status": "needs_review",
+          "proxy_to_target_risk_notes": [
+            "Seed proxy score; no greenhouse or field validation is implied.",
+            "Small reviewed-evidence coverage keeps uncertainty intentionally broad."
+          ],
+          "recommendation_rationale": "Candidate is retained for research review only.",
+          "continuous_vector": [
+            0.52,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            1.0,
+            0.52,
+            1.0,
+            0.5,
+            0.0,
+            0.8
+          ],
+          "categorical_variables": {
+            "strain_ids": [
+              "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+            ],
+            "genera": [
+              "Bacillus"
+            ],
+            "material_class": "liquid-liquid encapsulation",
+            "architecture_ids": [
+              "architecture:manual-formulation-002-liquid-liquid-encapsulated-payload"
+            ],
+            "stress_context_id": "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel"
+          },
+          "surrogate_prediction": {
+            "predicted_mean": 0.369,
+            "predictive_uncertainty": 0.63,
+            "nearest_observation_distance": 1.0
+          },
+          "acquisition": {
+            "name": "upper_confidence_bound",
+            "value": 0.589
+          }
+        }
+      ],
+      "summary": {
+        "best_observed_score": 0.369,
+        "best_acquisition_value": 0.589,
+        "unevaluated_candidate_count": 1
+      },
+      "limitations": [
+        "Seed surrogate uses deterministic proxy scores, not assay labels.",
+        "Batch proposals require downstream evaluator feedback before claims."
+      ]
+    },
+    {
+      "task_id": "pilot-2-controlled-release-payload-compatibility",
+      "method": "deterministic_seed_surrogate_ucb",
+      "surrogate_model": {
+        "type": "inverse_distance_weighted_regression",
+        "training_observations": 0,
+        "target": "overall_score",
+        "feature_schema": [
+          "mean_strain_confidence",
+          "mean_stress_response",
+          "mean_nutrient_use",
+          "mean_soil_persistence",
+          "consortium_size_norm",
+          "genus_diversity",
+          "formulation_confidence",
+          "release_fit_proxy",
+          "viability_proxy",
+          "manufacturability_proxy",
+          "foliar_panel_relevance"
+        ]
+      },
+      "acquisition_function": {
+        "type": "upper_confidence_bound",
+        "exploration_weight": 0.35,
+        "formula": "predicted_mean + exploration_weight * predictive_uncertainty"
+      },
+      "candidate_pool_size": 0,
+      "proposal_batch_size": 3,
+      "initial_observations": [],
+      "proposed_candidates": [],
+      "summary": {
+        "best_observed_score": 0.0,
+        "best_acquisition_value": 0.0,
+        "unevaluated_candidate_count": 0
+      },
+      "limitations": [
+        "Seed surrogate uses deterministic proxy scores, not assay labels.",
+        "Batch proposals require downstream evaluator feedback before claims."
+      ]
+    }
+  ],
+  "notes": [
+    "This is the first model-backed optimizer scaffold over encoded seed candidates.",
+    "It supports surrogate ranking, acquisition scoring, and batch proposal contracts."
+  ]
+}

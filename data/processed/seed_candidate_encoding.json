@@ -1,0 +1,151 @@
+{
+  "status": "ok",
+  "artifact_id": "optimizer:seed-candidate-encoding-v0.1",
+  "generated_at": "2026-05-01T16:20:55.504708+00:00",
+  "encoding_version": "deterministic-seed-candidate-encoding-v0.1",
+  "search_space_artifact_id": "optimizer:seed-search-space-v0.1",
+  "task_count": 2,
+  "records": [
+    {
+      "task_id": "pilot-1-foliar-retention-rainfastness",
+      "continuous_feature_schema": [
+        "mean_strain_confidence",
+        "mean_stress_response",
+        "mean_nutrient_use",
+        "mean_soil_persistence",
+        "consortium_size_norm",
+        "genus_diversity",
+        "formulation_confidence",
+        "release_fit_proxy",
+        "viability_proxy",
+        "manufacturability_proxy",
+        "foliar_panel_relevance"
+      ],
+      "categorical_feature_schema": [
+        "strain_ids",
+        "genera",
+        "material_class",
+        "architecture_ids",
+        "stress_context_id"
+      ],
+      "encoded_candidate_count": 2,
+      "encoded_candidates": [
+        {
+          "candidate_id": "candidate:encoded:pilot-1-foliar-retention-rainfastness:3fd52ac1",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "formulation_material_id": "material:liquid-liquid-encapsulation-shell",
+          "continuous_vector": [
+            0.52,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            1.0,
+            0.52,
+            1.0,
+            0.5,
+            0.0,
+            0.8
+          ],
+          "categorical_variables": {
+            "strain_ids": [
+              "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+            ],
+            "genera": [
+              "Bacillus"
+            ],
+            "material_class": "liquid-liquid encapsulation",
+            "architecture_ids": [
+              "architecture:manual-formulation-002-liquid-liquid-encapsulated-payload"
+            ],
+            "stress_context_id": "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel"
+          },
+          "conditional_constraints_satisfied": {
+            "has_strain": true,
+            "consortium_size_supported": true,
+            "has_required_formulation": true,
+            "formulation_has_architecture": true
+          }
+        },
+        {
+          "candidate_id": "candidate:encoded:pilot-1-foliar-retention-rainfastness:9e6fa9be",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "formulation_material_id": "material:polymer-assisted-emulsion-spray",
+          "continuous_vector": [
+            0.52,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            1.0,
+            0.5,
+            0.0,
+            0.5,
+            0.0,
+            0.8
+          ],
+          "categorical_variables": {
+            "strain_ids": [
+              "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+            ],
+            "genera": [
+              "Bacillus"
+            ],
+            "material_class": "polymer emulsion additive",
+            "architecture_ids": [
+              "architecture:manual-formulation-003-polymer-emulsion-foliar-film"
+            ],
+            "stress_context_id": "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel"
+          },
+          "conditional_constraints_satisfied": {
+            "has_strain": true,
+            "consortium_size_supported": true,
+            "has_required_formulation": true,
+            "formulation_has_architecture": true
+          }
+        }
+      ],
+      "encoding_notes": [
+        "Continuous vectors are normalized seed proxy descriptors.",
+        "Categorical variables are preserved for later one-hot or kernel encoding."
+      ]
+    },
+    {
+      "task_id": "pilot-2-controlled-release-payload-compatibility",
+      "continuous_feature_schema": [
+        "mean_strain_confidence",
+        "mean_stress_response",
+        "mean_nutrient_use",
+        "mean_soil_persistence",
+        "consortium_size_norm",
+        "genus_diversity",
+        "formulation_confidence",
+        "release_fit_proxy",
+        "viability_proxy",
+        "manufacturability_proxy",
+        "foliar_panel_relevance"
+      ],
+      "categorical_feature_schema": [
+        "strain_ids",
+        "genera",
+        "material_class",
+        "architecture_ids",
+        "stress_context_id"
+      ],
+      "encoded_candidate_count": 0,
+      "encoded_candidates": [],
+      "encoding_notes": [
+        "Continuous vectors are normalized seed proxy descriptors.",
+        "Categorical variables are preserved for later one-hot or kernel encoding."
+      ]
+    }
+  ],
+  "notes": [
+    "Encodings combine continuous proxy features with categorical IDs.",
+    "They are stable local optimizer inputs until model-backed embeddings land."
+  ]
+}

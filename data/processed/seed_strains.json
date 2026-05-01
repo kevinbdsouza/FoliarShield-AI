@@ -1,0 +1,135 @@
+{
+  "status": "ok",
+  "artifact_id": "ingest:seed-strains",
+  "source_manifest": {
+    "id": "manifest:source-manual-strain-curation-seed-strain-metadata-jsonl",
+    "source": "local-ingestion",
+    "license": "CC-BY-4.0",
+    "provenance": "data/raw/seed_strain_metadata.jsonl",
+    "confidence": 1.0,
+    "created_at": "2026-05-01T16:19:38.946170+00:00",
+    "version": "0.1",
+    "source_id": "source:manual-strain-curation",
+    "source_url": "https://example.org/foliarshield-ai/manual-strain-curation",
+    "retrieval_method": "local_seed_file",
+    "raw_path": "data/raw/seed_strain_metadata.jsonl",
+    "content_type": "seed_strain_metadata",
+    "source_license": "CC-BY-4.0",
+    "license_review_status": "approved_open",
+    "redistribution_mode": "redistributable",
+    "retrieved_at": "2026-05-01T16:19:38.946091+00:00",
+    "record_count": 3,
+    "checksum_sha256": "f79c6e4ffb952d7fac5b872da2f710c6db4fd053ad918c584171e745ae11e75e",
+    "transformation_notes": [
+      "Parsed local seed_strain_metadata records and normalized IDs only.",
+      "No biological ranking or recommendation is performed during ingestion."
+    ],
+    "record_type": "SourceManifest"
+  },
+  "input_records": 3,
+  "taxon_records": 3,
+  "strain_records": 3,
+  "records": [
+    {
+      "id": "taxon:bacillus-subtilis",
+      "source": "source:manual-strain-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_strain_metadata.jsonl",
+      "confidence": 0.52,
+      "created_at": "2026-05-01T16:19:38.946018+00:00",
+      "version": "0.1",
+      "scientific_name": "Bacillus subtilis",
+      "rank": "species",
+      "synonyms": [],
+      "taxonomy_authority": "",
+      "record_type": "Taxon"
+    },
+    {
+      "id": "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder",
+      "source": "source:manual-strain-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_strain_metadata.jsonl",
+      "confidence": 0.52,
+      "created_at": "2026-05-01T16:19:38.946036+00:00",
+      "version": "0.1",
+      "taxon": "Bacillus subtilis",
+      "strain_label": "contained foliar Bacillus-like payload placeholder",
+      "biosafety_flags": [],
+      "phenotype_tags": [
+        "foliar-compatible placeholder",
+        "leaf-retention proxy",
+        "rainfastness compatibility proxy",
+        "spore-forming viability proxy",
+        "contained-use review required"
+      ],
+      "record_type": "Strain"
+    },
+    {
+      "id": "taxon:bacillus-velezensis",
+      "source": "source:manual-strain-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_strain_metadata.jsonl",
+      "confidence": 0.5,
+      "created_at": "2026-05-01T16:19:38.946047+00:00",
+      "version": "0.1",
+      "scientific_name": "Bacillus velezensis",
+      "rank": "species",
+      "synonyms": [],
+      "taxonomy_authority": "",
+      "record_type": "Taxon"
+    },
+    {
+      "id": "strain:manual-payload-002-non-pathogenic-foliar-surrogate-placeholder",
+      "source": "source:manual-strain-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_strain_metadata.jsonl",
+      "confidence": 0.5,
+      "created_at": "2026-05-01T16:19:38.946057+00:00",
+      "version": "0.1",
+      "taxon": "Bacillus velezensis",
+      "strain_label": "non-pathogenic foliar surrogate placeholder",
+      "biosafety_flags": [
+        "institutional approval required before living-payload assay"
+      ],
+      "phenotype_tags": [
+        "phyllosphere persistence proxy",
+        "formulation compatibility proxy",
+        "contained-use review required"
+      ],
+      "record_type": "Strain"
+    },
+    {
+      "id": "taxon:bacillus-amyloliquefaciens",
+      "source": "source:manual-strain-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_strain_metadata.jsonl",
+      "confidence": 0.48,
+      "created_at": "2026-05-01T16:19:38.946065+00:00",
+      "version": "0.1",
+      "scientific_name": "Bacillus amyloliquefaciens",
+      "rank": "species",
+      "synonyms": [],
+      "taxonomy_authority": "",
+      "record_type": "Taxon"
+    },
+    {
+      "id": "strain:manual-payload-003-bacillus-like-viability-benchmark-placeholder",
+      "source": "source:manual-strain-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_strain_metadata.jsonl",
+      "confidence": 0.48,
+      "created_at": "2026-05-01T16:19:38.946073+00:00",
+      "version": "0.1",
+      "taxon": "Bacillus amyloliquefaciens",
+      "strain_label": "Bacillus-like viability benchmark placeholder",
+      "biosafety_flags": [
+        "institutional approval required before living-payload assay"
+      ],
+      "phenotype_tags": [
+        "leaf-surface survival proxy",
+        "controlled-release compatibility proxy"
+      ],
+      "record_type": "Strain"
+    }
+  ]
+}

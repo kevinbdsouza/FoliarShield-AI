@@ -1,0 +1,32 @@
+pilot_tasks:
+  - id: pilot-1-foliar-retention-rainfastness
+    name: Rice and waxy-brassica foliar retention and rainfastness ranking
+    crop: rice
+    stressors:
+      - leaf-retention
+      - rainfastness
+      - contact-line-motion
+    region_priority: contained laboratory leaf panel
+    evaluation_tier: fast_physical_assay
+    outputs:
+      - ranked_formulations
+      - retained_intensity_scores
+      - wash_off_risk_notes
+      - candidate_scorecards
+
+  - id: pilot-2-controlled-release-payload-compatibility
+    name: Controlled-release and Bacillus-like payload compatibility scoring
+    crop: waxy brassica leaf
+    stressors:
+      - controlled-release
+      - payload-viability
+      - sprayability
+    formulation_context:
+      - cloaked_droplet
+      - liquid_liquid_encapsulation
+      - polymer_emulsion_spray
+    evaluation_tier: tiered_assay
+    outputs:
+      - release_fit_scores
+      - viability_risk_notes
+      - responsible_use_flags

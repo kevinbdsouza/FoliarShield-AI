@@ -1,0 +1,196 @@
+{
+  "entries": [
+    {
+      "id": "source:ncbi-assembly",
+      "name": "NCBI Assembly",
+      "source": "manual-registry",
+      "source_type": "living-payload-genome-resource",
+      "license": "source-specific",
+      "license_review_status": "manifest_only",
+      "redistribution_mode": "manifest_only",
+      "homepage_url": "https://www.ncbi.nlm.nih.gov/assembly/",
+      "license_url": "https://www.nlm.nih.gov/databases/download.html",
+      "license_reviewed_on": "2026-04-24",
+      "provenance": "configs/source_registry.seed.json",
+      "confidence": 0.7,
+      "planned_record_types": ["Taxon", "Genome", "ProteinOrGeneFeature"],
+      "notes": [
+        "NLM data include U.S. government works and third-party copyrighted material; use accession-level manifests first.",
+        "Review record-level and contributor-specific terms before redistributing derived genome metadata."
+      ]
+    },
+    {
+      "id": "source:ena",
+      "name": "European Nucleotide Archive",
+      "source": "manual-registry",
+      "source_type": "living-payload-genome-resource",
+      "license": "source-specific",
+      "license_review_status": "manifest_only",
+      "redistribution_mode": "manifest_only",
+      "homepage_url": "https://www.ebi.ac.uk/ena/browser/home",
+      "license_url": "https://www.ebi.ac.uk/about/terms-of-use/",
+      "license_reviewed_on": "2026-04-24",
+      "provenance": "configs/source_registry.seed.json",
+      "confidence": 0.7,
+      "planned_record_types": ["Taxon", "Genome", "ProteinOrGeneFeature"],
+      "notes": [
+        "EMBL-EBI places no additional restrictions beyond original data-owner rights unless resource-specific terms apply.",
+        "Keep ENA imports manifest-only until record-level licensing and third-party rights are checked."
+      ]
+    },
+    {
+      "id": "source:bacdive",
+      "name": "BacDive strain metadata",
+      "source": "manual-registry",
+      "source_type": "living-payload-metadata-resource",
+      "license": "CC-BY-4.0",
+      "license_review_status": "approved_open",
+      "redistribution_mode": "redistributable",
+      "homepage_url": "https://bacdive.dsmz.de/",
+      "license_url": "https://bacdive.dsmz.de/about",
+      "license_reviewed_on": "2026-04-24",
+      "provenance": "configs/source_registry.seed.json",
+      "confidence": 0.7,
+      "planned_record_types": ["Taxon", "Strain", "Phenotype"],
+      "notes": [
+        "BacDive states that the work is licensed under CC-BY-4.0.",
+        "Commercial product use should still review BacDive's commercial-contact note before packaging large extracts."
+      ]
+    },
+    {
+      "id": "source:europe-pmc",
+      "name": "Europe PMC",
+      "source": "manual-registry",
+      "source_type": "literature-metadata-and-open-full-text",
+      "license": "article-specific",
+      "license_review_status": "manifest_only",
+      "redistribution_mode": "manifest_only",
+      "homepage_url": "https://europepmc.org/",
+      "license_url": "https://europepmc.org/downloads/openaccess",
+      "license_reviewed_on": "2026-04-24",
+      "provenance": "configs/source_registry.seed.json",
+      "confidence": 0.75,
+      "planned_record_types": ["EvidenceRecord", "Assay"],
+      "notes": [
+        "Open access subset articles use Creative Commons or similar licenses, but terms vary by article.",
+        "Preserve article-level license statements and avoid packaging full text unless the article license permits it."
+      ]
+    },
+    {
+      "id": "source:openalex",
+      "name": "OpenAlex",
+      "source": "manual-registry",
+      "source_type": "literature-metadata",
+      "license": "CC0-1.0",
+      "license_review_status": "approved_open",
+      "redistribution_mode": "redistributable",
+      "homepage_url": "https://openalex.org/",
+      "license_url": "https://help.openalex.org/hc/en-us/articles/24397762024087-Pricing",
+      "license_reviewed_on": "2026-04-24",
+      "provenance": "configs/source_registry.seed.json",
+      "confidence": 0.8,
+      "planned_record_types": ["EvidenceRecord"],
+      "notes": [
+        "OpenAlex states that its website, API, and data snapshot are licensed as CC0."
+      ]
+    },
+    {
+      "id": "source:crossref",
+      "name": "Crossref",
+      "source": "manual-registry",
+      "source_type": "literature-metadata",
+      "license": "mixed",
+      "license_review_status": "manifest_only",
+      "redistribution_mode": "manifest_only",
+      "homepage_url": "https://www.crossref.org/",
+      "license_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/rest-api-metadata-license-information/",
+      "license_reviewed_on": "2026-04-24",
+      "provenance": "configs/source_registry.seed.json",
+      "confidence": 0.75,
+      "planned_record_types": ["EvidenceRecord"],
+      "notes": [
+        "Crossref bibliographic metadata is reusable, but abstracts remain copyrighted by publishers or authors.",
+        "Use DOI and basic citation metadata first; keep abstract-derived fields out of public artifacts unless article-level rights are confirmed."
+      ]
+    },
+    {
+      "id": "source:pubchem",
+      "name": "PubChem",
+      "source": "manual-registry",
+      "source_type": "materials-property-resource",
+      "license": "source-specific",
+      "license_review_status": "manifest_only",
+      "redistribution_mode": "manifest_only",
+      "homepage_url": "https://pubchem.ncbi.nlm.nih.gov/",
+      "license_url": "https://pubchem.ncbi.nlm.nih.gov/docs/downloads",
+      "license_reviewed_on": "2026-04-24",
+      "provenance": "configs/source_registry.seed.json",
+      "confidence": 0.65,
+      "planned_record_types": ["FormulationMaterial"],
+      "notes": [
+        "PubChem is free to use and broadly downloadable, but contributor datasets may have explicit license information.",
+        "Use PubChem identifiers and provenance first; verify source-level terms before redistributing material-property extracts."
+      ]
+    },
+    {
+      "id": "source:manual-strain-curation",
+      "name": "Manual foliar payload curation",
+      "source": "manual-registry",
+      "source_type": "curated-foliar-payload-starter-dataset",
+      "license": "CC-BY-4.0",
+      "license_review_status": "approved_open",
+      "redistribution_mode": "redistributable",
+      "homepage_url": "https://example.org/foliarshield-ai/manual-strain-curation",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_reviewed_on": "2026-04-24",
+      "provenance": "configs/source_registry.seed.json",
+      "confidence": 0.6,
+      "planned_record_types": ["Taxon", "Strain", "Phenotype"],
+      "notes": [
+        "Project-authored Bacillus-like foliar payload rows for local workflow development.",
+        "Rows must include provenance to license-compatible public evidence before they are used for benchmarks."
+      ]
+    },
+    {
+      "id": "source:manual-crop-stress-curation",
+      "name": "Manual leaf-panel assay curation",
+      "source": "manual-registry",
+      "source_type": "curated-literature-derived-dataset",
+      "license": "CC-BY-4.0",
+      "license_review_status": "approved_open",
+      "redistribution_mode": "redistributable",
+      "homepage_url": "https://example.org/foliarshield-ai/manual-crop-stress-curation",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_reviewed_on": "2026-04-24",
+      "provenance": "configs/source_registry.seed.json",
+      "confidence": 0.5,
+      "planned_record_types": ["Crop", "StressContext", "Assay", "EvidenceRecord"],
+      "notes": [
+        "Placeholder for project-authored leaf-panel, retention, rainfastness, and assay-context records derived from license-compatible public evidence."
+      ]
+    },
+    {
+      "id": "source:manual-material-curation",
+      "name": "Manual foliar formulation and encapsulation curation",
+      "source": "manual-registry",
+      "source_type": "curated-literature-derived-dataset",
+      "license": "CC-BY-4.0",
+      "license_review_status": "approved_open",
+      "redistribution_mode": "redistributable",
+      "homepage_url": "https://example.org/foliarshield-ai/manual-material-curation",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_reviewed_on": "2026-04-24",
+      "provenance": "configs/source_registry.seed.json",
+      "confidence": 0.5,
+      "planned_record_types": [
+        "FormulationMaterial",
+        "EncapsulationArchitecture",
+        "ReleaseTrigger",
+        "EvidenceRecord"
+      ],
+      "notes": [
+        "Placeholder for project-authored foliar formulation records derived from license-compatible public evidence."
+      ]
+    }
+  ]
+}

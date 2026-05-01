@@ -1,0 +1,176 @@
+{
+  "status": "ok",
+  "artifact_id": "optimizer:seed-search-space-v0.1",
+  "generated_at": "2026-05-01T16:20:55.499537+00:00",
+  "search_space_version": "deterministic-seed-search-space-v0.1",
+  "max_consortium_size": 2,
+  "task_count": 2,
+  "records": [
+    {
+      "task_id": "pilot-1-foliar-retention-rainfastness",
+      "crop": "rice",
+      "stressors": [
+        "leaf-retention",
+        "rainfastness",
+        "contact-line-motion"
+      ],
+      "stress_context_ids": [
+        "stress:rice-leaf-retention-rainfastness-contained-laboratory-leaf-panel"
+      ],
+      "consortium_sizes": [
+        1
+      ],
+      "strain_candidates": [
+        {
+          "strain_id": "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder",
+          "taxon": "Bacillus subtilis",
+          "genus": "Bacillus",
+          "continuous_feature_keys": [
+            "confidence",
+            "stress_response_flag",
+            "root_growth_proxy_flag",
+            "nutrient_use_proxy_flag",
+            "formulation_viability_proxy_flag",
+            "soil_persistence_proxy_flag"
+          ]
+        }
+      ],
+      "formulation_candidates": [
+        {
+          "material_id": "material:liquid-liquid-encapsulation-shell",
+          "material_class": "liquid-liquid encapsulation",
+          "architecture_ids": [
+            "architecture:manual-formulation-002-liquid-liquid-encapsulated-payload"
+          ],
+          "release_triggers": [
+            "diffusion",
+            "hydration",
+            "leaf-surface-residence-time"
+          ]
+        },
+        {
+          "material_id": "material:polymer-assisted-emulsion-spray",
+          "material_class": "polymer emulsion additive",
+          "architecture_ids": [
+            "architecture:manual-formulation-003-polymer-emulsion-foliar-film"
+          ],
+          "release_triggers": [
+            "evaporation",
+            "film-formation",
+            "rainfall-challenge"
+          ]
+        }
+      ],
+      "release_profile_targets": [
+        "not_applicable"
+      ],
+      "constraint_summary": {
+        "biosafety_exclusion": "exclude strain features with biosafety_review_required",
+        "task_context_filter": "retain strains and formulations with stress or release-context overlap",
+        "formulation_requirement": true,
+        "architecture_requirement": "formulation candidates must link to at least one architecture",
+        "max_consortium_size": 2
+      },
+      "invalid_combination_filters": [
+        "drop biosafety-flagged strains before candidate enumeration",
+        "drop formulations without linked architectures",
+        "require formulation candidates for formulation-oriented outputs",
+        "require at least one crop-stress context or configured stressor label"
+      ],
+      "rejected_candidates": {
+        "strains": [
+          {
+            "strain_id": "strain:manual-payload-002-non-pathogenic-foliar-surrogate-placeholder",
+            "reason": "biosafety_review_required"
+          },
+          {
+            "strain_id": "strain:manual-payload-003-bacillus-like-viability-benchmark-placeholder",
+            "reason": "biosafety_review_required"
+          }
+        ],
+        "formulations": [
+          {
+            "material_id": "material:oil-cloaked-aqueous-droplet-system",
+            "reason": "no_task_context_match"
+          }
+        ]
+      },
+      "feasible_candidate_count": 2
+    },
+    {
+      "task_id": "pilot-2-controlled-release-payload-compatibility",
+      "crop": "waxy brassica leaf",
+      "stressors": [
+        "controlled-release",
+        "payload-viability",
+        "sprayability"
+      ],
+      "stress_context_ids": [
+        "stress:waxy-brassica-leaf-leaf-retention-rainfastness-contact-line-motion-contained-laboratory-leaf-panel"
+      ],
+      "consortium_sizes": [],
+      "strain_candidates": [],
+      "formulation_candidates": [
+        {
+          "material_id": "material:liquid-liquid-encapsulation-shell",
+          "material_class": "liquid-liquid encapsulation",
+          "architecture_ids": [
+            "architecture:manual-formulation-002-liquid-liquid-encapsulated-payload"
+          ],
+          "release_triggers": [
+            "diffusion",
+            "hydration",
+            "leaf-surface-residence-time"
+          ]
+        }
+      ],
+      "release_profile_targets": [
+        "task-matched formulation release"
+      ],
+      "constraint_summary": {
+        "biosafety_exclusion": "exclude strain features with biosafety_review_required",
+        "task_context_filter": "retain strains and formulations with stress or release-context overlap",
+        "formulation_requirement": true,
+        "architecture_requirement": "formulation candidates must link to at least one architecture",
+        "max_consortium_size": 2
+      },
+      "invalid_combination_filters": [
+        "drop biosafety-flagged strains before candidate enumeration",
+        "drop formulations without linked architectures",
+        "require formulation candidates for formulation-oriented outputs",
+        "require at least one crop-stress context or configured stressor label"
+      ],
+      "rejected_candidates": {
+        "strains": [
+          {
+            "strain_id": "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder",
+            "reason": "no_task_context_match"
+          },
+          {
+            "strain_id": "strain:manual-payload-002-non-pathogenic-foliar-surrogate-placeholder",
+            "reason": "biosafety_review_required"
+          },
+          {
+            "strain_id": "strain:manual-payload-003-bacillus-like-viability-benchmark-placeholder",
+            "reason": "biosafety_review_required"
+          }
+        ],
+        "formulations": [
+          {
+            "material_id": "material:oil-cloaked-aqueous-droplet-system",
+            "reason": "no_task_context_match"
+          },
+          {
+            "material_id": "material:polymer-assisted-emulsion-spray",
+            "reason": "no_task_context_match"
+          }
+        ]
+      },
+      "feasible_candidate_count": 0
+    }
+  ],
+  "notes": [
+    "Search spaces are built from seed proxy features and hard guardrail filters.",
+    "They define optimizer inputs only; they are not biological recommendations."
+  ]
+}

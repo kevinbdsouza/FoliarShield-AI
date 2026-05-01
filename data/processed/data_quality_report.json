@@ -1,0 +1,73 @@
+{
+  "status": "ok",
+  "artifact_id": "quality:seed-data",
+  "generated_at": "2026-05-01T16:20:05.588511+00:00",
+  "record_count": 39,
+  "record_type_counts": {
+    "Assay": 3,
+    "Crop": 3,
+    "EncapsulationArchitecture": 3,
+    "EvidenceRecord": 6,
+    "FormulationMaterial": 3,
+    "LiteratureChunk": 3,
+    "LiteratureDocument": 3,
+    "Phenotype": 3,
+    "ReleaseTrigger": 3,
+    "Strain": 3,
+    "StressContext": 3,
+    "Taxon": 3
+  },
+  "coverage_by_crop": {
+    "rice": 1,
+    "tomato": 1,
+    "waxy brassica leaf": 1
+  },
+  "coverage_by_stress_type": {
+    "contact-line-motion": 1,
+    "controlled-release": 1,
+    "leaf-retention": 3,
+    "rainfastness": 2
+  },
+  "coverage_by_microbial_group": {
+    "Bacillus": 6
+  },
+  "coverage_by_formulation_material": {
+    "cloaked foliar droplet": 1,
+    "liquid-liquid encapsulation": 1,
+    "polymer emulsion additive": 1
+  },
+  "missingness_summary": {
+    "id": 0,
+    "source": 0,
+    "license": 0,
+    "provenance": 0,
+    "confidence": 0,
+    "created_at": 0,
+    "version": 0
+  },
+  "license_summary": {
+    "CC-BY-4.0": 39
+  },
+  "provenance_completeness": {
+    "records_with_provenance": 39,
+    "records_total": 39,
+    "fraction": 1.0
+  },
+  "weak_or_ambiguous_evidence_ids": [
+    "evidence:manual-leaf-003",
+    "evidence:manual-formulation-001",
+    "evidence:manual-formulation-002",
+    "evidence:manual-formulation-003"
+  ],
+  "taxonomy_normalization_count": 6,
+  "duplicate_candidate_summary": {
+    "taxa": 0,
+    "strains": 0,
+    "publications": 0,
+    "duplicate_record_ids": []
+  },
+  "notes": [
+    "Seed artifacts validate workflow coverage only.",
+    "Low-confidence evidence should be human-reviewed before benchmarking."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "status": "ok",
+  "artifact_id": "curation:seed-data",
+  "generated_at": "2026-05-01T16:20:05.593239+00:00",
+  "record_count": 39,
+  "taxonomy_normalization": [
+    {
+      "record_id": "taxon:bacillus-subtilis",
+      "record_type": "Taxon",
+      "raw_name": "Bacillus subtilis",
+      "normalized_name": "Bacillus subtilis",
+      "normalized_taxon_id": "taxon:bacillus-subtilis"
+    },
+    {
+      "record_id": "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder",
+      "record_type": "Strain",
+      "raw_name": "Bacillus subtilis",
+      "normalized_name": "Bacillus subtilis",
+      "normalized_taxon_id": "taxon:bacillus-subtilis"
+    },
+    {
+      "record_id": "taxon:bacillus-velezensis",
+      "record_type": "Taxon",
+      "raw_name": "Bacillus velezensis",
+      "normalized_name": "Bacillus velezensis",
+      "normalized_taxon_id": "taxon:bacillus-velezensis"
+    },
+    {
+      "record_id": "strain:manual-payload-002-non-pathogenic-foliar-surrogate-placeholder",
+      "record_type": "Strain",
+      "raw_name": "Bacillus velezensis",
+      "normalized_name": "Bacillus velezensis",
+      "normalized_taxon_id": "taxon:bacillus-velezensis"
+    },
+    {
+      "record_id": "taxon:bacillus-amyloliquefaciens",
+      "record_type": "Taxon",
+      "raw_name": "Bacillus amyloliquefaciens",
+      "normalized_name": "Bacillus amyloliquefaciens",
+      "normalized_taxon_id": "taxon:bacillus-amyloliquefaciens"
+    },
+    {
+      "record_id": "strain:manual-payload-003-bacillus-like-viability-benchmark-placeholder",
+      "record_type": "Strain",
+      "raw_name": "Bacillus amyloliquefaciens",
+      "normalized_name": "Bacillus amyloliquefaciens",
+      "normalized_taxon_id": "taxon:bacillus-amyloliquefaciens"
+    }
+  ],
+  "duplicate_taxa": [],
+  "duplicate_strains": [],
+  "duplicate_publications": [],
+  "duplicate_record_ids": [],
+  "canonical_record_count_after_deduplication": 39,
+  "notes": [
+    "Duplicate groups keep the first sorted record ID as the canonical seed record.",
+    "Taxonomy normalization is string-level curation.",
+    "Authority-backed taxonomy checks are still required before benchmark use."
+  ]
+}

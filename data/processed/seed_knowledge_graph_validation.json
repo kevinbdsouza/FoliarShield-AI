@@ -1,0 +1,42 @@
+{
+  "status": "ok",
+  "artifact_id": "validation:seed-knowledge-graph",
+  "generated_at": "2026-05-01T16:20:05.630504+00:00",
+  "graph_artifact_id": "graph:seed-evidence-v0.1",
+  "node_count": 69,
+  "edge_count": 55,
+  "node_type_counts": {
+    "ArchitectureMention": 2,
+    "Assay": 3,
+    "Claim": 11,
+    "Crop": 3,
+    "CropMention": 2,
+    "EncapsulationArchitecture": 3,
+    "EvidenceRecord": 6,
+    "FormulationMaterial": 3,
+    "LiteratureChunk": 3,
+    "LiteratureDocument": 3,
+    "MaterialMention": 4,
+    "OrganismMention": 1,
+    "Phenotype": 3,
+    "PhenotypeMention": 6,
+    "ReleaseSignal": 2,
+    "ReleaseTrigger": 3,
+    "Strain": 3,
+    "StressContext": 3,
+    "StressMention": 2,
+    "Taxon": 3
+  },
+  "relation_counts": {
+    "chunk_of": 3,
+    "encapsulated_by": 9,
+    "has_taxon": 3,
+    "released_under": 6,
+    "supports": 21,
+    "tested_in": 13
+  },
+  "duplicate_node_ids": [],
+  "dangling_edge_count": 0,
+  "dangling_edges": [],
+  "warnings": []
+}

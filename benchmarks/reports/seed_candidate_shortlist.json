@@ -1,0 +1,397 @@
+{
+  "status": "ok",
+  "artifact_id": "shortlist:seed-candidates-v0.1",
+  "generated_at": "2026-05-01T16:20:55.531990+00:00",
+  "shortlist_version": "seed-candidate-shortlist-v0.1",
+  "top_k": 3,
+  "task_count": 2,
+  "records": [
+    {
+      "task_id": "pilot-1-foliar-retention-rainfastness",
+      "shortlist_count": 3,
+      "shortlist": [
+        {
+          "rank": 1,
+          "candidate_id": "candidate:random:pilot-1-foliar-retention-rainfastness:001:3fd52ac1",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "formulation_material_id": "material:liquid-liquid-encapsulation-shell",
+          "overall_score": 0.476,
+          "objective_scores": {
+            "stress_tolerance_proxy": 0.667,
+            "nutrient_use_efficiency_proxy": 0.0,
+            "persistence_proxy": 0.0,
+            "encapsulation_viability_proxy": 0.5,
+            "release_profile_fit": 1.0,
+            "manufacturability_proxy": 0.0,
+            "evidence_support": 0.744
+          },
+          "uncertainty_intervals": {
+            "stress_tolerance_proxy": [
+              0.467,
+              0.867
+            ],
+            "nutrient_use_efficiency_proxy": [
+              0.0,
+              0.2
+            ],
+            "persistence_proxy": [
+              0.0,
+              0.2
+            ],
+            "encapsulation_viability_proxy": [
+              0.3,
+              0.7
+            ],
+            "release_profile_fit": [
+              0.8,
+              1.0
+            ],
+            "manufacturability_proxy": [
+              0.0,
+              0.2
+            ],
+            "evidence_support": [
+              0.544,
+              0.944
+            ]
+          },
+          "evidence_ids": [
+            "evidence:manual-leaf-001",
+            "evidence:manual-leaf-003",
+            "evidence:manual-formulation-001"
+          ],
+          "biosafety_flags": [],
+          "manufacturability_flags": [],
+          "responsible_use_status": "needs_review",
+          "review_decision": "human_review_required",
+          "proxy_to_target_risk_notes": [
+            "Seed proxy score; no greenhouse or field validation is implied.",
+            "Small reviewed-evidence coverage keeps uncertainty intentionally broad."
+          ],
+          "recommendation_rationale": "Candidate is retained for research review only."
+        },
+        {
+          "rank": 2,
+          "candidate_id": "candidate:random:pilot-1-foliar-retention-rainfastness:005:3fd52ac1",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "formulation_material_id": "material:liquid-liquid-encapsulation-shell",
+          "overall_score": 0.476,
+          "objective_scores": {
+            "stress_tolerance_proxy": 0.667,
+            "nutrient_use_efficiency_proxy": 0.0,
+            "persistence_proxy": 0.0,
+            "encapsulation_viability_proxy": 0.5,
+            "release_profile_fit": 1.0,
+            "manufacturability_proxy": 0.0,
+            "evidence_support": 0.744
+          },
+          "uncertainty_intervals": {
+            "stress_tolerance_proxy": [
+              0.467,
+              0.867
+            ],
+            "nutrient_use_efficiency_proxy": [
+              0.0,
+              0.2
+            ],
+            "persistence_proxy": [
+              0.0,
+              0.2
+            ],
+            "encapsulation_viability_proxy": [
+              0.3,
+              0.7
+            ],
+            "release_profile_fit": [
+              0.8,
+              1.0
+            ],
+            "manufacturability_proxy": [
+              0.0,
+              0.2
+            ],
+            "evidence_support": [
+              0.544,
+              0.944
+            ]
+          },
+          "evidence_ids": [
+            "evidence:manual-leaf-001",
+            "evidence:manual-leaf-003",
+            "evidence:manual-formulation-001"
+          ],
+          "biosafety_flags": [],
+          "manufacturability_flags": [],
+          "responsible_use_status": "needs_review",
+          "review_decision": "human_review_required",
+          "proxy_to_target_risk_notes": [
+            "Seed proxy score; no greenhouse or field validation is implied.",
+            "Small reviewed-evidence coverage keeps uncertainty intentionally broad."
+          ],
+          "recommendation_rationale": "Candidate is retained for research review only."
+        },
+        {
+          "rank": 3,
+          "candidate_id": "candidate:random:pilot-1-foliar-retention-rainfastness:004:9e6fa9be",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "formulation_material_id": "material:polymer-assisted-emulsion-spray",
+          "overall_score": 0.369,
+          "objective_scores": {
+            "stress_tolerance_proxy": 0.667,
+            "nutrient_use_efficiency_proxy": 0.0,
+            "persistence_proxy": 0.0,
+            "encapsulation_viability_proxy": 0.5,
+            "release_profile_fit": 0.333,
+            "manufacturability_proxy": 0.0,
+            "evidence_support": 0.74
+          },
+          "uncertainty_intervals": {
+            "stress_tolerance_proxy": [
+              0.467,
+              0.867
+            ],
+            "nutrient_use_efficiency_proxy": [
+              0.0,
+              0.2
+            ],
+            "persistence_proxy": [
+              0.0,
+              0.2
+            ],
+            "encapsulation_viability_proxy": [
+              0.3,
+              0.7
+            ],
+            "release_profile_fit": [
+              0.133,
+              0.533
+            ],
+            "manufacturability_proxy": [
+              0.0,
+              0.2
+            ],
+            "evidence_support": [
+              0.54,
+              0.94
+            ]
+          },
+          "evidence_ids": [
+            "evidence:manual-leaf-001",
+            "evidence:manual-leaf-003",
+            "evidence:manual-formulation-001"
+          ],
+          "biosafety_flags": [],
+          "manufacturability_flags": [],
+          "responsible_use_status": "needs_review",
+          "review_decision": "human_review_required",
+          "proxy_to_target_risk_notes": [
+            "Seed proxy score; no greenhouse or field validation is implied.",
+            "Small reviewed-evidence coverage keeps uncertainty intentionally broad."
+          ],
+          "recommendation_rationale": "Candidate is retained for research review only."
+        }
+      ],
+      "excluded_blocked_count": 0,
+      "source_method": "optimizer_only"
+    },
+    {
+      "task_id": "pilot-2-controlled-release-payload-compatibility",
+      "shortlist_count": 3,
+      "shortlist": [
+        {
+          "rank": 1,
+          "candidate_id": "candidate:random:pilot-2-controlled-release-payload-compatibility:002:3fd52ac1",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "formulation_material_id": "material:liquid-liquid-encapsulation-shell",
+          "overall_score": 0.39,
+          "objective_scores": {
+            "stress_tolerance_proxy": 0.0,
+            "nutrient_use_efficiency_proxy": 0.0,
+            "persistence_proxy": 0.0,
+            "encapsulation_viability_proxy": 0.5,
+            "release_profile_fit": 1.0,
+            "manufacturability_proxy": 0.0,
+            "evidence_support": 0.664
+          },
+          "uncertainty_intervals": {
+            "stress_tolerance_proxy": [
+              0.0,
+              0.26
+            ],
+            "nutrient_use_efficiency_proxy": [
+              0.0,
+              0.26
+            ],
+            "persistence_proxy": [
+              0.0,
+              0.26
+            ],
+            "encapsulation_viability_proxy": [
+              0.24,
+              0.76
+            ],
+            "release_profile_fit": [
+              0.74,
+              1.0
+            ],
+            "manufacturability_proxy": [
+              0.0,
+              0.26
+            ],
+            "evidence_support": [
+              0.404,
+              0.924
+            ]
+          },
+          "evidence_ids": [
+            "evidence:manual-formulation-003"
+          ],
+          "biosafety_flags": [],
+          "manufacturability_flags": [],
+          "responsible_use_status": "needs_review",
+          "review_decision": "human_review_required",
+          "proxy_to_target_risk_notes": [
+            "Seed proxy score; no greenhouse or field validation is implied.",
+            "Small reviewed-evidence coverage keeps uncertainty intentionally broad."
+          ],
+          "recommendation_rationale": "Candidate is retained for research review only."
+        },
+        {
+          "rank": 2,
+          "candidate_id": "candidate:random:pilot-2-controlled-release-payload-compatibility:003:3fd52ac1",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "formulation_material_id": "material:liquid-liquid-encapsulation-shell",
+          "overall_score": 0.39,
+          "objective_scores": {
+            "stress_tolerance_proxy": 0.0,
+            "nutrient_use_efficiency_proxy": 0.0,
+            "persistence_proxy": 0.0,
+            "encapsulation_viability_proxy": 0.5,
+            "release_profile_fit": 1.0,
+            "manufacturability_proxy": 0.0,
+            "evidence_support": 0.664
+          },
+          "uncertainty_intervals": {
+            "stress_tolerance_proxy": [
+              0.0,
+              0.26
+            ],
+            "nutrient_use_efficiency_proxy": [
+              0.0,
+              0.26
+            ],
+            "persistence_proxy": [
+              0.0,
+              0.26
+            ],
+            "encapsulation_viability_proxy": [
+              0.24,
+              0.76
+            ],
+            "release_profile_fit": [
+              0.74,
+              1.0
+            ],
+            "manufacturability_proxy": [
+              0.0,
+              0.26
+            ],
+            "evidence_support": [
+              0.404,
+              0.924
+            ]
+          },
+          "evidence_ids": [
+            "evidence:manual-formulation-003"
+          ],
+          "biosafety_flags": [],
+          "manufacturability_flags": [],
+          "responsible_use_status": "needs_review",
+          "review_decision": "human_review_required",
+          "proxy_to_target_risk_notes": [
+            "Seed proxy score; no greenhouse or field validation is implied.",
+            "Small reviewed-evidence coverage keeps uncertainty intentionally broad."
+          ],
+          "recommendation_rationale": "Candidate is retained for research review only."
+        },
+        {
+          "rank": 3,
+          "candidate_id": "candidate:random:pilot-2-controlled-release-payload-compatibility:006:3fd52ac1",
+          "strain_ids": [
+            "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder"
+          ],
+          "formulation_material_id": "material:liquid-liquid-encapsulation-shell",
+          "overall_score": 0.39,
+          "objective_scores": {
+            "stress_tolerance_proxy": 0.0,
+            "nutrient_use_efficiency_proxy": 0.0,
+            "persistence_proxy": 0.0,
+            "encapsulation_viability_proxy": 0.5,
+            "release_profile_fit": 1.0,
+            "manufacturability_proxy": 0.0,
+            "evidence_support": 0.664
+          },
+          "uncertainty_intervals": {
+            "stress_tolerance_proxy": [
+              0.0,
+              0.26
+            ],
+            "nutrient_use_efficiency_proxy": [
+              0.0,
+              0.26
+            ],
+            "persistence_proxy": [
+              0.0,
+              0.26
+            ],
+            "encapsulation_viability_proxy": [
+              0.24,
+              0.76
+            ],
+            "release_profile_fit": [
+              0.74,
+              1.0
+            ],
+            "manufacturability_proxy": [
+              0.0,
+              0.26
+            ],
+            "evidence_support": [
+              0.404,
+              0.924
+            ]
+          },
+          "evidence_ids": [
+            "evidence:manual-formulation-003"
+          ],
+          "biosafety_flags": [],
+          "manufacturability_flags": [],
+          "responsible_use_status": "needs_review",
+          "review_decision": "human_review_required",
+          "proxy_to_target_risk_notes": [
+            "Seed proxy score; no greenhouse or field validation is implied.",
+            "Small reviewed-evidence coverage keeps uncertainty intentionally broad."
+          ],
+          "recommendation_rationale": "Candidate is retained for research review only."
+        }
+      ],
+      "excluded_blocked_count": 0,
+      "source_method": "optimizer_only"
+    }
+  ],
+  "responsible_use_notice": "Shortlisted candidates are research decision-support artifacts only and require domain, biosafety, regulatory, and experimental review.",
+  "source_artifacts": {
+    "scorecards": "evaluator:seed-candidate-scorecards-v0.1",
+    "optimizer_only": "baseline:optimizer-only-seed-v0.1"
+  }
+}

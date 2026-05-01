@@ -1,0 +1,25 @@
+{
+  "id": "manifest:source-manual-strain-curation-seed-strain-metadata-jsonl",
+  "source": "local-ingestion",
+  "license": "CC-BY-4.0",
+  "provenance": "data/raw/seed_strain_metadata.jsonl",
+  "confidence": 1.0,
+  "created_at": "2026-05-01T16:19:38.946170+00:00",
+  "version": "0.1",
+  "source_id": "source:manual-strain-curation",
+  "source_url": "https://example.org/foliarshield-ai/manual-strain-curation",
+  "retrieval_method": "local_seed_file",
+  "raw_path": "data/raw/seed_strain_metadata.jsonl",
+  "content_type": "seed_strain_metadata",
+  "source_license": "CC-BY-4.0",
+  "license_review_status": "approved_open",
+  "redistribution_mode": "redistributable",
+  "retrieved_at": "2026-05-01T16:19:38.946091+00:00",
+  "record_count": 3,
+  "checksum_sha256": "f79c6e4ffb952d7fac5b872da2f710c6db4fd053ad918c584171e745ae11e75e",
+  "transformation_notes": [
+    "Parsed local seed_strain_metadata records and normalized IDs only.",
+    "No biological ranking or recommendation is performed during ingestion."
+  ],
+  "record_type": "SourceManifest"
+}

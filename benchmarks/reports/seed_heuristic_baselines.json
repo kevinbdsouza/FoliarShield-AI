@@ -1,0 +1,184 @@
+{
+  "status": "ok",
+  "artifact_id": "baseline:seed-heuristics-v0.1",
+  "generated_at": "2026-05-01T16:20:05.657794+00:00",
+  "baseline_version": "deterministic-heuristics-v0.1",
+  "task_count": 2,
+  "records": [
+    {
+      "task_id": "pilot-1-foliar-retention-rainfastness",
+      "method": "deterministic_seed_heuristic",
+      "ranked_strains": [
+        {
+          "strain_id": "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder",
+          "taxon": "Bacillus subtilis",
+          "score": 0.645,
+          "components": {
+            "evidence_support": 0.76,
+            "stress_relevance": 0.667,
+            "crop_relevance": 0.5,
+            "biosafety_penalty": 0.0
+          },
+          "evidence_ids": [
+            "evidence:manual-leaf-001",
+            "evidence:manual-leaf-003",
+            "evidence:manual-formulation-001"
+          ],
+          "biosafety_flags": []
+        },
+        {
+          "strain_id": "strain:manual-payload-002-non-pathogenic-foliar-surrogate-placeholder",
+          "taxon": "Bacillus velezensis",
+          "score": 0.0,
+          "components": {
+            "evidence_support": 0.74,
+            "stress_relevance": 0.0,
+            "crop_relevance": 0.5,
+            "biosafety_penalty": 0.45
+          },
+          "evidence_ids": [
+            "evidence:manual-leaf-001",
+            "evidence:manual-leaf-003",
+            "evidence:manual-formulation-001"
+          ],
+          "biosafety_flags": [
+            "institutional approval required before living-payload assay"
+          ]
+        },
+        {
+          "strain_id": "strain:manual-payload-003-bacillus-like-viability-benchmark-placeholder",
+          "taxon": "Bacillus amyloliquefaciens",
+          "score": 0.0,
+          "components": {
+            "evidence_support": 0.72,
+            "stress_relevance": 0.0,
+            "crop_relevance": 0.5,
+            "biosafety_penalty": 0.45
+          },
+          "evidence_ids": [
+            "evidence:manual-leaf-001",
+            "evidence:manual-leaf-003",
+            "evidence:manual-formulation-001"
+          ],
+          "biosafety_flags": [
+            "institutional approval required before living-payload assay"
+          ]
+        }
+      ],
+      "ranked_consortia": [],
+      "ranked_formulations": [],
+      "evaluation_caveats": [
+        "Scores combine local seed confidence, lexical feature flags, and simple penalties.",
+        "Use only for baseline plumbing until reviewed evidence and objective weights land."
+      ]
+    },
+    {
+      "task_id": "pilot-2-controlled-release-payload-compatibility",
+      "method": "deterministic_seed_heuristic",
+      "ranked_strains": [
+        {
+          "strain_id": "strain:manual-payload-001-contained-foliar-bacillus-like-payload-placeholder",
+          "taxon": "Bacillus subtilis",
+          "score": 0.389,
+          "components": {
+            "evidence_support": 0.6,
+            "stress_relevance": 0.0,
+            "crop_relevance": 0.5,
+            "biosafety_penalty": 0.0
+          },
+          "evidence_ids": [
+            "evidence:manual-formulation-003"
+          ],
+          "biosafety_flags": []
+        },
+        {
+          "strain_id": "strain:manual-payload-003-bacillus-like-viability-benchmark-placeholder",
+          "taxon": "Bacillus amyloliquefaciens",
+          "score": 0.017,
+          "components": {
+            "evidence_support": 0.56,
+            "stress_relevance": 0.333,
+            "crop_relevance": 0.5,
+            "biosafety_penalty": 0.45
+          },
+          "evidence_ids": [
+            "evidence:manual-formulation-003"
+          ],
+          "biosafety_flags": [
+            "institutional approval required before living-payload assay"
+          ]
+        },
+        {
+          "strain_id": "strain:manual-payload-002-non-pathogenic-foliar-surrogate-placeholder",
+          "taxon": "Bacillus velezensis",
+          "score": 0.0,
+          "components": {
+            "evidence_support": 0.58,
+            "stress_relevance": 0.0,
+            "crop_relevance": 0.5,
+            "biosafety_penalty": 0.45
+          },
+          "evidence_ids": [
+            "evidence:manual-formulation-003"
+          ],
+          "biosafety_flags": [
+            "institutional approval required before living-payload assay"
+          ]
+        }
+      ],
+      "ranked_consortia": [],
+      "ranked_formulations": [
+        {
+          "material_id": "material:liquid-liquid-encapsulation-shell",
+          "material_class": "liquid-liquid encapsulation",
+          "score": 0.454,
+          "components": {
+            "release_profile_match": 1.0,
+            "manufacturability_proxy": 0.0,
+            "viability_risk": 0.5
+          },
+          "viability_constraints": [
+            "screen processing stress for living payload",
+            "measure early release with nonliving payload first"
+          ]
+        },
+        {
+          "material_id": "material:polymer-assisted-emulsion-spray",
+          "material_class": "polymer emulsion additive",
+          "score": 0.075,
+          "components": {
+            "release_profile_match": 0.167,
+            "manufacturability_proxy": 0.0,
+            "viability_risk": 0.5
+          },
+          "viability_constraints": [
+            "check sprayability and payload compatibility",
+            "avoid unreviewed phytotoxicity assumptions"
+          ]
+        },
+        {
+          "material_id": "material:oil-cloaked-aqueous-droplet-system",
+          "material_class": "cloaked foliar droplet",
+          "score": 0.004,
+          "components": {
+            "release_profile_match": 0.0,
+            "manufacturability_proxy": 0.0,
+            "viability_risk": 0.5
+          },
+          "viability_constraints": [
+            "verify Bacillus-like payload compatibility before living assay",
+            "avoid phytotoxic solvent assumptions"
+          ]
+        }
+      ],
+      "evaluation_caveats": [
+        "Scores combine local seed confidence, lexical feature flags, and simple penalties.",
+        "Use only for baseline plumbing until reviewed evidence and objective weights land."
+      ]
+    }
+  ],
+  "notes": [
+    "Heuristic baselines are deterministic scaffolds for regression testing.",
+    "Scores are proxy features only and must not be interpreted as recommendations."
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "status": "ok",
+  "artifact_id": "benchmark:seed-baseline-comparison-v0.1",
+  "generated_at": "2026-05-01T16:20:55.527103+00:00",
+  "benchmark_version": "seed-baseline-comparison-v0.1",
+  "review_threshold": 0.6,
+  "top_k": 3,
+  "task_count": 2,
+  "records": [
+    {
+      "task_id": "pilot-1-foliar-retention-rainfastness",
+      "metrics": {
+        "random_valid_candidates": {
+          "candidate_count": 4,
+          "hit_rate": 0.0,
+          "top_k_enrichment": 0.0,
+          "mean_score": 0.369,
+          "mean_top_k_score": 0.387,
+          "search_cost": 4,
+          "calibration_proxy": {
+            "mean_uncertainty_width": 0.293,
+            "narrow_interval_fraction": 0.0
+          }
+        },
+        "heuristic_baseline": {
+          "candidate_count": 3,
+          "hit_rate": 0.333,
+          "top_k_enrichment": 0.333,
+          "mean_score": 0.215,
+          "mean_top_k_score": 0.215,
+          "search_cost": 3,
+          "calibration_proxy": "not_applicable_without_uncertainty_intervals"
+        },
+        "optimizer_only": {
+          "candidate_count": 3,
+          "hit_rate": 0.0,
+          "top_k_enrichment": 0.0,
+          "mean_score": 0.44,
+          "mean_top_k_score": 0.44,
+          "search_cost": 3,
+          "calibration_proxy": {
+            "mean_uncertainty_width": 0.295,
+            "narrow_interval_fraction": 0.0
+          }
+        },
+        "reasoning_only": {
+          "candidate_count": 3,
+          "hit_rate": 0.333,
+          "top_k_enrichment": 0.333,
+          "mean_score": 0.215,
+          "mean_top_k_score": 0.215,
+          "search_cost": 3,
+          "calibration_proxy": "not_applicable_without_uncertainty_intervals"
+        }
+      },
+      "comparisons": {
+        "optimizer_top_k_lift_over_random": 0.053,
+        "reasoning_top_k_lift_over_heuristic": 0.0,
+        "optimizer_search_cost": 4,
+        "reasoning_search_cost": 3,
+        "heuristic_search_cost": 3
+      },
+      "failure_cases": [
+        {
+          "case": "no_review_ready_optimizer_candidates",
+          "detail": "Optimizer-only proposals did not clear seed review thresholds."
+        }
+      ]
+    },
+    {
+      "task_id": "pilot-2-controlled-release-payload-compatibility",
+      "metrics": {
+        "random_valid_candidates": {
+          "candidate_count": 4,
+          "hit_rate": 0.0,
+          "top_k_enrichment": 0.0,
+          "mean_score": 0.285,
+          "mean_top_k_score": 0.32,
+          "search_cost": 4,
+          "calibration_proxy": {
+            "mean_uncertainty_width": 0.334,
+            "narrow_interval_fraction": 0.0
+          }
+        },
+        "heuristic_baseline": {
+          "candidate_count": 6,
+          "hit_rate": 0.0,
+          "top_k_enrichment": 0.0,
+          "mean_score": 0.157,
+          "mean_top_k_score": 0.306,
+          "search_cost": 6,
+          "calibration_proxy": "not_applicable_without_uncertainty_intervals"
+        },
+        "optimizer_only": {
+          "candidate_count": 3,
+          "hit_rate": 0.0,
+          "top_k_enrichment": 0.0,
+          "mean_score": 0.39,
+          "mean_top_k_score": 0.39,
+          "search_cost": 3,
+          "calibration_proxy": {
+            "mean_uncertainty_width": 0.334,
+            "narrow_interval_fraction": 0.0
+          }
+        },
+        "reasoning_only": {
+          "candidate_count": 6,
+          "hit_rate": 0.0,
+          "top_k_enrichment": 0.0,
+          "mean_score": 0.157,
+          "mean_top_k_score": 0.306,
+          "search_cost": 6,
+          "calibration_proxy": "not_applicable_without_uncertainty_intervals"
+        }
+      },
+      "comparisons": {
+        "optimizer_top_k_lift_over_random": 0.07,
+        "reasoning_top_k_lift_over_heuristic": 0.0,
+        "optimizer_search_cost": 4,
+        "reasoning_search_cost": 6,
+        "heuristic_search_cost": 6
+      },
+      "failure_cases": [
+        {
+          "case": "no_review_ready_optimizer_candidates",
+          "detail": "Optimizer-only proposals did not clear seed review thresholds."
+        }
+      ]
+    }
+  ],
+  "source_artifacts": {
+    "heuristic": "baseline:seed-heuristics-v0.1",
+    "random_candidates": "baseline:random-valid-candidates-v0.1",
+    "scorecards": "evaluator:seed-candidate-scorecards-v0.1",
+    "optimizer_only": "baseline:optimizer-only-seed-v0.1",
+    "reasoning_only": "baseline:reasoning-only-seed-v0.1"
+  },
+  "notes": [
+    "Metrics are computed from seed proxy scores for workflow validation.",
+    "Hit rate counts candidates at or above the review threshold.",
+    "Calibration is a placeholder based on uncertainty width until held-out labels exist."
+  ]
+}

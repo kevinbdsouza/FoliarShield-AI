@@ -7,7 +7,7 @@
     "license": "CC-BY-4.0",
     "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
     "confidence": 1.0,
-    "created_at": "2026-05-01T17:34:05.572871+00:00",
+    "created_at": "2026-05-02T03:35:22.488107+00:00",
     "version": "0.1",
     "source_id": "source:manual-crop-stress-curation",
     "source_url": "https://example.org/foliarshield-ai/manual-crop-stress-curation",
@@ -17,7 +17,7 @@
     "source_license": "CC-BY-4.0",
     "license_review_status": "approved_open",
     "redistribution_mode": "redistributable",
-    "retrieved_at": "2026-05-01T17:34:05.572187+00:00",
+    "retrieved_at": "2026-05-02T03:35:22.488002+00:00",
     "record_count": 9,
     "checksum_sha256": "2bef9d1e2801293d8b0544149de4c30d475b2a33fee2a7e1b59867d960f3da83",
     "transformation_notes": [
@@ -30,6 +30,7 @@
   "crop_records": 3,
   "stress_context_records": 9,
   "assay_records": 9,
+  "assay_endpoint_schema_records": 9,
   "evidence_records": 9,
   "phenotype_records": 9,
   "records": [
@@ -39,7 +40,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.55,
-      "created_at": "2026-05-01T17:34:05.571695+00:00",
+      "created_at": "2026-05-02T03:35:22.487359+00:00",
       "version": "0.1",
       "common_name": "rice",
       "scientific_name": "Oryza sativa",
@@ -56,7 +57,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.55,
-      "created_at": "2026-05-01T17:34:05.571713+00:00",
+      "created_at": "2026-05-02T03:35:22.487372+00:00",
       "version": "0.1",
       "stressors": [
         "leaf-retention",
@@ -77,7 +78,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.55,
-      "created_at": "2026-05-01T17:34:05.571727+00:00",
+      "created_at": "2026-05-02T03:35:22.487384+00:00",
       "version": "0.1",
       "title": "Starter rice leaf foliar delivery benchmark context",
       "citation": "Project-authored starter record for FoliarShield-AI workflow validation; replace with license-compatible public literature or assay data before benchmarking.",
@@ -94,7 +95,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.55,
-      "created_at": "2026-05-01T17:34:05.571736+00:00",
+      "created_at": "2026-05-02T03:35:22.487394+00:00",
       "version": "0.1",
       "assay_type": "foliar retention and wash-off proxy",
       "fidelity_tier": "fast_physical_assay_seed",
@@ -109,12 +110,53 @@
       "record_type": "Assay"
     },
     {
+      "id": "assay-schema:manual-leaf-001-wash-off",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.55,
+      "created_at": "2026-05-02T03:35:22.487420+00:00",
+      "version": "0.1",
+      "assay_id": "assay:manual-leaf-001-foliar-retention-and-wash-off-proxy",
+      "endpoint_kind": "wash_off",
+      "raw_measurements": [
+        "pre_rain_retained_signal",
+        "post_rain_retained_signal",
+        "runoff_signal",
+        "rainfall_dose_mm"
+      ],
+      "derived_metrics": [
+        "wash_off_fraction",
+        "rainfastness_score",
+        "post_rain_retained_fraction"
+      ],
+      "units": {
+        "pre_rain_retained_signal": "assay_signal_units",
+        "post_rain_retained_signal": "assay_signal_units",
+        "runoff_signal": "assay_signal_units",
+        "rainfall_dose_mm": "millimeter",
+        "wash_off_fraction": "unitless_0_to_1",
+        "rainfastness_score": "unitless_0_to_1",
+        "post_rain_retained_fraction": "unitless_0_to_1"
+      },
+      "quality_controls": [
+        "rainfall_dose_calibrated",
+        "pre_post_image_registration_checked",
+        "runoff_blank_subtracted"
+      ],
+      "objective_links": [
+        "wash_off",
+        "retention"
+      ],
+      "record_type": "AssayEndpointSchema"
+    },
+    {
       "id": "phenotype:manual-leaf-001-foliar-delivery-benchmark-relevance",
       "source": "source:manual-crop-stress-curation",
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.55,
-      "created_at": "2026-05-01T17:34:05.571746+00:00",
+      "created_at": "2026-05-02T03:35:22.487429+00:00",
       "version": "0.1",
       "subject_id": "crop:rice",
       "trait": "foliar delivery benchmark relevance",
@@ -131,7 +173,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.55,
-      "created_at": "2026-05-01T17:34:05.571774+00:00",
+      "created_at": "2026-05-02T03:35:22.487453+00:00",
       "version": "0.1",
       "common_name": "waxy brassica leaf",
       "scientific_name": "Brassica oleracea",
@@ -148,7 +190,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.55,
-      "created_at": "2026-05-01T17:34:05.571784+00:00",
+      "created_at": "2026-05-02T03:35:22.487462+00:00",
       "version": "0.1",
       "stressors": [
         "leaf-retention",
@@ -170,7 +212,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.55,
-      "created_at": "2026-05-01T17:34:05.571790+00:00",
+      "created_at": "2026-05-02T03:35:22.487468+00:00",
       "version": "0.1",
       "title": "Starter waxy brassica difficult-to-wet benchmark context",
       "citation": "Project-authored starter record for FoliarShield-AI workflow validation; replace with license-compatible public literature or assay data before benchmarking.",
@@ -187,7 +229,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.55,
-      "created_at": "2026-05-01T17:34:05.571796+00:00",
+      "created_at": "2026-05-02T03:35:22.487473+00:00",
       "version": "0.1",
       "assay_type": "hydrophobic-leaf retention benchmark",
       "fidelity_tier": "fast_physical_assay_seed",
@@ -202,12 +244,53 @@
       "record_type": "Assay"
     },
     {
+      "id": "assay-schema:manual-leaf-002-wash-off",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.55,
+      "created_at": "2026-05-02T03:35:22.487491+00:00",
+      "version": "0.1",
+      "assay_id": "assay:manual-leaf-002-hydrophobic-leaf-retention-benchmark",
+      "endpoint_kind": "wash_off",
+      "raw_measurements": [
+        "pre_rain_retained_signal",
+        "post_rain_retained_signal",
+        "runoff_signal",
+        "rainfall_dose_mm"
+      ],
+      "derived_metrics": [
+        "wash_off_fraction",
+        "rainfastness_score",
+        "post_rain_retained_fraction"
+      ],
+      "units": {
+        "pre_rain_retained_signal": "assay_signal_units",
+        "post_rain_retained_signal": "assay_signal_units",
+        "runoff_signal": "assay_signal_units",
+        "rainfall_dose_mm": "millimeter",
+        "wash_off_fraction": "unitless_0_to_1",
+        "rainfastness_score": "unitless_0_to_1",
+        "post_rain_retained_fraction": "unitless_0_to_1"
+      },
+      "quality_controls": [
+        "rainfall_dose_calibrated",
+        "pre_post_image_registration_checked",
+        "runoff_blank_subtracted"
+      ],
+      "objective_links": [
+        "wash_off",
+        "retention"
+      ],
+      "record_type": "AssayEndpointSchema"
+    },
+    {
       "id": "phenotype:manual-leaf-002-hydrophobic-retention-benchmark-relevance",
       "source": "source:manual-crop-stress-curation",
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.55,
-      "created_at": "2026-05-01T17:34:05.571803+00:00",
+      "created_at": "2026-05-02T03:35:22.487499+00:00",
       "version": "0.1",
       "subject_id": "crop:waxy-brassica-leaf",
       "trait": "hydrophobic retention benchmark relevance",
@@ -224,7 +307,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.45,
-      "created_at": "2026-05-01T17:34:05.571826+00:00",
+      "created_at": "2026-05-02T03:35:22.487518+00:00",
       "version": "0.1",
       "common_name": "tomato",
       "scientific_name": "Solanum lycopersicum",
@@ -241,7 +324,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.45,
-      "created_at": "2026-05-01T17:34:05.571834+00:00",
+      "created_at": "2026-05-02T03:35:22.487526+00:00",
       "version": "0.1",
       "stressors": [
         "leaf-retention",
@@ -262,7 +345,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.45,
-      "created_at": "2026-05-01T17:34:05.571839+00:00",
+      "created_at": "2026-05-02T03:35:22.487531+00:00",
       "version": "0.1",
       "title": "Optional moderate-wettability leaf expansion context",
       "citation": "Project-authored starter record for FoliarShield-AI workflow validation; use only after rice and waxy brassica assays stabilize.",
@@ -278,7 +361,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.45,
-      "created_at": "2026-05-01T17:34:05.571845+00:00",
+      "created_at": "2026-05-02T03:35:22.487536+00:00",
       "version": "0.1",
       "assay_type": "moderate-wettability optional benchmark",
       "fidelity_tier": "expansion_seed",
@@ -292,12 +375,53 @@
       "record_type": "Assay"
     },
     {
+      "id": "assay-schema:manual-leaf-003-release",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.45,
+      "created_at": "2026-05-02T03:35:22.487553+00:00",
+      "version": "0.1",
+      "assay_id": "assay:manual-leaf-003-moderate-wettability-optional-benchmark",
+      "endpoint_kind": "release",
+      "raw_measurements": [
+        "payload_released_signal_by_time",
+        "retained_payload_signal_by_time",
+        "sampling_volume_ul"
+      ],
+      "derived_metrics": [
+        "fraction_released_1h",
+        "fraction_released_4h",
+        "fraction_released_24h",
+        "burst_release_flag"
+      ],
+      "units": {
+        "payload_released_signal_by_time": "assay_signal_units",
+        "retained_payload_signal_by_time": "assay_signal_units",
+        "sampling_volume_ul": "microliter",
+        "fraction_released_1h": "unitless_0_to_1",
+        "fraction_released_4h": "unitless_0_to_1",
+        "fraction_released_24h": "unitless_0_to_1",
+        "burst_release_flag": "boolean"
+      },
+      "quality_controls": [
+        "release_blank_subtracted",
+        "mass_balance_checked",
+        "sampling_schedule_logged"
+      ],
+      "objective_links": [
+        "release_profile",
+        "payload_viability"
+      ],
+      "record_type": "AssayEndpointSchema"
+    },
+    {
       "id": "phenotype:manual-leaf-003-optional-foliar-delivery-expansion-relevance",
       "source": "source:manual-crop-stress-curation",
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.45,
-      "created_at": "2026-05-01T17:34:05.571851+00:00",
+      "created_at": "2026-05-02T03:35:22.487559+00:00",
       "version": "0.1",
       "subject_id": "crop:tomato",
       "trait": "optional foliar delivery expansion relevance",
@@ -314,7 +438,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.78,
-      "created_at": "2026-05-01T17:34:05.571877+00:00",
+      "created_at": "2026-05-02T03:35:22.487586+00:00",
       "version": "0.1",
       "stressors": [
         "droplet-impact",
@@ -336,7 +460,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.78,
-      "created_at": "2026-05-01T17:34:05.571882+00:00",
+      "created_at": "2026-05-02T03:35:22.487591+00:00",
       "version": "0.1",
       "title": "Cloaked-droplet impact video assay metadata",
       "citation": "Derived from Jayaprakash et al. Soft Matter 21, 3688-3699 (2025), https://doi.org/10.1039/D4SM01496K, and Song et al. Polymer Testing 93, 106958 (2021), https://doi.org/10.1016/j.polymertesting.2020.106958.",
@@ -353,7 +477,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.78,
-      "created_at": "2026-05-01T17:34:05.571889+00:00",
+      "created_at": "2026-05-02T03:35:22.487597+00:00",
       "version": "0.1",
       "assay_type": "high-speed droplet impact video assay",
       "fidelity_tier": "fast_physical_assay_metadata",
@@ -370,12 +494,53 @@
       "record_type": "Assay"
     },
     {
+      "id": "assay-schema:assay-droplet-impact-video-001-imaging",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.78,
+      "created_at": "2026-05-02T03:35:22.487617+00:00",
+      "version": "0.1",
+      "assay_id": "assay:assay-droplet-impact-video-001-high-speed-droplet-impact-video-assay",
+      "endpoint_kind": "imaging",
+      "raw_measurements": [
+        "image_or_video_frame_id",
+        "leaf_mask_area_px",
+        "deposited_signal_area_px",
+        "droplet_count"
+      ],
+      "derived_metrics": [
+        "percent_leaf_area_covered",
+        "coverage_uniformity",
+        "contact_line_motion_score"
+      ],
+      "units": {
+        "image_or_video_frame_id": "unitless",
+        "leaf_mask_area_px": "pixels",
+        "deposited_signal_area_px": "pixels",
+        "droplet_count": "unitless",
+        "percent_leaf_area_covered": "unitless",
+        "coverage_uniformity": "unitless_0_to_1",
+        "contact_line_motion_score": "unitless_0_to_1"
+      },
+      "quality_controls": [
+        "calibration_target_detected",
+        "leaf_mask_reviewed",
+        "background_signal_subtracted"
+      ],
+      "objective_links": [
+        "retention",
+        "sprayability"
+      ],
+      "record_type": "AssayEndpointSchema"
+    },
+    {
       "id": "phenotype:assay-droplet-impact-video-001-assay-endpoint-readiness",
       "source": "source:manual-crop-stress-curation",
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.78,
-      "created_at": "2026-05-01T17:34:05.571895+00:00",
+      "created_at": "2026-05-02T03:35:22.487625+00:00",
       "version": "0.1",
       "subject_id": "crop:waxy-brassica-leaf",
       "trait": "assay endpoint readiness",
@@ -392,7 +557,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.76,
-      "created_at": "2026-05-01T17:34:05.571917+00:00",
+      "created_at": "2026-05-02T03:35:22.487646+00:00",
       "version": "0.1",
       "stressors": [
         "spray-coverage",
@@ -413,7 +578,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.76,
-      "created_at": "2026-05-01T17:34:05.571923+00:00",
+      "created_at": "2026-05-02T03:35:22.487651+00:00",
       "version": "0.1",
       "title": "Spray coverage image assay metadata",
       "citation": "Derived from Jayaprakash et al. Soft Matter 21, 3688-3699 (2025), https://doi.org/10.1039/D4SM01496K, and Tang et al. Nature Communications 14, 6401 (2023), https://doi.org/10.1038/s41467-023-41878-3.",
@@ -430,7 +595,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.76,
-      "created_at": "2026-05-01T17:34:05.571929+00:00",
+      "created_at": "2026-05-02T03:35:22.487657+00:00",
       "version": "0.1",
       "assay_type": "spray coverage image assay",
       "fidelity_tier": "fast_physical_assay_metadata",
@@ -446,12 +611,52 @@
       "record_type": "Assay"
     },
     {
+      "id": "assay-schema:assay-spray-coverage-image-001-retention",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.76,
+      "created_at": "2026-05-02T03:35:22.487677+00:00",
+      "version": "0.1",
+      "assay_id": "assay:assay-spray-coverage-image-001-spray-coverage-image-assay",
+      "endpoint_kind": "retention",
+      "raw_measurements": [
+        "initial_payload_signal",
+        "retained_payload_signal",
+        "background_leaf_signal",
+        "elapsed_time_min"
+      ],
+      "derived_metrics": [
+        "normalized_retained_fraction",
+        "background_corrected_leaf_signal",
+        "spatial_signal_persistence"
+      ],
+      "units": {
+        "initial_payload_signal": "assay_signal_units",
+        "retained_payload_signal": "assay_signal_units",
+        "background_leaf_signal": "assay_signal_units",
+        "elapsed_time_min": "minute",
+        "normalized_retained_fraction": "unitless_0_to_1",
+        "background_corrected_leaf_signal": "assay_signal_units",
+        "spatial_signal_persistence": "assay_signal_units"
+      },
+      "quality_controls": [
+        "payload_standard_curve_recorded",
+        "background_signal_subtracted",
+        "replicate_leaf_position_logged"
+      ],
+      "objective_links": [
+        "retention"
+      ],
+      "record_type": "AssayEndpointSchema"
+    },
+    {
       "id": "phenotype:assay-spray-coverage-image-001-assay-endpoint-readiness",
       "source": "source:manual-crop-stress-curation",
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.76,
-      "created_at": "2026-05-01T17:34:05.571935+00:00",
+      "created_at": "2026-05-02T03:35:22.487682+00:00",
       "version": "0.1",
       "subject_id": "crop:waxy-brassica-leaf",
       "trait": "assay endpoint readiness",
@@ -468,7 +673,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.77,
-      "created_at": "2026-05-01T17:34:05.571960+00:00",
+      "created_at": "2026-05-02T03:35:22.487702+00:00",
       "version": "0.1",
       "stressors": [
         "simulated-rain",
@@ -490,7 +695,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.77,
-      "created_at": "2026-05-01T17:34:05.571966+00:00",
+      "created_at": "2026-05-02T03:35:22.487707+00:00",
       "version": "0.1",
       "title": "Simulated rain and wash-off assay metadata",
       "citation": "Derived from Tang et al. Nature Communications 14, 6401 (2023), https://doi.org/10.1038/s41467-023-41878-3, and Jayaprakash et al. Soft Matter 21, 3688-3699 (2025), https://doi.org/10.1039/D4SM01496K.",
@@ -507,7 +712,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.77,
-      "created_at": "2026-05-01T17:34:05.571972+00:00",
+      "created_at": "2026-05-02T03:35:22.487712+00:00",
       "version": "0.1",
       "assay_type": "simulated rain wash-off assay",
       "fidelity_tier": "fast_physical_assay_metadata",
@@ -523,12 +728,53 @@
       "record_type": "Assay"
     },
     {
+      "id": "assay-schema:assay-simulated-rain-001-wash-off",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.77,
+      "created_at": "2026-05-02T03:35:22.487726+00:00",
+      "version": "0.1",
+      "assay_id": "assay:assay-simulated-rain-001-simulated-rain-wash-off-assay",
+      "endpoint_kind": "wash_off",
+      "raw_measurements": [
+        "pre_rain_retained_signal",
+        "post_rain_retained_signal",
+        "runoff_signal",
+        "rainfall_dose_mm"
+      ],
+      "derived_metrics": [
+        "wash_off_fraction",
+        "rainfastness_score",
+        "post_rain_retained_fraction"
+      ],
+      "units": {
+        "pre_rain_retained_signal": "assay_signal_units",
+        "post_rain_retained_signal": "assay_signal_units",
+        "runoff_signal": "assay_signal_units",
+        "rainfall_dose_mm": "millimeter",
+        "wash_off_fraction": "unitless_0_to_1",
+        "rainfastness_score": "unitless_0_to_1",
+        "post_rain_retained_fraction": "unitless_0_to_1"
+      },
+      "quality_controls": [
+        "rainfall_dose_calibrated",
+        "pre_post_image_registration_checked",
+        "runoff_blank_subtracted"
+      ],
+      "objective_links": [
+        "wash_off",
+        "retention"
+      ],
+      "record_type": "AssayEndpointSchema"
+    },
+    {
       "id": "phenotype:assay-simulated-rain-001-assay-endpoint-readiness",
       "source": "source:manual-crop-stress-curation",
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.77,
-      "created_at": "2026-05-01T17:34:05.571978+00:00",
+      "created_at": "2026-05-02T03:35:22.487732+00:00",
       "version": "0.1",
       "subject_id": "crop:rice",
       "trait": "assay endpoint readiness",
@@ -545,7 +791,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.72,
-      "created_at": "2026-05-01T17:34:05.572000+00:00",
+      "created_at": "2026-05-02T03:35:22.487753+00:00",
       "version": "0.1",
       "stressors": [
         "retained-intensity",
@@ -567,7 +813,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.72,
-      "created_at": "2026-05-01T17:34:05.572006+00:00",
+      "created_at": "2026-05-02T03:35:22.487757+00:00",
       "version": "0.1",
       "title": "Retained fluorescence assay metadata",
       "citation": "Project-authored assay adapter derived from the FoliarShield nonliving-payload benchmark plan and foliar deposition literature including Jayaprakash et al. Soft Matter 21, 3688-3699 (2025), https://doi.org/10.1039/D4SM01496K.",
@@ -584,7 +830,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.72,
-      "created_at": "2026-05-01T17:34:05.572012+00:00",
+      "created_at": "2026-05-02T03:35:22.487763+00:00",
       "version": "0.1",
       "assay_type": "retained fluorescence intensity assay",
       "fidelity_tier": "fast_physical_assay_metadata",
@@ -600,12 +846,52 @@
       "record_type": "Assay"
     },
     {
+      "id": "assay-schema:assay-retained-fluorescence-001-retention",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.72,
+      "created_at": "2026-05-02T03:35:22.487782+00:00",
+      "version": "0.1",
+      "assay_id": "assay:assay-retained-fluorescence-001-retained-fluorescence-intensity-assay",
+      "endpoint_kind": "retention",
+      "raw_measurements": [
+        "initial_payload_signal",
+        "retained_payload_signal",
+        "background_leaf_signal",
+        "elapsed_time_min"
+      ],
+      "derived_metrics": [
+        "normalized_retained_fraction",
+        "background_corrected_leaf_signal",
+        "spatial_signal_persistence"
+      ],
+      "units": {
+        "initial_payload_signal": "assay_signal_units",
+        "retained_payload_signal": "assay_signal_units",
+        "background_leaf_signal": "assay_signal_units",
+        "elapsed_time_min": "minute",
+        "normalized_retained_fraction": "unitless_0_to_1",
+        "background_corrected_leaf_signal": "assay_signal_units",
+        "spatial_signal_persistence": "assay_signal_units"
+      },
+      "quality_controls": [
+        "payload_standard_curve_recorded",
+        "background_signal_subtracted",
+        "replicate_leaf_position_logged"
+      ],
+      "objective_links": [
+        "retention"
+      ],
+      "record_type": "AssayEndpointSchema"
+    },
+    {
       "id": "phenotype:assay-retained-fluorescence-001-assay-endpoint-readiness",
       "source": "source:manual-crop-stress-curation",
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.72,
-      "created_at": "2026-05-01T17:34:05.572019+00:00",
+      "created_at": "2026-05-02T03:35:22.487790+00:00",
       "version": "0.1",
       "subject_id": "crop:rice",
       "trait": "assay endpoint readiness",
@@ -622,7 +908,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.76,
-      "created_at": "2026-05-01T17:34:05.572048+00:00",
+      "created_at": "2026-05-02T03:35:22.487817+00:00",
       "version": "0.1",
       "stressors": [
         "evaporation",
@@ -644,7 +930,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.76,
-      "created_at": "2026-05-01T17:34:05.572055+00:00",
+      "created_at": "2026-05-02T03:35:22.487822+00:00",
       "version": "0.1",
       "title": "Evaporation and residence-time assay metadata",
       "citation": "Derived from Lathia et al. Nature Communications 14, 6445 (2023), https://doi.org/10.1038/s41467-023-41977-1, and Jayaprakash et al. Soft Matter 21, 3688-3699 (2025), https://doi.org/10.1039/D4SM01496K.",
@@ -661,7 +947,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.76,
-      "created_at": "2026-05-01T17:34:05.572062+00:00",
+      "created_at": "2026-05-02T03:35:22.487828+00:00",
       "version": "0.1",
       "assay_type": "droplet evaporation and residence-time assay",
       "fidelity_tier": "fast_physical_assay_metadata",
@@ -677,12 +963,53 @@
       "record_type": "Assay"
     },
     {
+      "id": "assay-schema:assay-evaporation-001-release",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.76,
+      "created_at": "2026-05-02T03:35:22.487847+00:00",
+      "version": "0.1",
+      "assay_id": "assay:assay-evaporation-001-droplet-evaporation-and-residence-time-assay",
+      "endpoint_kind": "release",
+      "raw_measurements": [
+        "payload_released_signal_by_time",
+        "retained_payload_signal_by_time",
+        "sampling_volume_ul"
+      ],
+      "derived_metrics": [
+        "fraction_released_1h",
+        "fraction_released_4h",
+        "fraction_released_24h",
+        "burst_release_flag"
+      ],
+      "units": {
+        "payload_released_signal_by_time": "assay_signal_units",
+        "retained_payload_signal_by_time": "assay_signal_units",
+        "sampling_volume_ul": "microliter",
+        "fraction_released_1h": "unitless_0_to_1",
+        "fraction_released_4h": "unitless_0_to_1",
+        "fraction_released_24h": "unitless_0_to_1",
+        "burst_release_flag": "boolean"
+      },
+      "quality_controls": [
+        "release_blank_subtracted",
+        "mass_balance_checked",
+        "sampling_schedule_logged"
+      ],
+      "objective_links": [
+        "release_profile",
+        "payload_viability"
+      ],
+      "record_type": "AssayEndpointSchema"
+    },
+    {
       "id": "phenotype:assay-evaporation-001-assay-endpoint-readiness",
       "source": "source:manual-crop-stress-curation",
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.76,
-      "created_at": "2026-05-01T17:34:05.572069+00:00",
+      "created_at": "2026-05-02T03:35:22.487855+00:00",
       "version": "0.1",
       "subject_id": "crop:waxy-brassica-leaf",
       "trait": "assay endpoint readiness",
@@ -699,7 +1026,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.73,
-      "created_at": "2026-05-01T17:34:05.572095+00:00",
+      "created_at": "2026-05-02T03:35:22.487878+00:00",
       "version": "0.1",
       "stressors": [
         "early-release",
@@ -721,7 +1048,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.73,
-      "created_at": "2026-05-01T17:34:05.572101+00:00",
+      "created_at": "2026-05-02T03:35:22.487883+00:00",
       "version": "0.1",
       "title": "Early release kinetics assay metadata",
       "citation": "Derived from Lathia et al. Nature Communications 14, 6445 (2023), https://doi.org/10.1038/s41467-023-41977-1, and the FoliarShield nonliving-payload benchmark plan.",
@@ -738,7 +1065,7 @@
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.73,
-      "created_at": "2026-05-01T17:34:05.572107+00:00",
+      "created_at": "2026-05-02T03:35:22.487889+00:00",
       "version": "0.1",
       "assay_type": "early release kinetics assay",
       "fidelity_tier": "fast_physical_assay_metadata",
@@ -754,12 +1081,53 @@
       "record_type": "Assay"
     },
     {
+      "id": "assay-schema:assay-early-release-001-release",
+      "source": "source:manual-crop-stress-curation",
+      "license": "CC-BY-4.0",
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
+      "confidence": 0.73,
+      "created_at": "2026-05-02T03:35:22.487904+00:00",
+      "version": "0.1",
+      "assay_id": "assay:assay-early-release-001-early-release-kinetics-assay",
+      "endpoint_kind": "release",
+      "raw_measurements": [
+        "payload_released_signal_by_time",
+        "retained_payload_signal_by_time",
+        "sampling_volume_ul"
+      ],
+      "derived_metrics": [
+        "fraction_released_1h",
+        "fraction_released_4h",
+        "fraction_released_24h",
+        "burst_release_flag"
+      ],
+      "units": {
+        "payload_released_signal_by_time": "assay_signal_units",
+        "retained_payload_signal_by_time": "assay_signal_units",
+        "sampling_volume_ul": "microliter",
+        "fraction_released_1h": "unitless_0_to_1",
+        "fraction_released_4h": "unitless_0_to_1",
+        "fraction_released_24h": "unitless_0_to_1",
+        "burst_release_flag": "boolean"
+      },
+      "quality_controls": [
+        "release_blank_subtracted",
+        "mass_balance_checked",
+        "sampling_schedule_logged"
+      ],
+      "objective_links": [
+        "release_profile",
+        "payload_viability"
+      ],
+      "record_type": "AssayEndpointSchema"
+    },
+    {
       "id": "phenotype:assay-early-release-001-assay-endpoint-readiness",
       "source": "source:manual-crop-stress-curation",
       "license": "CC-BY-4.0",
       "provenance": "data/raw/seed_crop_stress_evidence.jsonl",
       "confidence": 0.73,
-      "created_at": "2026-05-01T17:34:05.572113+00:00",
+      "created_at": "2026-05-02T03:35:22.487910+00:00",
       "version": "0.1",
       "subject_id": "crop:rice",
       "trait": "assay endpoint readiness",

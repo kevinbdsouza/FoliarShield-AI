@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Sequence
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from enum import StrEnum
 from math import isfinite
 from typing import Any
@@ -45,6 +45,14 @@ class RedistributionMode(StrEnum):
     BLOCKED = "blocked"
 
 
+class AssayEndpointKind(StrEnum):
+    IMAGING = "imaging"
+    WASH_OFF = "wash_off"
+    RETENTION = "retention"
+    EVAPORATION = "evaporation"
+    RELEASE = "release"
+
+
 @dataclass(frozen=True)
 class ProvenancedRecord:
     """Common fields required for public, reviewable MVP artifacts."""
@@ -54,7 +62,7 @@ class ProvenancedRecord:
     license: str
     provenance: str
     confidence: float
-    created_at: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
+    created_at: str = field(default_factory=lambda: datetime.now(UTC).isoformat())
     version: str = "0.1"
 
     def validate_common(self, *, require_open_license: bool = False) -> None:
@@ -324,7 +332,8 @@ class PayloadCombination(ProvenancedRecord):
             for payload_id, ratio in self.ratios.items():
                 if not isfinite(ratio) or ratio < 0:
                     raise SchemaValidationError(
-                        f"PayloadCombination ratio for {payload_id!r} must be finite and non-negative"
+                        f"PayloadCombination ratio for {payload_id!r} must be finite "
+                        "and non-negative"
                     )
             if sum(self.ratios.values()) <= 0:
                 raise SchemaValidationError("PayloadCombination ratios must have a positive total")
@@ -438,6 +447,37 @@ class Assay(ProvenancedRecord):
 
 
 @dataclass(frozen=True)
+class AssayEndpointSchema(ProvenancedRecord):
+    assay_id: str = ""
+    endpoint_kind: AssayEndpointKind = AssayEndpointKind.IMAGING
+    raw_measurements: tuple[str, ...] = ()
+    derived_metrics: tuple[str, ...] = ()
+    units: dict[str, str] = field(default_factory=dict)
+    quality_controls: tuple[str, ...] = ()
+    objective_links: tuple[str, ...] = ()
+
+    def validate(self, *, require_open_license: bool = False) -> None:
+        self.validate_common(require_open_license=require_open_license)
+        if not self.assay_id.strip():
+            raise SchemaValidationError("AssayEndpointSchema requires assay_id")
+        if not self.raw_measurements:
+            raise SchemaValidationError("AssayEndpointSchema requires raw_measurements")
+        if not self.derived_metrics:
+            raise SchemaValidationError("AssayEndpointSchema requires derived_metrics")
+        if not self.quality_controls:
+            raise SchemaValidationError("AssayEndpointSchema requires quality_controls")
+        if not self.objective_links:
+            raise SchemaValidationError("AssayEndpointSchema requires objective_links")
+        expected_unit_keys = {*self.raw_measurements, *self.derived_metrics}
+        missing_units = sorted(
+            name for name in expected_unit_keys if not self.units.get(name, "").strip()
+        )
+        if missing_units:
+            joined = ", ".join(missing_units)
+            raise SchemaValidationError(f"AssayEndpointSchema missing units for: {joined}")
+
+
+@dataclass(frozen=True)
 class ObjectiveWeights(ProvenancedRecord):
     retention: float = 1.0
     wash_off: float = 1.0
@@ -449,10 +489,20 @@ class ObjectiveWeights(ProvenancedRecord):
 
     def validate(self, *, require_open_license: bool = False) -> None:
         self.validate_common(require_open_license=require_open_license)
-        for name in ("retention", "wash_off", "release_profile", "sprayability", "payload_viability", "material_safety", "experiment_cost"):
+        for name in (
+            "retention",
+            "wash_off",
+            "release_profile",
+            "sprayability",
+            "payload_viability",
+            "material_safety",
+            "experiment_cost",
+        ):
             val = getattr(self, name)
             if not isfinite(val) or val < 0:
-                raise SchemaValidationError(f"ObjectiveWeights {name} must be a finite, non-negative number")
+                raise SchemaValidationError(
+                    f"ObjectiveWeights {name} must be a finite, non-negative number"
+                )
 
 
 @dataclass(frozen=True)
@@ -468,10 +518,18 @@ class PromotionThresholds(ProvenancedRecord):
         self.validate_common(require_open_license=require_open_license)
         if not self.target_tier.strip():
             raise SchemaValidationError("PromotionThresholds requires a target_tier")
-        for name in ("min_retention_score", "min_wash_off_resistance", "min_release_score", "min_sprayability_score", "min_material_safety_score"):
+        for name in (
+            "min_retention_score",
+            "min_wash_off_resistance",
+            "min_release_score",
+            "min_sprayability_score",
+            "min_material_safety_score",
+        ):
             val = getattr(self, name)
             if not isfinite(val) or val < 0:
-                raise SchemaValidationError(f"PromotionThresholds {name} must be a finite, non-negative number")
+                raise SchemaValidationError(
+                    f"PromotionThresholds {name} must be a finite, non-negative number"
+                )
 
 
 @dataclass(frozen=True)

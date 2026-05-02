@@ -4,9 +4,10 @@ import unittest
 
 from foliarshield_ai import (
     Assay,
+    AssayEndpointKind,
+    AssayEndpointSchema,
     BenchmarkResult,
     CandidateDesign,
-    PayloadCombination,
     Crop,
     EncapsulationArchitecture,
     EvaluationResult,
@@ -14,6 +15,7 @@ from foliarshield_ai import (
     FormulationMaterial,
     Genome,
     LicenseReviewStatus,
+    PayloadCombination,
     Phenotype,
     ProteinOrGeneFeature,
     RedistributionMode,
@@ -183,6 +185,23 @@ class SchemaValidationTests(unittest.TestCase):
                 assay_type="pot-trial-proxy",
                 fidelity_tier="low",
                 measured_traits=("root_growth_proxy",),
+            ),
+            AssayEndpointSchema(
+                id="assay-schema:pot-trial-proxy-imaging",
+                source="unit-test",
+                license="CC-BY-4.0",
+                provenance="tests/test_schemas.py",
+                confidence=0.65,
+                assay_id="assay:pot-trial-proxy",
+                endpoint_kind=AssayEndpointKind.IMAGING,
+                raw_measurements=("image_frame_id",),
+                derived_metrics=("percent_leaf_area_covered",),
+                units={
+                    "image_frame_id": "unitless",
+                    "percent_leaf_area_covered": "unitless_0_to_1",
+                },
+                quality_controls=("leaf_mask_reviewed",),
+                objective_links=("retention",),
             ),
             EvidenceRecord(
                 id="evidence:paper-001",
@@ -366,6 +385,25 @@ class SchemaValidationTests(unittest.TestCase):
             payload_ratios={"strain:unknown": 1.0},
             crop="millet",
             stress_context="drought",
+        )
+
+        with self.assertRaises(SchemaValidationError):
+            record.validate()
+
+    def test_assay_endpoint_schema_requires_units_for_all_metrics(self) -> None:
+        record = AssayEndpointSchema(
+            id="assay-schema:missing-unit",
+            source="unit-test",
+            license="CC-BY-4.0",
+            provenance="tests/test_schemas.py",
+            confidence=0.6,
+            assay_id="assay:retention",
+            endpoint_kind=AssayEndpointKind.RETENTION,
+            raw_measurements=("initial_payload_signal",),
+            derived_metrics=("normalized_retained_fraction",),
+            units={"initial_payload_signal": "assay_signal_units"},
+            quality_controls=("background_signal_subtracted",),
+            objective_links=("retention",),
         )
 
         with self.assertRaises(SchemaValidationError):

@@ -1,12 +1,12 @@
 {
   "status": "ok",
   "artifact_id": "features:seed-v0.1",
-  "generated_at": "2026-05-01T17:34:24.192182+00:00",
+  "generated_at": "2026-05-02T03:35:51.280555+00:00",
   "feature_version": "deterministic-seed-features-v0.1",
-  "record_count": 79,
+  "record_count": 88,
   "feature_counts": {
     "strain_features": 3,
-    "consortium_pair_features": 0,
+    "payload_combination_pair_features": 0,
     "formulation_features": 3,
     "crop_stress_context_features": 9,
     "genome_records_linked": 0,
@@ -128,7 +128,7 @@
       "biosafety_review_required": true
     }
   ],
-  "consortium_pair_features": [],
+  "payload_combination_pair_features": [],
   "formulation_features": [
     {
       "material_id": "material:oil-cloaked-aqueous-droplet-system",

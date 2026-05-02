@@ -53,6 +53,8 @@ fixtures, then make the interfaces ready for real batched assay data.
 ## Milestone D: Active Learning Loop
 
 - [x] Keep deterministic surrogate/acquisition scaffolding for local regression tests.
+- [x] Add explicit assay schemas or adapters for imaging, wash-off, retention,
+  evaporation, and release endpoints.
 - [ ] Replace fixture-derived scores with batched assay endpoints.
 - [ ] Add expected Pareto improvement or compatible multi-objective acquisition.
 - [ ] Persist experiment-batch traces, candidate rationales, model uncertainty, and

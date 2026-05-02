@@ -1,8 +1,8 @@
 {
   "status": "ok",
   "artifact_id": "curation:seed-data",
-  "generated_at": "2026-05-01T17:34:14.929715+00:00",
-  "record_count": 79,
+  "generated_at": "2026-05-02T03:35:51.277754+00:00",
+  "record_count": 88,
   "taxonomy_normalization": [
     {
       "record_id": "taxon:bacillus-subtilis",
@@ -98,7 +98,7 @@
     "evidence:assay-simulated-rain-001",
     "evidence:assay-spray-coverage-image-001"
   ],
-  "canonical_record_count_after_deduplication": 73,
+  "canonical_record_count_after_deduplication": 82,
   "notes": [
     "Duplicate groups keep the first sorted record ID as the canonical seed record.",
     "Taxonomy normalization is string-level curation.",

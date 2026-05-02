@@ -1,10 +1,11 @@
 {
   "status": "ok",
   "artifact_id": "quality:seed-data",
-  "generated_at": "2026-05-01T17:34:14.930392+00:00",
-  "record_count": 79,
+  "generated_at": "2026-05-02T03:35:51.278073+00:00",
+  "record_count": 88,
   "record_type_counts": {
     "Assay": 9,
+    "AssayEndpointSchema": 9,
     "Crop": 3,
     "EncapsulationArchitecture": 3,
     "EvidenceRecord": 12,
@@ -57,11 +58,11 @@
     "version": 0
   },
   "license_summary": {
-    "CC-BY-4.0": 79
+    "CC-BY-4.0": 88
   },
   "provenance_completeness": {
-    "records_with_provenance": 79,
-    "records_total": 79,
+    "records_with_provenance": 88,
+    "records_total": 88,
     "fraction": 1.0
   },
   "weak_or_ambiguous_evidence_ids": [

@@ -20,11 +20,16 @@ Open release artifacts must use an approved license value from
 ## Implemented Records
 
 The current skeleton includes source manifests, literature records, crop and assay
-contexts, formulation materials, release triggers, encapsulation architectures, evidence
-records, candidate designs, evaluation results, and benchmark results. It also retains
-compatibility records for `Taxon`, `Strain`, `Genome`, `ProteinOrGeneFeature`,
-`Phenotype`, and `Consortium` so starter Bacillus-like payload and migrated reports can
-continue to validate.
+contexts, assay endpoint schemas, formulation materials, release triggers,
+encapsulation architectures, evidence records, candidate designs, evaluation results,
+and benchmark results. It also retains compatibility records for `Taxon`, `Strain`,
+`Genome`, `ProteinOrGeneFeature`, and `Phenotype` so starter Bacillus-like payload and
+migrated reports can continue to validate.
+
+`AssayEndpointSchema` records define the expected raw measurements, derived metrics,
+units, quality checks, and objective links for fast foliar assays. The starter adapters
+cover imaging, wash-off, retained-intensity, evaporation/residence-time, and early
+release endpoints.
 
 ## Implemented CLI Contracts
 

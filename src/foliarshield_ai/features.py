@@ -804,7 +804,10 @@ def build_reasoning_only_baseline_report(
                 rank=index + 1,
             )
             for index, ranking in enumerate(
-                cast(list[dict[str, Any]], heuristic_record.get("ranked_payload_combinations", []))[:top_k]
+                cast(
+                    list[dict[str, Any]],
+                    heuristic_record.get("ranked_payload_combinations", []),
+                )[:top_k]
             )
         ]
         formulation_hypotheses = [
@@ -1431,7 +1434,9 @@ def _crop_stress_feature(
     }
 
 
-def _payload_combination_pair_features(strain_features: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
+def _payload_combination_pair_features(
+    strain_features: Sequence[Mapping[str, Any]],
+) -> list[dict[str, Any]]:
     features: list[dict[str, Any]] = []
     eligible = [
         feature
@@ -1455,9 +1460,13 @@ def _payload_combination_pair_features(strain_features: Sequence[Mapping[str, An
         )
         features.append(
             {
-                "payload_combination_id": f"payload_combination:pair:{left['strain_id']}+{right['strain_id']}",
+                "payload_combination_id": (
+                    f"payload_combination:pair:{left['strain_id']}+{right['strain_id']}"
+                ),
                 "member_payload_ids": [left["strain_id"], right["strain_id"]],
-                "genus_diversity": int(str(left.get("genus", "")) != str(right.get("genus", ""))),
+                "genus_diversity": int(
+                    str(left.get("genus", "")) != str(right.get("genus", ""))
+                ),
                 "shared_phenotype_tag_count": len(left_tags & right_tags),
                 "functional_complementarity_score": round(complementarity / len(feature_flags), 3),
                 "risk_flags": [],
@@ -1550,7 +1559,9 @@ def _score_formulation_feature(
     }
 
 
-def _rank_payload_combinations(strain_rankings: Sequence[Mapping[str, Any]]) -> list[dict[str, Any]]:
+def _rank_payload_combinations(
+    strain_rankings: Sequence[Mapping[str, Any]],
+) -> list[dict[str, Any]]:
     eligible = [
         ranking
         for ranking in strain_rankings
@@ -1705,7 +1716,9 @@ def _search_space_for_task(
     ]
     stress_context_id = _matching_stress_context_id(stress_features, crop, stressors)
     payload_combination_sizes = [
-        size for size in range(1, max(1, max_payload_combination_size) + 1) if size <= len(eligible_strains)
+        size
+        for size in range(1, max(1, max_payload_combination_size) + 1)
+        if size <= len(eligible_strains)
     ]
     combinations_count = _combination_count(len(eligible_strains), payload_combination_sizes)
     formulation_multiplier = len(eligible_formulations) if needs_formulation else 1
@@ -2039,7 +2052,8 @@ def _sample_candidates_for_task(
         "candidate_designs": candidates,
         "validity_notes": [
             "Candidates are sampled from local seed feature records.",
-            "Equal payload_combination ratios are placeholders for schema-valid baseline candidates.",
+            "Equal payload_combination ratios are placeholders for schema-valid "
+            "baseline candidates.",
         ],
     }
 

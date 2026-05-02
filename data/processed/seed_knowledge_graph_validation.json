@@ -1,13 +1,14 @@
 {
-  "status": "ok",
+  "status": "needs_review",
   "artifact_id": "validation:seed-knowledge-graph",
-  "generated_at": "2026-05-01T17:34:43.232403+00:00",
+  "generated_at": "2026-05-02T03:35:55.345597+00:00",
   "graph_artifact_id": "graph:seed-evidence-v0.1",
-  "node_count": 123,
-  "edge_count": 124,
+  "node_count": 132,
+  "edge_count": 149,
   "node_type_counts": {
     "ArchitectureMention": 2,
     "Assay": 9,
+    "AssayEndpointSchema": 9,
     "Claim": 23,
     "Crop": 3,
     "CropMention": 2,
@@ -29,14 +30,99 @@
   },
   "relation_counts": {
     "chunk_of": 11,
+    "defines_endpoint_for": 9,
     "encapsulated_by": 12,
     "has_taxon": 3,
+    "measures": 16,
     "released_under": 10,
     "supports": 53,
     "tested_in": 35
   },
   "duplicate_node_ids": [],
-  "dangling_edge_count": 0,
-  "dangling_edges": [],
-  "warnings": []
+  "dangling_edge_count": 16,
+  "dangling_edges": [
+    {
+      "source": "assay-schema:assay-droplet-impact-video-001-imaging",
+      "target": "objective:retention",
+      "relation": "measures"
+    },
+    {
+      "source": "assay-schema:assay-droplet-impact-video-001-imaging",
+      "target": "objective:sprayability",
+      "relation": "measures"
+    },
+    {
+      "source": "assay-schema:assay-early-release-001-release",
+      "target": "objective:payload-viability",
+      "relation": "measures"
+    },
+    {
+      "source": "assay-schema:assay-early-release-001-release",
+      "target": "objective:release-profile",
+      "relation": "measures"
+    },
+    {
+      "source": "assay-schema:assay-evaporation-001-release",
+      "target": "objective:payload-viability",
+      "relation": "measures"
+    },
+    {
+      "source": "assay-schema:assay-evaporation-001-release",
+      "target": "objective:release-profile",
+      "relation": "measures"
+    },
+    {
+      "source": "assay-schema:assay-retained-fluorescence-001-retention",
+      "target": "objective:retention",
+      "relation": "measures"
+    },
+    {
+      "source": "assay-schema:assay-simulated-rain-001-wash-off",
+      "target": "objective:retention",
+      "relation": "measures"
+    },
+    {
+      "source": "assay-schema:assay-simulated-rain-001-wash-off",
+      "target": "objective:wash-off",
+      "relation": "measures"
+    },
+    {
+      "source": "assay-schema:assay-spray-coverage-image-001-retention",
+      "target": "objective:retention",
+      "relation": "measures"
+    },
+    {
+      "source": "assay-schema:manual-leaf-001-wash-off",
+      "target": "objective:retention",
+      "relation": "measures"
+    },
+    {
+      "source": "assay-schema:manual-leaf-001-wash-off",
+      "target": "objective:wash-off",
+      "relation": "measures"
+    },
+    {
+      "source": "assay-schema:manual-leaf-002-wash-off",
+      "target": "objective:retention",
+      "relation": "measures"
+    },
+    {
+      "source": "assay-schema:manual-leaf-002-wash-off",
+      "target": "objective:wash-off",
+      "relation": "measures"
+    },
+    {
+      "source": "assay-schema:manual-leaf-003-release",
+      "target": "objective:payload-viability",
+      "relation": "measures"
+    },
+    {
+      "source": "assay-schema:manual-leaf-003-release",
+      "target": "objective:release-profile",
+      "relation": "measures"
+    }
+  ],
+  "warnings": [
+    "dangling_edges"
+  ]
 }

@@ -737,6 +737,18 @@ def _record_edges(
             target = str(record.get(target_key, "")).strip()
             if target:
                 _add_edge(edges, record_id, target, "tested_in", confidence=confidence)
+    elif record_type == "AssayEndpointSchema":
+        assay_id = str(record.get("assay_id", "")).strip()
+        if assay_id:
+            _add_edge(edges, record_id, assay_id, "defines_endpoint_for", confidence=confidence)
+        for objective in _sequence_values(record.get("objective_links", [])):
+            _add_edge(
+                edges,
+                record_id,
+                f"objective:{_slug(objective)}",
+                "measures",
+                confidence=confidence,
+            )
     elif record_type == "EncapsulationArchitecture":
         for material_id in _sequence_values(record.get("material_ids", [])):
             _add_edge(edges, record_id, material_id, "encapsulated_by", confidence=confidence)

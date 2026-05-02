@@ -20,6 +20,8 @@ from foliarshield_ai.ingestion import (
 )
 from foliarshield_ai.schemas import (
     Assay,
+    AssayEndpointKind,
+    AssayEndpointSchema,
     Crop,
     EncapsulationArchitecture,
     EvidenceRecord,
@@ -121,7 +123,36 @@ class IngestionTests(unittest.TestCase):
         self.assertTrue(any(isinstance(record, Crop) for record in records))
         self.assertTrue(any(isinstance(record, StressContext) for record in records))
         self.assertTrue(any(isinstance(record, Assay) for record in records))
+        self.assertTrue(any(isinstance(record, AssayEndpointSchema) for record in records))
         self.assertTrue(any(isinstance(record, EvidenceRecord) for record in records))
+
+    def test_crop_stress_assay_adapter_classifies_wash_off_endpoint(self) -> None:
+        records = build_crop_stress_evidence_records(
+            [
+                {
+                    "source_record_id": "assay-rain-001",
+                    "crop_common_name": "Rice",
+                    "crop_scientific_name": "Oryza sativa",
+                    "stressors": ["rainfastness", "wash-off"],
+                    "assay_type": "simulated rain wash-off assay",
+                    "measured_traits": ["pre-rain retained intensity", "wash-off fraction"],
+                    "evidence_title": "Rainfastness assay",
+                    "citation": "Project-authored seed record",
+                    "claims": ["requires calibrated simulated rainfall"],
+                    "confidence": 0.7,
+                }
+            ],
+            source_id="source:manual-crop-stress-curation",
+            source_license="CC-BY-4.0",
+            default_provenance="data/raw/seed_crop_stress_evidence.jsonl",
+        )
+
+        schemas = [record for record in records if isinstance(record, AssayEndpointSchema)]
+        self.assertEqual(len(schemas), 1)
+        self.assertEqual(schemas[0].endpoint_kind, AssayEndpointKind.WASH_OFF)
+        self.assertIn("wash_off_fraction", schemas[0].derived_metrics)
+        self.assertEqual(schemas[0].units["rainfall_dose_mm"], "millimeter")
+        self.assertIn("wash_off", schemas[0].objective_links)
 
     def test_build_formulation_evidence_records(self) -> None:
         records = build_formulation_evidence_records(

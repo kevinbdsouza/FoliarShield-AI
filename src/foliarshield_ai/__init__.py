@@ -2,6 +2,8 @@
 
 from foliarshield_ai.schemas import (
     Assay,
+    AssayEndpointKind,
+    AssayEndpointSchema,
     BenchmarkResult,
     CandidateDesign,
     Crop,
@@ -32,6 +34,8 @@ from foliarshield_ai.schemas import (
 
 __all__ = [
     "Assay",
+    "AssayEndpointKind",
+    "AssayEndpointSchema",
     "BenchmarkResult",
     "CandidateDesign",
     "Crop",

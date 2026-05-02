@@ -17,7 +17,7 @@
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 0.75,
-      "created_at": "2026-05-01T16:20:05.710167+00:00",
+      "created_at": "2026-05-02T03:36:45.553997+00:00",
       "version": "0.1",
       "scientific_name": "Bacillus subtilis",
       "rank": "species",
@@ -31,7 +31,7 @@
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 0.75,
-      "created_at": "2026-05-01T16:20:05.710173+00:00",
+      "created_at": "2026-05-02T03:36:45.554001+00:00",
       "version": "0.1",
       "taxon": "Bacillus subtilis",
       "strain_label": "contained foliar payload placeholder",
@@ -47,7 +47,7 @@
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 0.72,
-      "created_at": "2026-05-01T16:20:05.710177+00:00",
+      "created_at": "2026-05-02T03:36:45.554004+00:00",
       "version": "0.1",
       "taxon": "Bacillus subtilis",
       "strain_label": "Bacillus-like compatibility placeholder",
@@ -63,7 +63,7 @@
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 0.6,
-      "created_at": "2026-05-01T16:20:05.710182+00:00",
+      "created_at": "2026-05-02T03:36:45.554009+00:00",
       "version": "0.1",
       "taxon_id": "taxon:smoke-bacillus-subtilis",
       "strain_id": "strain:smoke-bacillus-like-payload-foliar",
@@ -78,7 +78,7 @@
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 0.55,
-      "created_at": "2026-05-01T16:20:05.710189+00:00",
+      "created_at": "2026-05-02T03:36:45.554013+00:00",
       "version": "0.1",
       "genome_id": "genome:smoke-bacillus",
       "feature_name": "spore-viability-marker",
@@ -95,7 +95,7 @@
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 0.9,
-      "created_at": "2026-05-01T16:20:05.710194+00:00",
+      "created_at": "2026-05-02T03:36:45.554017+00:00",
       "version": "0.1",
       "common_name": "rice",
       "scientific_name": "Oryza sativa",
@@ -110,7 +110,7 @@
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 0.8,
-      "created_at": "2026-05-01T16:20:05.710200+00:00",
+      "created_at": "2026-05-02T03:36:45.554021+00:00",
       "version": "0.1",
       "stressors": [
         "leaf-retention",
@@ -131,7 +131,7 @@
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 0.65,
-      "created_at": "2026-05-01T16:20:05.710206+00:00",
+      "created_at": "2026-05-02T03:36:45.554025+00:00",
       "version": "0.1",
       "texture": "waxy cuticle proxy",
       "ph_range": [
@@ -148,7 +148,7 @@
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 0.6,
-      "created_at": "2026-05-01T16:20:05.710211+00:00",
+      "created_at": "2026-05-02T03:36:45.554029+00:00",
       "version": "0.1",
       "assay_type": "foliar-retention-proxy",
       "fidelity_tier": "low",
@@ -166,7 +166,7 @@
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 0.58,
-      "created_at": "2026-05-01T16:20:05.710216+00:00",
+      "created_at": "2026-05-02T03:36:45.554034+00:00",
       "version": "0.1",
       "subject_id": "strain:smoke-bacillus-like-payload-foliar",
       "trait": "foliar viability proxy",
@@ -178,14 +178,14 @@
       "record_type": "Phenotype"
     },
     {
-      "id": "consortium:smoke-payload-compatibility-001",
+      "id": "payload-combination:smoke-payload-compatibility-001",
       "source": "cli-smoke",
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 0.55,
-      "created_at": "2026-05-01T16:20:05.710222+00:00",
+      "created_at": "2026-05-02T03:36:45.554038+00:00",
       "version": "0.1",
-      "member_strain_ids": [
+      "payload_ids": [
         "strain:smoke-bacillus-like-payload-foliar",
         "strain:smoke-bacillus-like-payload"
       ],
@@ -197,7 +197,7 @@
       "compatibility_notes": [
         "Synthetic payload compatibility placeholder."
       ],
-      "record_type": "Consortium"
+      "record_type": "PayloadCombination"
     },
     {
       "id": "material:smoke-cloaked-droplet",
@@ -205,7 +205,7 @@
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 0.7,
-      "created_at": "2026-05-01T16:20:05.710227+00:00",
+      "created_at": "2026-05-02T03:36:45.554042+00:00",
       "version": "0.1",
       "material_class": "cloaked droplet",
       "release_triggers": [
@@ -221,7 +221,7 @@
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 0.65,
-      "created_at": "2026-05-01T16:20:05.710231+00:00",
+      "created_at": "2026-05-02T03:36:45.554045+00:00",
       "version": "0.1",
       "trigger_type": "rainfastness",
       "condition": "simulated rainfall after leaf deposition",
@@ -234,7 +234,7 @@
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 0.62,
-      "created_at": "2026-05-01T16:20:05.710236+00:00",
+      "created_at": "2026-05-02T03:36:45.554049+00:00",
       "version": "0.1",
       "architecture_type": "cloaked_droplet",
       "material_ids": [
@@ -255,7 +255,7 @@
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 0.7,
-      "created_at": "2026-05-01T16:20:05.710148+00:00",
+      "created_at": "2026-05-02T03:36:45.553984+00:00",
       "version": "0.1",
       "title": "",
       "citation": "Synthetic smoke-test evidence record",
@@ -271,14 +271,14 @@
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 0.6,
-      "created_at": "2026-05-01T16:20:05.710158+00:00",
+      "created_at": "2026-05-02T03:36:45.553991+00:00",
       "version": "0.1",
-      "strain_ids": [
+      "payload_ids": [
         "strain:smoke-bacillus-like-payload-foliar",
         "strain:smoke-bacillus-like-payload"
       ],
-      "consortium_id": "consortium:smoke-payload-compatibility-001",
-      "consortium_ratios": {
+      "payload_combination_id": "payload-combination:smoke-payload-compatibility-001",
+      "payload_ratios": {
         "strain:smoke-bacillus-like-payload-foliar": 0.6,
         "strain:smoke-bacillus-like-payload": 0.4
       },
@@ -299,13 +299,15 @@
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 0.65,
-      "created_at": "2026-05-01T16:20:05.710242+00:00",
+      "created_at": "2026-05-02T03:36:45.554054+00:00",
       "version": "0.1",
       "candidate_id": "candidate:pilot-1-smoke-001",
       "objective_scores": {
         "retention_proxy": 0.62,
         "evidence_support": 0.7
       },
+      "objective_weights_id": null,
+      "promotion_thresholds_id": null,
       "uncertainty_intervals": {
         "retention_proxy": [
           0.45,
@@ -329,7 +331,7 @@
       "license": "CC-BY-4.0",
       "provenance": "src/foliarshield_ai/cli.py",
       "confidence": 1.0,
-      "created_at": "2026-05-01T16:20:05.710248+00:00",
+      "created_at": "2026-05-02T03:36:45.554059+00:00",
       "version": "0.1",
       "task_id": "pilot-1-foliar-retention-rainfastness",
       "run_id": "run:local-smoke-001",

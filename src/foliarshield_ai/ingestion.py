@@ -14,6 +14,8 @@ from typing import Any, cast
 
 from foliarshield_ai.schemas import (
     Assay,
+    AssayEndpointKind,
+    AssayEndpointSchema,
     Crop,
     EncapsulationArchitecture,
     EvidenceRecord,
@@ -190,16 +192,117 @@ def build_seed_strain_records(
     return records
 
 
+_ASSAY_ENDPOINT_ADAPTERS: dict[AssayEndpointKind, dict[str, tuple[str, ...] | dict[str, str]]] = {
+    AssayEndpointKind.IMAGING: {
+        "raw_measurements": (
+            "image_or_video_frame_id",
+            "leaf_mask_area_px",
+            "deposited_signal_area_px",
+            "droplet_count",
+        ),
+        "derived_metrics": (
+            "percent_leaf_area_covered",
+            "coverage_uniformity",
+            "contact_line_motion_score",
+        ),
+        "quality_controls": (
+            "calibration_target_detected",
+            "leaf_mask_reviewed",
+            "background_signal_subtracted",
+        ),
+        "objective_links": ("retention", "sprayability"),
+    },
+    AssayEndpointKind.WASH_OFF: {
+        "raw_measurements": (
+            "pre_rain_retained_signal",
+            "post_rain_retained_signal",
+            "runoff_signal",
+            "rainfall_dose_mm",
+        ),
+        "derived_metrics": (
+            "wash_off_fraction",
+            "rainfastness_score",
+            "post_rain_retained_fraction",
+        ),
+        "quality_controls": (
+            "rainfall_dose_calibrated",
+            "pre_post_image_registration_checked",
+            "runoff_blank_subtracted",
+        ),
+        "objective_links": ("wash_off", "retention"),
+    },
+    AssayEndpointKind.RETENTION: {
+        "raw_measurements": (
+            "initial_payload_signal",
+            "retained_payload_signal",
+            "background_leaf_signal",
+            "elapsed_time_min",
+        ),
+        "derived_metrics": (
+            "normalized_retained_fraction",
+            "background_corrected_leaf_signal",
+            "spatial_signal_persistence",
+        ),
+        "quality_controls": (
+            "payload_standard_curve_recorded",
+            "background_signal_subtracted",
+            "replicate_leaf_position_logged",
+        ),
+        "objective_links": ("retention",),
+    },
+    AssayEndpointKind.EVAPORATION: {
+        "raw_measurements": (
+            "initial_droplet_volume_ul",
+            "droplet_area_px_by_time",
+            "ambient_temperature_c",
+            "relative_humidity_percent",
+        ),
+        "derived_metrics": (
+            "droplet_lifetime_min",
+            "evaporation_rate",
+            "residual_footprint_area",
+        ),
+        "quality_controls": (
+            "humidity_logged",
+            "temperature_logged",
+            "timebase_calibrated",
+        ),
+        "objective_links": ("retention", "release_profile"),
+    },
+    AssayEndpointKind.RELEASE: {
+        "raw_measurements": (
+            "payload_released_signal_by_time",
+            "retained_payload_signal_by_time",
+            "sampling_volume_ul",
+        ),
+        "derived_metrics": (
+            "fraction_released_1h",
+            "fraction_released_4h",
+            "fraction_released_24h",
+            "burst_release_flag",
+        ),
+        "quality_controls": (
+            "release_blank_subtracted",
+            "mass_balance_checked",
+            "sampling_schedule_logged",
+        ),
+        "objective_links": ("release_profile", "payload_viability"),
+    },
+}
+
+
 def build_crop_stress_evidence_records(
     rows: Iterable[Mapping[str, Any]],
     *,
     source_id: str,
     source_license: str,
     default_provenance: str,
-) -> list[Crop | StressContext | Assay | EvidenceRecord | Phenotype]:
+) -> list[Crop | StressContext | Assay | AssayEndpointSchema | EvidenceRecord | Phenotype]:
     """Build validated crop-stress and plant-microbe evidence records."""
 
-    records: list[Crop | StressContext | Assay | EvidenceRecord | Phenotype] = []
+    records: list[
+        Crop | StressContext | Assay | AssayEndpointSchema | EvidenceRecord | Phenotype
+    ] = []
     seen_crops: set[str] = set()
     seen_stress_contexts: set[str] = set()
 
@@ -314,6 +417,16 @@ def build_crop_stress_evidence_records(
                 stress_context_id=stress_context_id,
             )
         )
+        records.append(
+            _build_assay_endpoint_schema(
+                row,
+                assay_id=assay_id,
+                source_id=source_id,
+                source_license=source_license,
+                provenance=provenance,
+                confidence=confidence,
+            )
+        )
 
         phenotype_trait = str(row.get("phenotype_trait", "")).strip()
         phenotype_value = str(row.get("phenotype_value", "")).strip()
@@ -339,6 +452,91 @@ def build_crop_stress_evidence_records(
 
     validate_records(records, require_open_license=True)
     return records
+
+
+def _build_assay_endpoint_schema(
+    row: Mapping[str, Any],
+    *,
+    assay_id: str,
+    source_id: str,
+    source_license: str,
+    provenance: str,
+    confidence: float,
+) -> AssayEndpointSchema:
+    endpoint_kind = _classify_assay_endpoint(row)
+    adapter = _ASSAY_ENDPOINT_ADAPTERS[endpoint_kind]
+    raw_measurements = cast(tuple[str, ...], adapter["raw_measurements"])
+    derived_metrics = cast(tuple[str, ...], adapter["derived_metrics"])
+    source_record_id = str(row.get("source_record_id", assay_id)).strip() or assay_id
+    units = _endpoint_units(endpoint_kind, (*raw_measurements, *derived_metrics))
+    return AssayEndpointSchema(
+        id=normalize_identifier(f"{source_record_id}-{endpoint_kind.value}", prefix="assay-schema"),
+        source=source_id,
+        license=source_license,
+        provenance=provenance,
+        confidence=confidence,
+        assay_id=assay_id,
+        endpoint_kind=endpoint_kind,
+        raw_measurements=raw_measurements,
+        derived_metrics=derived_metrics,
+        units=units,
+        quality_controls=cast(tuple[str, ...], adapter["quality_controls"]),
+        objective_links=cast(tuple[str, ...], adapter["objective_links"]),
+    )
+
+
+def _classify_assay_endpoint(row: Mapping[str, Any]) -> AssayEndpointKind:
+    text = " ".join(
+        [
+            str(row.get("assay_type", "")),
+            str(row.get("evidence_type", "")),
+            " ".join(split_tags(row.get("stressors"))),
+            " ".join(split_tags(row.get("measured_traits"))),
+        ]
+    ).lower()
+    if any(token in text for token in ("wash-off", "wash off", "rain", "runoff", "rainfast")):
+        return AssayEndpointKind.WASH_OFF
+    if any(token in text for token in ("release", "kinetic", "fraction released")):
+        return AssayEndpointKind.RELEASE
+    if any(token in text for token in ("evaporation", "residence", "time-to-dry", "lifetime")):
+        return AssayEndpointKind.EVAPORATION
+    if any(token in text for token in ("retained", "retention", "fluorescence", "intensity")):
+        return AssayEndpointKind.RETENTION
+    return AssayEndpointKind.IMAGING
+
+
+def _endpoint_units(
+    endpoint_kind: AssayEndpointKind,
+    measurement_names: Sequence[str],
+) -> dict[str, str]:
+    units: dict[str, str] = {}
+    for name in measurement_names:
+        units[name] = _unit_for_endpoint_measurement(endpoint_kind, name)
+    return units
+
+
+def _unit_for_endpoint_measurement(endpoint_kind: AssayEndpointKind, name: str) -> str:
+    if name.endswith("_flag") or name.endswith("_checked") or name.endswith("_logged"):
+        return "boolean"
+    if "fraction" in name or "score" in name or "uniformity" in name:
+        return "unitless_0_to_1"
+    if name.endswith("_px") or "_px_" in name:
+        return "pixels"
+    if name.endswith("_ul"):
+        return "microliter"
+    if name.endswith("_mm"):
+        return "millimeter"
+    if name.endswith("_min"):
+        return "minute"
+    if name.endswith("_c"):
+        return "degree_celsius"
+    if name.endswith("_percent"):
+        return "percent"
+    if "signal" in name:
+        return "assay_signal_units"
+    if endpoint_kind == AssayEndpointKind.EVAPORATION and "rate" in name:
+        return "volume_or_area_per_minute"
+    return "unitless"
 
 
 def build_formulation_evidence_records(

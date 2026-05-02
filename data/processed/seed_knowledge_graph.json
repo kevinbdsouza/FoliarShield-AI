@@ -1,10 +1,10 @@
 {
   "status": "ok",
   "artifact_id": "graph:seed-evidence-v0.1",
-  "generated_at": "2026-05-01T17:34:34.084766+00:00",
+  "generated_at": "2026-05-02T03:35:51.279055+00:00",
   "graph_version": "json-node-edge-v0.1",
-  "node_count": 123,
-  "edge_count": 124,
+  "node_count": 132,
+  "edge_count": 149,
   "nodes": [
     {
       "id": "architecture:manual-formulation-001-cloaked-droplet",
@@ -29,6 +29,78 @@
       "source": "source:manual-material-curation",
       "confidence": 0.5,
       "provenance": "data/raw/seed_formulation_evidence.jsonl"
+    },
+    {
+      "id": "assay-schema:assay-droplet-impact-video-001-imaging",
+      "type": "AssayEndpointSchema",
+      "label": "assay-schema:assay-droplet-impact-video-001-imaging",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.78,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "assay-schema:assay-early-release-001-release",
+      "type": "AssayEndpointSchema",
+      "label": "assay-schema:assay-early-release-001-release",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.73,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "assay-schema:assay-evaporation-001-release",
+      "type": "AssayEndpointSchema",
+      "label": "assay-schema:assay-evaporation-001-release",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.76,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "assay-schema:assay-retained-fluorescence-001-retention",
+      "type": "AssayEndpointSchema",
+      "label": "assay-schema:assay-retained-fluorescence-001-retention",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.72,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "assay-schema:assay-simulated-rain-001-wash-off",
+      "type": "AssayEndpointSchema",
+      "label": "assay-schema:assay-simulated-rain-001-wash-off",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.77,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "assay-schema:assay-spray-coverage-image-001-retention",
+      "type": "AssayEndpointSchema",
+      "label": "assay-schema:assay-spray-coverage-image-001-retention",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.76,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "assay-schema:manual-leaf-001-wash-off",
+      "type": "AssayEndpointSchema",
+      "label": "assay-schema:manual-leaf-001-wash-off",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "assay-schema:manual-leaf-002-wash-off",
+      "type": "AssayEndpointSchema",
+      "label": "assay-schema:manual-leaf-002-wash-off",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.55,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
+    },
+    {
+      "id": "assay-schema:manual-leaf-003-release",
+      "type": "AssayEndpointSchema",
+      "label": "assay-schema:manual-leaf-003-release",
+      "source": "source:manual-crop-stress-curation",
+      "confidence": 0.45,
+      "provenance": "data/raw/seed_crop_stress_evidence.jsonl"
     },
     {
       "id": "assay:assay-droplet-impact-video-001-high-speed-droplet-impact-video-assay",
@@ -1033,6 +1105,181 @@
       "relation": "released_under",
       "evidence_id": "",
       "confidence": 0.5
+    },
+    {
+      "source": "assay-schema:assay-droplet-impact-video-001-imaging",
+      "target": "assay:assay-droplet-impact-video-001-high-speed-droplet-impact-video-assay",
+      "relation": "defines_endpoint_for",
+      "evidence_id": "",
+      "confidence": 0.78
+    },
+    {
+      "source": "assay-schema:assay-droplet-impact-video-001-imaging",
+      "target": "objective:retention",
+      "relation": "measures",
+      "evidence_id": "",
+      "confidence": 0.78
+    },
+    {
+      "source": "assay-schema:assay-droplet-impact-video-001-imaging",
+      "target": "objective:sprayability",
+      "relation": "measures",
+      "evidence_id": "",
+      "confidence": 0.78
+    },
+    {
+      "source": "assay-schema:assay-early-release-001-release",
+      "target": "assay:assay-early-release-001-early-release-kinetics-assay",
+      "relation": "defines_endpoint_for",
+      "evidence_id": "",
+      "confidence": 0.73
+    },
+    {
+      "source": "assay-schema:assay-early-release-001-release",
+      "target": "objective:payload-viability",
+      "relation": "measures",
+      "evidence_id": "",
+      "confidence": 0.73
+    },
+    {
+      "source": "assay-schema:assay-early-release-001-release",
+      "target": "objective:release-profile",
+      "relation": "measures",
+      "evidence_id": "",
+      "confidence": 0.73
+    },
+    {
+      "source": "assay-schema:assay-evaporation-001-release",
+      "target": "assay:assay-evaporation-001-droplet-evaporation-and-residence-time-assay",
+      "relation": "defines_endpoint_for",
+      "evidence_id": "",
+      "confidence": 0.76
+    },
+    {
+      "source": "assay-schema:assay-evaporation-001-release",
+      "target": "objective:payload-viability",
+      "relation": "measures",
+      "evidence_id": "",
+      "confidence": 0.76
+    },
+    {
+      "source": "assay-schema:assay-evaporation-001-release",
+      "target": "objective:release-profile",
+      "relation": "measures",
+      "evidence_id": "",
+      "confidence": 0.76
+    },
+    {
+      "source": "assay-schema:assay-retained-fluorescence-001-retention",
+      "target": "assay:assay-retained-fluorescence-001-retained-fluorescence-intensity-assay",
+      "relation": "defines_endpoint_for",
+      "evidence_id": "",
+      "confidence": 0.72
+    },
+    {
+      "source": "assay-schema:assay-retained-fluorescence-001-retention",
+      "target": "objective:retention",
+      "relation": "measures",
+      "evidence_id": "",
+      "confidence": 0.72
+    },
+    {
+      "source": "assay-schema:assay-simulated-rain-001-wash-off",
+      "target": "assay:assay-simulated-rain-001-simulated-rain-wash-off-assay",
+      "relation": "defines_endpoint_for",
+      "evidence_id": "",
+      "confidence": 0.77
+    },
+    {
+      "source": "assay-schema:assay-simulated-rain-001-wash-off",
+      "target": "objective:retention",
+      "relation": "measures",
+      "evidence_id": "",
+      "confidence": 0.77
+    },
+    {
+      "source": "assay-schema:assay-simulated-rain-001-wash-off",
+      "target": "objective:wash-off",
+      "relation": "measures",
+      "evidence_id": "",
+      "confidence": 0.77
+    },
+    {
+      "source": "assay-schema:assay-spray-coverage-image-001-retention",
+      "target": "assay:assay-spray-coverage-image-001-spray-coverage-image-assay",
+      "relation": "defines_endpoint_for",
+      "evidence_id": "",
+      "confidence": 0.76
+    },
+    {
+      "source": "assay-schema:assay-spray-coverage-image-001-retention",
+      "target": "objective:retention",
+      "relation": "measures",
+      "evidence_id": "",
+      "confidence": 0.76
+    },
+    {
+      "source": "assay-schema:manual-leaf-001-wash-off",
+      "target": "assay:manual-leaf-001-foliar-retention-and-wash-off-proxy",
+      "relation": "defines_endpoint_for",
+      "evidence_id": "",
+      "confidence": 0.55
+    },
+    {
+      "source": "assay-schema:manual-leaf-001-wash-off",
+      "target": "objective:retention",
+      "relation": "measures",
+      "evidence_id": "",
+      "confidence": 0.55
+    },
+    {
+      "source": "assay-schema:manual-leaf-001-wash-off",
+      "target": "objective:wash-off",
+      "relation": "measures",
+      "evidence_id": "",
+      "confidence": 0.55
+    },
+    {
+      "source": "assay-schema:manual-leaf-002-wash-off",
+      "target": "assay:manual-leaf-002-hydrophobic-leaf-retention-benchmark",
+      "relation": "defines_endpoint_for",
+      "evidence_id": "",
+      "confidence": 0.55
+    },
+    {
+      "source": "assay-schema:manual-leaf-002-wash-off",
+      "target": "objective:retention",
+      "relation": "measures",
+      "evidence_id": "",
+      "confidence": 0.55
+    },
+    {
+      "source": "assay-schema:manual-leaf-002-wash-off",
+      "target": "objective:wash-off",
+      "relation": "measures",
+      "evidence_id": "",
+      "confidence": 0.55
+    },
+    {
+      "source": "assay-schema:manual-leaf-003-release",
+      "target": "assay:manual-leaf-003-moderate-wettability-optional-benchmark",
+      "relation": "defines_endpoint_for",
+      "evidence_id": "",
+      "confidence": 0.45
+    },
+    {
+      "source": "assay-schema:manual-leaf-003-release",
+      "target": "objective:payload-viability",
+      "relation": "measures",
+      "evidence_id": "",
+      "confidence": 0.45
+    },
+    {
+      "source": "assay-schema:manual-leaf-003-release",
+      "target": "objective:release-profile",
+      "relation": "measures",
+      "evidence_id": "",
+      "confidence": 0.45
     },
     {
       "source": "assay:assay-droplet-impact-video-001-high-speed-droplet-impact-video-assay",

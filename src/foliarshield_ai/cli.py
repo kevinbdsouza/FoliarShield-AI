@@ -10,9 +10,9 @@ from typing import Any, cast
 
 from foliarshield_ai import (
     Assay,
+    AssayEndpointSchema,
     BenchmarkResult,
     CandidateDesign,
-    PayloadCombination,
     Crop,
     EncapsulationArchitecture,
     EvaluationResult,
@@ -20,6 +20,7 @@ from foliarshield_ai import (
     FormulationMaterial,
     Genome,
     LicenseReviewStatus,
+    PayloadCombination,
     Phenotype,
     ProteinOrGeneFeature,
     RedistributionMode,
@@ -502,6 +503,9 @@ def run_ingest_crop_stress(args: argparse.Namespace) -> int:
         "crop_records": sum(1 for record in records if isinstance(record, Crop)),
         "stress_context_records": sum(1 for record in records if isinstance(record, StressContext)),
         "assay_records": sum(1 for record in records if isinstance(record, Assay)),
+        "assay_endpoint_schema_records": sum(
+            1 for record in records if isinstance(record, AssayEndpointSchema)
+        ),
         "evidence_records": sum(1 for record in records if isinstance(record, EvidenceRecord)),
         "phenotype_records": sum(1 for record in records if isinstance(record, Phenotype)),
         "records": artifact_records(records),
@@ -1295,7 +1299,10 @@ def build_parser() -> argparse.ArgumentParser:
 
     heuristic_baselines = subparsers.add_parser(
         "run-heuristic-baselines",
-        help="Run deterministic seed heuristic strain, payload combination, and formulation baselines.",
+        help=(
+            "Run deterministic seed heuristic strain, payload combination, "
+            "and formulation baselines."
+        ),
     )
     heuristic_baselines.add_argument("--project-root", default=".", help="Repository root to use.")
     heuristic_baselines.add_argument(
